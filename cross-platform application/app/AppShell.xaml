@@ -7,8 +7,13 @@
     Title="app">
 
     <ShellContent
-        Title="Home"
+        Title="Главное меню"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
+
+    <ShellContent
+        Title="Калькулятор"
+        ContentTemplate="{DataTemplate local:DatabaseCalculator}"
+        Route="DatabaseCalculator" />
 
 </Shell>

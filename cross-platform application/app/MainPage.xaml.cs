@@ -10,7 +10,7 @@
 
         private async void OnCalculatorClicked(object? sender, EventArgs e)
         {
-            await DisplayAlert("Уведомление", "Уже скоро", "ок");
+            await Navigation.PushAsync(new DatabaseCalculator());
         }
     }
 }

@@ -2,143 +2,135 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="app.MainPage"
-             Title="Магазин Баз Данных">
+             Title="Магазин Баз Данных"
+             BackgroundColor="#F8F4FF">
 
     <ScrollView>
         <VerticalStackLayout Padding="20" Spacing="20">
 
-            <!-- Заголовок -->
             <VerticalStackLayout Spacing="5" HorizontalOptions="Center">
                 <Label Text="Магазин Баз Данных"
                        FontSize="28"
                        FontAttributes="Bold"
-                       HorizontalOptions="Center" />
+                       HorizontalOptions="Center"
+                       TextColor="#4A148C" />
 
                 <Label Text="Добро пожаловать в онлайн-магазин баз данных!"
                        FontSize="18"
-                       HorizontalOptions="Center" />
+                       HorizontalOptions="Center"
+                       TextColor="#6A1B9A" />
 
                 <Label Text="Выберите базу данных для вашего проекта и настройте её параметры."
                        FontSize="14"
-                       HorizontalOptions="Center" />
+                       HorizontalOptions="Center"
+                       TextColor="#6A1B9A" />
             </VerticalStackLayout>
 
-            <!-- Подзаголовок -->
             <Label Text="Популярные базы данных"
                    FontSize="22"
                    FontAttributes="Bold"
-                   HorizontalOptions="Center" />
+                   HorizontalOptions="Center"
+                   TextColor="#4A148C" />
 
-            <!-- Сетка карточек -->
             <FlexLayout Direction="Row"
                         Wrap="Wrap"
                         JustifyContent="Center"
                         AlignItems="Start">
 
-                <!-- Карточка MySQL -->
                 <Frame WidthRequest="160" HeightRequest="220" Margin="10"
-                       CornerRadius="10" HasShadow="True" BorderColor="#ccc">
+                       CornerRadius="10" HasShadow="True" BorderColor="#D1C4E9" BackgroundColor="#FFFFFF">
                     <VerticalStackLayout Spacing="10">
                         <Image Source="mysql.png" HeightRequest="80" Aspect="AspectFit" />
-                        <Label Text="MySQL" FontAttributes="Bold" HorizontalOptions="Center" />
+                        <Label Text="MySQL" FontAttributes="Bold" HorizontalOptions="Center" TextColor="#4A148C" />
                         <Label Text="Реляционная БД для веб-приложений."
-                               FontSize="12" HorizontalTextAlignment="Center" />
+                               FontSize="12" HorizontalTextAlignment="Center" TextColor="#6A1B9A" />
                     </VerticalStackLayout>
                 </Frame>
 
-                <!-- PostgreSQL -->
                 <Frame WidthRequest="160" HeightRequest="220" Margin="10"
-                       CornerRadius="10" HasShadow="True" BorderColor="#ccc">
+                       CornerRadius="10" HasShadow="True" BorderColor="#D1C4E9" BackgroundColor="#FFFFFF">
                     <VerticalStackLayout Spacing="10">
                         <Image Source="postgresql.png" HeightRequest="80" Aspect="AspectFit" />
-                        <Label Text="PostgreSQL" FontAttributes="Bold" HorizontalOptions="Center" />
+                        <Label Text="PostgreSQL" FontAttributes="Bold" HorizontalOptions="Center" TextColor="#4A148C" />
                         <Label Text="Мощная реляционная БД с JSON-поддержкой."
-                               FontSize="12" HorizontalTextAlignment="Center" />
+                               FontSize="12" HorizontalTextAlignment="Center" TextColor="#6A1B9A" />
                     </VerticalStackLayout>
                 </Frame>
 
-                <!-- MongoDB -->
                 <Frame WidthRequest="160" HeightRequest="220" Margin="10"
-                       CornerRadius="10" HasShadow="True" BorderColor="#ccc">
+                       CornerRadius="10" HasShadow="True" BorderColor="#D1C4E9" BackgroundColor="#FFFFFF">
                     <VerticalStackLayout Spacing="10">
                         <Image Source="mongodb.png" HeightRequest="80" Aspect="AspectFit" />
-                        <Label Text="MongoDB" FontAttributes="Bold" HorizontalOptions="Center" />
+                        <Label Text="MongoDB" FontAttributes="Bold" HorizontalOptions="Center" TextColor="#4A148C" />
                         <Label Text="NoSQL для гибких данных."
-                               FontSize="12" HorizontalTextAlignment="Center" />
+                               FontSize="12" HorizontalTextAlignment="Center" TextColor="#6A1B9A" />
                     </VerticalStackLayout>
                 </Frame>
 
-                <!-- Redis -->
                 <Frame WidthRequest="160" HeightRequest="220" Margin="10"
-                       CornerRadius="10" HasShadow="True" BorderColor="#ccc">
+                       CornerRadius="10" HasShadow="True" BorderColor="#D1C4E9" BackgroundColor="#FFFFFF">
                     <VerticalStackLayout Spacing="10">
                         <Image Source="redis.png" HeightRequest="80" Aspect="AspectFit" />
-                        <Label Text="Redis" FontAttributes="Bold" HorizontalOptions="Center" />
+                        <Label Text="Redis" FontAttributes="Bold" HorizontalOptions="Center" TextColor="#4A148C" />
                         <Label Text="Кэширование и высокая скорость."
-                               FontSize="12" HorizontalTextAlignment="Center" />
+                               FontSize="12" HorizontalTextAlignment="Center" TextColor="#6A1B9A" />
                     </VerticalStackLayout>
                 </Frame>
 
-                <!-- SQLite -->
                 <Frame WidthRequest="160" HeightRequest="220" Margin="10"
-                       CornerRadius="10" HasShadow="True" BorderColor="#ccc">
+                       CornerRadius="10" HasShadow="True" BorderColor="#D1C4E9" BackgroundColor="#FFFFFF">
                     <VerticalStackLayout Spacing="10">
                         <Image Source="sqlite.jpg" HeightRequest="80" Aspect="AspectFit" />
-                        <Label Text="SQLite" FontAttributes="Bold" HorizontalOptions="Center" />
+                        <Label Text="SQLite" FontAttributes="Bold" HorizontalOptions="Center" TextColor="#4A148C" />
                         <Label Text="Лёгкая БД для локального использования."
-                               FontSize="12" HorizontalTextAlignment="Center" />
+                               FontSize="12" HorizontalTextAlignment="Center" TextColor="#6A1B9A" />
                     </VerticalStackLayout>
                 </Frame>
 
-                <!-- microsoftsqlserver -->
                 <Frame WidthRequest="160" HeightRequest="220" Margin="10"
-                       CornerRadius="10" HasShadow="True" BorderColor="#ccc">
+                       CornerRadius="10" HasShadow="True" BorderColor="#D1C4E9" BackgroundColor="#FFFFFF">
                     <VerticalStackLayout Spacing="10">
                         <Image Source="microsoftsqlserver.png" HeightRequest="80" Aspect="AspectFit" />
-                        <Label Text="Microsoft SQL Server" FontAttributes="Bold" HorizontalOptions="Center" />
+                        <Label Text="Microsoft SQL Server" FontAttributes="Bold" HorizontalOptions="Center" TextColor="#4A148C" />
                         <Label Text="Корпоративная реляционная БД."
-                               FontSize="12" HorizontalTextAlignment="Center" />
+                               FontSize="12" HorizontalTextAlignment="Center" TextColor="#6A1B9A" />
                     </VerticalStackLayout>
                 </Frame>
 
-                <!-- Cassandra -->
                 <Frame WidthRequest="160" HeightRequest="220" Margin="10"
-                       CornerRadius="10" HasShadow="True" BorderColor="#ccc">
+                       CornerRadius="10" HasShadow="True" BorderColor="#D1C4E9" BackgroundColor="#FFFFFF">
                     <VerticalStackLayout Spacing="10">
                         <Image Source="cassandra.png" HeightRequest="80" Aspect="AspectFit" />
-                        <Label Text="Cassandra" FontAttributes="Bold" HorizontalOptions="Center" />
+                        <Label Text="Cassandra" FontAttributes="Bold" HorizontalOptions="Center" TextColor="#4A148C" />
                         <Label Text="NoSQL для больших данных."
-                               FontSize="12" HorizontalTextAlignment="Center" />
+                               FontSize="12" HorizontalTextAlignment="Center" TextColor="#6A1B9A" />
                     </VerticalStackLayout>
                 </Frame>
 
-                <!-- Oracle -->
                 <Frame WidthRequest="160" HeightRequest="220" Margin="10"
-                       CornerRadius="10" HasShadow="True" BorderColor="#ccc">
+                       CornerRadius="10" HasShadow="True" BorderColor="#D1C4E9" BackgroundColor="#FFFFFF">
                     <VerticalStackLayout Spacing="10">
                         <Image Source="oracledb.jpeg" HeightRequest="80" Aspect="AspectFit" />
-                        <Label Text="Oracle Database" FontAttributes="Bold" HorizontalOptions="Center" />
+                        <Label Text="Oracle Database" FontAttributes="Bold" HorizontalOptions="Center" TextColor="#4A148C" />
                         <Label Text="Предприятие-уровень реляционная БД."
-                               FontSize="12" HorizontalTextAlignment="Center" />
+                               FontSize="12" HorizontalTextAlignment="Center" TextColor="#6A1B9A" />
                     </VerticalStackLayout>
                 </Frame>
 
-                <!-- MariaDB -->
                 <Frame WidthRequest="160" HeightRequest="220" Margin="10"
-                       CornerRadius="10" HasShadow="True" BorderColor="#ccc">
+                       CornerRadius="10" HasShadow="True" BorderColor="#D1C4E9" BackgroundColor="#FFFFFF">
                     <VerticalStackLayout Spacing="10">
                         <Image Source="mariadb.png" HeightRequest="80" Aspect="AspectFit" />
-                        <Label Text="MariaDB" FontAttributes="Bold" HorizontalOptions="Center" />
+                        <Label Text="MariaDB" FontAttributes="Bold" HorizontalOptions="Center" TextColor="#4A148C" />
                         <Label Text="Филиал MySQL с открытым кодом."
-                               FontSize="12" HorizontalTextAlignment="Center" />
+                               FontSize="12" HorizontalTextAlignment="Center" TextColor="#6A1B9A" />
                     </VerticalStackLayout>
                 </Frame>
 
             </FlexLayout>
 
-            <!-- Кнопка -->
             <Button Text="Перейти к калькулятору"
-                    BackgroundColor="#007bff"
+                    BackgroundColor="#6A1B9A"
                     TextColor="White"
                     CornerRadius="8"
                     HeightRequest="50"

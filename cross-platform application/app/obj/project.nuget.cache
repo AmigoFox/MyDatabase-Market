@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "t0lOfMtfOZM=",
+  "dgSpecHash": "/5hd2fTC/Hs=",
   "success": true,
   "projectFilePath": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\cross-platform application\\app\\app.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\prost\\.nuget\\packages\\communitytoolkit.mvvm\\8.4.0\\communitytoolkit.mvvm.8.4.0.nupkg.sha512",
     "C:\\Users\\prost\\.nuget\\packages\\googlegson\\2.13.0.1\\googlegson.2.13.0.1.nupkg.sha512",
     "C:\\Users\\prost\\.nuget\\packages\\microsoft.extensions.configuration\\9.0.8\\microsoft.extensions.configuration.9.0.8.nupkg.sha512",
     "C:\\Users\\prost\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\9.0.8\\microsoft.extensions.configuration.abstractions.9.0.8.nupkg.sha512",

@@ -4,11 +4,148 @@
         <name>app</name>
     </assembly>
     <members>
+        <member name="T:app.ViewModels.DatabaseCalculatorViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:app.ViewModels.DatabaseCalculatorViewModel.SelectedType">
+            <inheritdoc cref="F:app.ViewModels.DatabaseCalculatorViewModel._selectedType"/>
+        </member>
+        <member name="P:app.ViewModels.DatabaseCalculatorViewModel.SizeGB">
+            <inheritdoc cref="F:app.ViewModels.DatabaseCalculatorViewModel._sizeGB"/>
+        </member>
+        <member name="P:app.ViewModels.DatabaseCalculatorViewModel.SelectedIOPS">
+            <inheritdoc cref="F:app.ViewModels.DatabaseCalculatorViewModel._selectedIOPS"/>
+        </member>
+        <member name="P:app.ViewModels.DatabaseCalculatorViewModel.StorageType">
+            <inheritdoc cref="F:app.ViewModels.DatabaseCalculatorViewModel._storageType"/>
+        </member>
+        <member name="P:app.ViewModels.DatabaseCalculatorViewModel.Scalability">
+            <inheritdoc cref="F:app.ViewModels.DatabaseCalculatorViewModel._scalability"/>
+        </member>
+        <member name="P:app.ViewModels.DatabaseCalculatorViewModel.RussiaSelected">
+            <inheritdoc cref="F:app.ViewModels.DatabaseCalculatorViewModel._russiaSelected"/>
+        </member>
+        <member name="P:app.ViewModels.DatabaseCalculatorViewModel.KazakhstanSelected">
+            <inheritdoc cref="F:app.ViewModels.DatabaseCalculatorViewModel._kazakhstanSelected"/>
+        </member>
+        <member name="P:app.ViewModels.DatabaseCalculatorViewModel.ChinaSelected">
+            <inheritdoc cref="F:app.ViewModels.DatabaseCalculatorViewModel._chinaSelected"/>
+        </member>
+        <member name="P:app.ViewModels.DatabaseCalculatorViewModel.UzbekistanSelected">
+            <inheritdoc cref="F:app.ViewModels.DatabaseCalculatorViewModel._uzbekistanSelected"/>
+        </member>
+        <member name="P:app.ViewModels.DatabaseCalculatorViewModel.BelarusSelected">
+            <inheritdoc cref="F:app.ViewModels.DatabaseCalculatorViewModel._belarusSelected"/>
+        </member>
+        <member name="P:app.ViewModels.DatabaseCalculatorViewModel.PriceInRub">
+            <inheritdoc cref="F:app.ViewModels.DatabaseCalculatorViewModel._priceInRub"/>
+        </member>
+        <member name="P:app.ViewModels.DatabaseCalculatorViewModel.PriceInUsd">
+            <inheritdoc cref="F:app.ViewModels.DatabaseCalculatorViewModel._priceInUsd"/>
+        </member>
+        <member name="F:app.ViewModels.DatabaseCalculatorViewModel.selectionChangedCommand">
+            <summary>The backing field for <see cref="P:app.ViewModels.DatabaseCalculatorViewModel.SelectionChangedCommand"/>.</summary>
+        </member>
+        <member name="P:app.ViewModels.DatabaseCalculatorViewModel.SelectionChangedCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:app.ViewModels.DatabaseCalculatorViewModel.OnSelectionChanged"/>.</summary>
+        </member>
+        <member name="F:app.ViewModels.DatabaseCalculatorViewModel.validateAndUpdateCommand">
+            <summary>The backing field for <see cref="P:app.ViewModels.DatabaseCalculatorViewModel.ValidateAndUpdateCommand"/>.</summary>
+        </member>
+        <member name="P:app.ViewModels.DatabaseCalculatorViewModel.ValidateAndUpdateCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:app.ViewModels.DatabaseCalculatorViewModel.ValidateAndUpdate"/>.</summary>
+        </member>
         <member name="T:app.Resource">
             <summary>
             Android Resource Designer class.
             Exposes the Android Resource designer assembly into the project Namespace.
             </summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedType">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedType" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SizeGB">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SizeGB" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedIOPS">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedIOPS" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.StorageType">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "StorageType" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Scalability">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Scalability" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.RussiaSelected">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "RussiaSelected" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.KazakhstanSelected">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "KazakhstanSelected" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ChinaSelected">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ChinaSelected" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.UzbekistanSelected">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "UzbekistanSelected" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.BelarusSelected">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "BelarusSelected" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.PriceInRub">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "PriceInRub" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.PriceInUsd">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "PriceInUsd" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedType">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedType" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SizeGB">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SizeGB" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedIOPS">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedIOPS" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.StorageType">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "StorageType" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Scalability">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Scalability" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.RussiaSelected">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "RussiaSelected" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.KazakhstanSelected">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "KazakhstanSelected" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ChinaSelected">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ChinaSelected" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.UzbekistanSelected">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "UzbekistanSelected" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.BelarusSelected">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "BelarusSelected" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.PriceInRub">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "PriceInRub" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.PriceInUsd">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "PriceInUsd" generated properties.</summary>
         </member>
     </members>
 </doc>
