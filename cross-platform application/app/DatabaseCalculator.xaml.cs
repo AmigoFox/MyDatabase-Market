@@ -4,23 +4,25 @@ namespace app;
 
 public partial class DatabaseCalculator : ContentPage
 {
-    public DatabaseCalculator()
+
+    public DatabaseCalculator(app.ViewModels.DatabaseCalculatorViewModel vm)
     {
         InitializeComponent();
+        BindingContext = vm;
     }
 
-    private async void OnPickerChanged(object sender, EventArgs e)
+    protected override async void OnAppearing()
+    {
+        base.OnAppearing();
+        if (BindingContext is app.ViewModels.DatabaseCalculatorViewModel viewModel)
+            await viewModel.InitializeAsync();
+    }
+
+    private void OnPickerChanged(object sender, EventArgs e)
     {
 
         if (BindingContext is ViewModels.DatabaseCalculatorViewModel vm)
-        {
-            byte count = (byte)vm.SelectedCountriesCount;
             vm.OnSelectionChanged();
-            if (count > 3)
-            {
-               await DisplayAlert("Уведомление", "Чтобы выбрать больше 3-х стран обратитесь к менеджеру", "OK");
-            }
-        }
 
     }
 

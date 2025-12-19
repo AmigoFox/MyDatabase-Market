@@ -1,4 +1,7 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using app.Services;
+
 
 
 namespace app
@@ -16,8 +19,14 @@ namespace app
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
+            builder.Services.AddHttpClient<CbrExchangeRateService>();
+            builder.Services.AddTransient<ViewModels.DatabaseCalculatorViewModel>();
+            builder.Services.AddTransient<DatabaseCalculator>();
+
+
+
 #if DEBUG
-    		builder.Logging.AddDebug(); 
+            builder.Logging.AddDebug(); 
 #endif
             return builder.Build();
 

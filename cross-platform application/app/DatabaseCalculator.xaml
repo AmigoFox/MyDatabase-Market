@@ -6,10 +6,6 @@
              Title="Калькулятор баз данных"
              BackgroundColor="#F8F4FF">
 
-    <ContentPage.BindingContext>
-        <vm:DatabaseCalculatorViewModel />
-    </ContentPage.BindingContext>
-
     <ScrollView>
         <VerticalStackLayout Padding="20" Spacing="25">
 
@@ -149,7 +145,7 @@
                         </Picker.ItemsSource>
                     </Picker>
 
-                    <Label Text="Выберите страны (1-3):"
+                    <Label Text="Выберите:"
                            Grid.Row="5" Grid.Column="0"
                            VerticalOptions="Start"
                            FontAttributes="Bold"
@@ -181,75 +177,81 @@
                             <Label Text="Беларусь" VerticalOptions="Center" TextColor="#4A148C" />
                         </HorizontalStackLayout>
 
-                        <Label Text="{Binding SelectedCountriesCount, StringFormat='Выбрано стран: {0}'}"
-                               TextColor="#6A1B9A"
-                               FontAttributes="Bold" />
+
                     </VerticalStackLayout>
 
                 </Grid>
             </Frame>
-            
+
 
             <Frame BackgroundColor="#FFFFFF"
-       CornerRadius="16"
-       Padding="20"
-       BorderColor="#D1C4E9"
-       HasShadow="True">
+               CornerRadius="16"
+               Padding="20"
+               BorderColor="#D1C4E9"
+               HasShadow="True"
+               HorizontalOptions="Fill">
 
-                <Grid ColumnDefinitions="Auto,*"
-              RowSpacing="14"
-              ColumnSpacing="20"
-              Padding="4">
+                <Grid RowSpacing="12"
+      ColumnSpacing="20"
+      Padding="8"
+      HorizontalOptions="FillAndExpand"
+      ColumnDefinitions="Auto,*"
+      RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto">
 
+                    <!-- Заголовок -->
+                    <Label Grid.Row="0" Grid.ColumnSpan="2"
+           Text="Результат расчёта"
+           FontSize="22"
+           FontAttributes="Bold"
+           HorizontalOptions="Center"
+           TextColor="#4A148C"
+           Margin="0,0,0,6" />
 
-                    <VerticalStackLayout Spacing="20">
+                    <BoxView Grid.Row="1" Grid.ColumnSpan="2"
+             Color="#D1C4E9"
+             HeightRequest="2"
+             HorizontalOptions="FillAndExpand" />
 
-                    <Label Text="Результат расчёта"
-               FontSize="20"
-               FontAttributes="Bold"
-               HorizontalOptions="Center"
-               TextColor="#4A148C" />
+                    <!-- Тип БД -->
+                    <Label Grid.Row="2" Grid.Column="0" Text="Тип базы данных:" TextColor="#4A148C" FontSize="16" />
+                    <Label Grid.Row="2" Grid.Column="1" Text="{Binding SelectedType}" TextColor="#6A1B9A" FontSize="16" HorizontalTextAlignment="End" />
 
-                    <BoxView Color="#D1C4E9" HeightRequest="2" />
+                    <!-- Объём -->
+                    <Label Grid.Row="3" Grid.Column="0" Text="Объём:" TextColor="#4A148C" FontSize="16" />
+                    <Label Grid.Row="3" Grid.Column="1" Text="{Binding SizeGB, StringFormat='{0} GB'}" TextColor="#6A1B9A" FontSize="16" HorizontalTextAlignment="End" />
 
+                    <!-- Хранилище -->
+                    <Label Grid.Row="4" Grid.Column="0" Text="Тип хранилища:" TextColor="#4A148C" FontSize="16" />
+                    <Label Grid.Row="4" Grid.Column="1" Text="{Binding StorageType}" TextColor="#6A1B9A" FontSize="16" HorizontalTextAlignment="End" />
 
+                    <!-- IOPS -->
+                    <Label Grid.Row="5" Grid.Column="0" Text="Скорость (IOPS):" TextColor="#4A148C" FontSize="16" />
+                    <Label Grid.Row="5" Grid.Column="1" Text="{Binding SelectedIOPS}" TextColor="#6A1B9A" FontSize="16" HorizontalTextAlignment="End" />
 
-                        <!-- Тип БД -->
-                        <Label Grid.Row="0" Grid.Column="0" Text="Тип базы данных:" TextColor="#4A148C" FontSize="16" />
-                        <Label Grid.Row="0" Grid.Column="1" Text="{Binding SelectedType}" TextColor="#6A1B9A" FontSize="16" HorizontalTextAlignment="End" />
+                    <!-- Масштабируемость -->
+                    <Label Grid.Row="6" Grid.Column="0" Text="Масштабируемость:" TextColor="#4A148C" FontSize="16" />
+                    <Label Grid.Row="6" Grid.Column="1" Text="{Binding Scalability}" TextColor="#6A1B9A" FontSize="16" HorizontalTextAlignment="End" />
 
-                        <!-- Объём -->
-                        <Label Grid.Row="1" Grid.Column="0" Text="Объём:" TextColor="#4A148C" FontSize="16" />
-                        <Label Grid.Row="1" Grid.Column="1" Text="{Binding SizeGB, StringFormat='{0} GB'}" TextColor="#6A1B9A" FontSize="16" HorizontalTextAlignment="End" />
+                    <!-- Страны -->
+                    <Label Grid.Row="7" Grid.Column="0" Text="Страны размещения:" TextColor="#4A148C" FontSize="16" />
+                    <Label Grid.Row="7" Grid.Column="1" Text="{Binding SelectedCountriesText}" TextColor="#6A1B9A" FontSize="16" HorizontalTextAlignment="End" LineBreakMode="WordWrap" MaxLines="3" />
 
-                        <!-- Хранилище -->
-                        <Label Grid.Row="2" Grid.Column="0" Text="Тип хранилища:" TextColor="#4A148C" FontSize="16" />
-                        <Label Grid.Row="2" Grid.Column="1" Text="{Binding StorageType}" TextColor="#6A1B9A" FontSize="16" HorizontalTextAlignment="End" />
+                    <!-- Кол-во стран -->
+                    <Label Grid.Row="8" Grid.Column="0" Text="Выбрано стран:" TextColor="#4A148C" FontSize="16" />
+                    <Label Grid.Row="8" Grid.Column="1" Text="{Binding SelectedCountriesCount}" TextColor="#6A1B9A" FontSize="16" HorizontalTextAlignment="End" />
 
-                        <!-- IOPS -->
-                        <Label Grid.Row="3" Grid.Column="0" Text="Скорость (IOPS):" TextColor="#4A148C" FontSize="16" />
-                        <Label Grid.Row="3" Grid.Column="1" Text="{Binding SelectedIOPS}" TextColor="#6A1B9A" FontSize="16" HorizontalTextAlignment="End" />
+                    <!-- RUB -->
+                    <Label Grid.Row="9" Grid.Column="0" Text="Стоимость (RUB):" TextColor="#E53935" FontAttributes="Bold" FontSize="17" />
+                    <Label Grid.Row="9" Grid.Column="1" Text="{Binding PriceInRubFormatted}" TextColor="#E53935" FontAttributes="Bold" FontSize="17" HorizontalTextAlignment="End" />
 
-                        <!-- Масштабируемость -->
-                        <Label Grid.Row="4" Grid.Column="0" Text="Масштабируемость:" TextColor="#4A148C" FontSize="16" />
-                        <Label Grid.Row="4" Grid.Column="1" Text="{Binding Scalability}" TextColor="#6A1B9A" FontSize="16" HorizontalTextAlignment="End" />
+                    <!-- USD -->
+                    <Label Grid.Row="10" Grid.Column="0" Text="Стоимость (USD):" TextColor="#6A1B9A" FontAttributes="Bold" FontSize="17" />
+                    <Label Grid.Row="10" Grid.Column="1" Text="{Binding PriceInUsdFormatted}" TextColor="#6A1B9A" FontAttributes="Bold" FontSize="17" HorizontalTextAlignment="End" />
 
-                        <!-- Страны -->
-                        <Label Grid.Row="5" Grid.Column="0" Text="Страны:" TextColor="#4A148C" FontSize="16" />
-                        <Label Grid.Row="5" Grid.Column="1" Text="{Binding SelectedCountriesText}" TextColor="#6A1B9A" FontSize="16" HorizontalTextAlignment="End" />
-
-                        <!-- RUB -->
-                        <Label Grid.Row="6" Grid.Column="0" Text="Стоимость (RUB):" TextColor="#E53935" FontAttributes="Bold" FontSize="17" />
-                        <Label Grid.Row="6" Grid.Column="1" Text="{Binding PriceInRubFormatted}" TextColor="#E53935" FontAttributes="Bold" FontSize="17" HorizontalTextAlignment="End" />
-
-                        <!-- USD -->
-                        <Label Grid.Row="7" Grid.Column="0" Text="Стоимость (USD):" TextColor="#6A1B9A" FontAttributes="Bold" FontSize="17" />
-                        <Label Grid.Row="7" Grid.Column="1" Text="{Binding PriceInUsdFormatted}" TextColor="#6A1B9A" FontAttributes="Bold" FontSize="17" HorizontalTextAlignment="End" />
-
-                    
-                </VerticalStackLayout>
                 </Grid>
+
             </Frame>
+
 
 
 

@@ -5,9 +5,15 @@ namespace app.ViewModels;
 
 public partial class DatabaseCalculatorViewModel : ObservableObject
 {
-    private const decimal FIXED_USD_TO_RUB_RATE = 95m;
-    private const string RUB_SYMBOL = "₽";
-    private const string USD_SYMBOL = "$";
+    private Dictionary<string, decimal> rates = new();
+    private readonly CbrExchangeRateService _rateService;
+    private bool _ratesReady;
+
+
+    public DatabaseCalculatorViewModel(CbrExchangeRateService rateService)
+    {
+        _rateService = rateService;
+    }
 
     [ObservableProperty] private string _selectedType = "MySQL";
     [ObservableProperty] private int _sizeGB = 10;
@@ -15,7 +21,7 @@ public partial class DatabaseCalculatorViewModel : ObservableObject
     [ObservableProperty] private string _storageType = "SSD";
     [ObservableProperty] private string _scalability = "None";
 
-    [ObservableProperty] private bool _russiaSelected = true;
+    [ObservableProperty] private bool _russiaSelected;
     [ObservableProperty] private bool _kazakhstanSelected;
     [ObservableProperty] private bool _chinaSelected;
     [ObservableProperty] private bool _uzbekistanSelected;
@@ -23,11 +29,38 @@ public partial class DatabaseCalculatorViewModel : ObservableObject
 
     [ObservableProperty] private decimal _priceInRub;
     [ObservableProperty] private decimal _priceInUsd;
+    [ObservableProperty] private decimal _priceInCny;
+    [ObservableProperty] private decimal _priceInInr;
+    [ObservableProperty] private decimal _priceInTry;
+    [ObservableProperty] private decimal _priceInByn;
+    [ObservableProperty] private decimal _priceInKzt;
+    [ObservableProperty] private decimal _priceInKrw;
+    [ObservableProperty] private decimal _priceInEur;
+    [ObservableProperty] private decimal _priceInAmd;
+    [ObservableProperty] private decimal _priceInUzs;
 
-    public string PriceInRubFormatted => $"{PriceInRub:N2} {RUB_SYMBOL}";
-    public string PriceInUsdFormatted => $"{PriceInUsd:N2} {USD_SYMBOL}";
+    public string PriceInRubFormatted => $"{PriceInRub:N2} ₽";
+    public string PriceInUsdFormatted => $"{PriceInUsd:N2} $";
+    public string PriceInCnyFormatted => $"{PriceInCny:N2} ¥";
+    public string PriceInInrFormatted => $"{PriceInInr:N2} ₹";
+    public string PriceInTryFormatted => $"{PriceInTry:N2} ₺";
+    public string PriceInBynFormatted => $"{PriceInByn:N2} Br";
+    public string PriceInKztFormatted => $"{PriceInKzt:N2} ₸";
+    public string PriceInKrwFormatted => $"{PriceInKrw:N2} ₩";
+    public string PriceInEurFormatted => $"{PriceInEur:N2} €";
+    public string PriceInAmdFormatted => $"{PriceInAmd:N2} ֏";
+    public string PriceInUzsFormatted => $"{PriceInUzs:N2} сум";
+
+   
+
+
+    partial void OnRussiaSelectedChanged(bool value) => ValidateAndUpdate();
+    partial void OnKazakhstanSelectedChanged(bool value) => ValidateAndUpdate();
+    partial void OnChinaSelectedChanged(bool value) => ValidateAndUpdate();
+    partial void OnUzbekistanSelectedChanged(bool value) => ValidateAndUpdate();
+    partial void OnBelarusSelectedChanged(bool value) => ValidateAndUpdate();
+
     public int SelectedCountriesCount => GetSelectedCountries().Count();
-
     public string SelectedCountriesText => string.Join(", ", GetSelectedCountries());
 
     public List<string> GetSelectedCountries()
@@ -39,22 +72,49 @@ public partial class DatabaseCalculatorViewModel : ObservableObject
         if (UzbekistanSelected) list.Add("Узбекистан");
         if (BelarusSelected) list.Add("Беларусь");
         return list;
-
     }
 
     private decimal GetCountriesMultiplier()
     {
-        var count = GetSelectedCountries().Count();
-        if (count < 1) return 1m;
-        if (count > 3) return 3.3m;
-        return count * 1.1m;
+        var countries = GetSelectedCountries();
+        if (countries.Count == 0) return 1m;
+
+        decimal total = 0m;
+        foreach (var country in countries)
+        {
+            total += country switch
+            {
+                "Россия" => 1.0m,
+                "Беларусь" => 1.2m,
+                "Казахстан" => 1.5m,
+                "Узбекистан" => 1.2m,
+                "Китай" => 1.8m,
+                _ => 1.0m
+            };
+        }
+
+        if (countries.Count > 1)
+            total *= 1.1m;
+
+        return total;
+    }
+
+
+
+    [RelayCommand]
+    public async Task InitializeAsync()
+    {
+        rates = await _rateService.GetRatesAsync();
+
+        if (!rates.ContainsKey("USD"))
+            throw new InvalidOperationException("Курс USD не загружен. Проверь подключение к ЦБ РФ.");
+
+        _ratesReady = true;
+        ValidateAndUpdate();
     }
 
     [RelayCommand]
-    public void OnSelectionChanged()
-    {
-        ValidateAndUpdate();
-    }
+    public void OnSelectionChanged() => ValidateAndUpdate();
 
     [RelayCommand]
     public void ValidateAndUpdate()
@@ -64,16 +124,6 @@ public partial class DatabaseCalculatorViewModel : ObservableObject
         {
             RussiaSelected = true;
             countries = new List<string> { "Россия" };
-        }
-
-        if (countries.Count > 3)
-        {
-            var limited = countries.Take(3).ToList();
-            RussiaSelected = limited.Contains("Россия");
-            KazakhstanSelected = limited.Contains("Казахстан");
-            ChinaSelected = limited.Contains("Китай");
-            UzbekistanSelected = limited.Contains("Узбекистан");
-            BelarusSelected = limited.Contains("Беларусь");
         }
 
         if (StorageType == "HDD" &&
@@ -86,6 +136,15 @@ public partial class DatabaseCalculatorViewModel : ObservableObject
         OnPropertyChanged(nameof(SelectedCountriesCount));
         OnPropertyChanged(nameof(SelectedCountriesText));
     }
+
+    private decimal GetRate(string code)
+    {
+        if (rates.TryGetValue(code, out var rate) && rate > 0)
+            return rate;
+
+        throw new InvalidOperationException($"Курс '{code}' не загружен. Проверь подключение к ЦБ РФ.");
+    }
+
 
     private void UpdatePrice(byte countries)
     {
@@ -131,11 +190,56 @@ public partial class DatabaseCalculatorViewModel : ObservableObject
         var price = (basePrice + (SizeGB * 0.10m)) * iopsMultiplier * storageMultiplier * scalabilityMultiplier * countriesMultiplier;
 
         PriceInRub = Math.Round(price, 2);
-        PriceInUsd = Math.Round(price / FIXED_USD_TO_RUB_RATE, 2);
 
+        if (!_ratesReady)
+        {
+            PriceInUsd = PriceInCny = PriceInInr = PriceInTry = PriceInByn =
+                PriceInKzt = PriceInKrw = PriceInEur = PriceInAmd = PriceInUzs = 0m;
+
+            OnPropertyChanged(nameof(PriceInRubFormatted));
+            OnPropertyChanged(nameof(PriceInUsdFormatted));
+            OnPropertyChanged(nameof(PriceInCnyFormatted));
+            OnPropertyChanged(nameof(PriceInInrFormatted));
+            OnPropertyChanged(nameof(PriceInTryFormatted));
+            OnPropertyChanged(nameof(PriceInBynFormatted));
+            OnPropertyChanged(nameof(PriceInKztFormatted));
+            OnPropertyChanged(nameof(PriceInKrwFormatted));
+            OnPropertyChanged(nameof(PriceInEurFormatted));
+            OnPropertyChanged(nameof(PriceInAmdFormatted));
+            OnPropertyChanged(nameof(PriceInUzsFormatted));
+            return;
+        }
+
+        try
+        {
+            PriceInUsd = Math.Round(PriceInRub / GetRate("USD"), 2);
+            PriceInCny = Math.Round(PriceInRub / GetRate("CNY"), 2);
+            PriceInInr = Math.Round(PriceInRub / GetRate("INR"), 2);
+            PriceInTry = Math.Round(PriceInRub / GetRate("TRY"), 2);
+            PriceInByn = Math.Round(PriceInRub / GetRate("BYN"), 2);
+            PriceInKzt = Math.Round(PriceInRub / GetRate("KZT"), 2);
+            PriceInKrw = Math.Round(PriceInRub / GetRate("KRW"), 2);
+            PriceInEur = Math.Round(PriceInRub / GetRate("EUR"), 2);
+            PriceInAmd = Math.Round(PriceInRub / GetRate("AMD"), 2);
+            PriceInUzs = Math.Round(PriceInRub / GetRate("UZS"), 2);
+        }
+        catch (InvalidOperationException)
+        {
+            PriceInUsd = PriceInCny = PriceInInr = PriceInTry = PriceInByn =
+                PriceInKzt = PriceInKrw = PriceInEur = PriceInAmd = PriceInUzs = 0m;
+        }
 
         OnPropertyChanged(nameof(PriceInRubFormatted));
         OnPropertyChanged(nameof(PriceInUsdFormatted));
+        OnPropertyChanged(nameof(PriceInCnyFormatted));
+        OnPropertyChanged(nameof(PriceInInrFormatted));
+        OnPropertyChanged(nameof(PriceInTryFormatted));
+        OnPropertyChanged(nameof(PriceInBynFormatted));
+        OnPropertyChanged(nameof(PriceInKztFormatted));
+        OnPropertyChanged(nameof(PriceInKrwFormatted));
+        OnPropertyChanged(nameof(PriceInEurFormatted));
+        OnPropertyChanged(nameof(PriceInAmdFormatted));
+        OnPropertyChanged(nameof(PriceInUzsFormatted));
         OnPropertyChanged(nameof(SelectedCountriesText));
         OnPropertyChanged(nameof(SelectedCountriesCount));
     }
