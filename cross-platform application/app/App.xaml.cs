@@ -1,4 +1,6 @@
-﻿namespace app
+﻿using app.Services;
+
+namespace app
 {
     public partial class App : Application
     {
@@ -8,6 +10,22 @@
         {
             InitializeComponent();
             Services = services;
+
+            var cache = services.GetService<ExchangeRateCache>();
+            var api = services.GetService<CbrExchangeRateService>();
+
+            // Загружаем курсы в фоне
+            Task.Run(async () =>
+            {
+                try
+                {
+                    cache.Rates = await api.GetRatesAsync();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Ошибка загрузки курсов: " + ex.Message);
+                }
+            });
         }
 
         protected override Window CreateWindow(IActivationState? activationState)

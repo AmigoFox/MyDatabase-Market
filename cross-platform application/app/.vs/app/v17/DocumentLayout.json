@@ -3,24 +3,16 @@
   "WorkspaceRootPath": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\cross-platform application\\app\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4D5E092E-D4BB-4833-ACBB-2FE19C630E1C}|app.csproj|a:\\mydatabasemarket\\mydatabasemarket\\cross-platform application\\app\\databasecalculator.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4D5E092E-D4BB-4833-ACBB-2FE19C630E1C}|app.csproj|solutionrelative:databasecalculator.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D5E092E-D4BB-4833-ACBB-2FE19C630E1C}|app.csproj|a:\\mydatabasemarket\\mydatabasemarket\\cross-platform application\\app\\databasecalculator.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D5E092E-D4BB-4833-ACBB-2FE19C630E1C}|app.csproj|solutionrelative:databasecalculator.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4D5E092E-D4BB-4833-ACBB-2FE19C630E1C}|app.csproj|a:\\mydatabasemarket\\mydatabasemarket\\cross-platform application\\app\\viewmodels\\databasecalculatorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4D5E092E-D4BB-4833-ACBB-2FE19C630E1C}|app.csproj|solutionrelative:viewmodels\\databasecalculatorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D5E092E-D4BB-4833-ACBB-2FE19C630E1C}|app.csproj|a:\\mydatabasemarket\\mydatabasemarket\\cross-platform application\\app\\services\\cbrexchangerateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D5E092E-D4BB-4833-ACBB-2FE19C630E1C}|app.csproj|solutionrelative:services\\cbrexchangerateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D5E092E-D4BB-4833-ACBB-2FE19C630E1C}|app.csproj|a:\\mydatabasemarket\\mydatabasemarket\\cross-platform application\\app\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D5E092E-D4BB-4833-ACBB-2FE19C630E1C}|app.csproj|solutionrelative:mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D5E092E-D4BB-4833-ACBB-2FE19C630E1C}|app.csproj|a:\\mydatabasemarket\\mydatabasemarket\\cross-platform application\\app\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D5E092E-D4BB-4833-ACBB-2FE19C630E1C}|app.csproj|solutionrelative:mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D5E092E-D4BB-4833-ACBB-2FE19C630E1C}|app.csproj|a:\\mydatabasemarket\\mydatabasemarket\\cross-platform application\\app\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D5E092E-D4BB-4833-ACBB-2FE19C630E1C}|app.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,63 +27,41 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "CbrExchangeRateService.cs",
-              "DocumentMoniker": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\cross-platform application\\app\\Services\\CbrExchangeRateService.cs",
-              "RelativeDocumentMoniker": "Services\\CbrExchangeRateService.cs",
-              "ToolTip": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\cross-platform application\\app\\Services\\CbrExchangeRateService.cs",
-              "RelativeToolTip": "Services\\CbrExchangeRateService.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAAADkAAAABAAAAAAAAAA==",
+              "Title": "DatabaseCalculator.xaml.cs",
+              "DocumentMoniker": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\cross-platform application\\app\\DatabaseCalculator.xaml.cs",
+              "RelativeDocumentMoniker": "DatabaseCalculator.xaml.cs",
+              "ToolTip": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\cross-platform application\\app\\DatabaseCalculator.xaml.cs",
+              "RelativeToolTip": "DatabaseCalculator.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-19T16:11:18.029Z"
+              "WhenOpened": "2025-12-20T08:33:45.689Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "DatabaseCalculatorViewModel.cs",
-              "DocumentMoniker": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\cross-platform application\\app\\ViewModels\\DatabaseCalculatorViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\DatabaseCalculatorViewModel.cs",
-              "ToolTip": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\cross-platform application\\app\\ViewModels\\DatabaseCalculatorViewModel.cs",
-              "RelativeToolTip": "ViewModels\\DatabaseCalculatorViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA4AAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-19T16:00:26.233Z",
+              "Title": "DatabaseCalculator.xaml",
+              "DocumentMoniker": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\cross-platform application\\app\\DatabaseCalculator.xaml",
+              "RelativeDocumentMoniker": "DatabaseCalculator.xaml",
+              "ToolTip": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\cross-platform application\\app\\DatabaseCalculator.xaml",
+              "RelativeToolTip": "DatabaseCalculator.xaml",
+              "ViewState": "AgIAAL4AAAAAAAAAAAAEwAYBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-20T08:26:58.935Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "MainPage.xaml.cs",
-              "DocumentMoniker": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\cross-platform application\\app\\MainPage.xaml.cs",
-              "RelativeDocumentMoniker": "MainPage.xaml.cs",
-              "ToolTip": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\cross-platform application\\app\\MainPage.xaml.cs",
-              "RelativeToolTip": "MainPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Title": "DatabaseCalculatorViewModel.cs",
+              "DocumentMoniker": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\cross-platform application\\app\\ViewModels\\DatabaseCalculatorViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\DatabaseCalculatorViewModel.cs",
+              "ToolTip": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\cross-platform application\\app\\ViewModels\\DatabaseCalculatorViewModel.cs",
+              "RelativeToolTip": "ViewModels\\DatabaseCalculatorViewModel.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAkwCoAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-19T15:58:01.447Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "App.xaml.cs",
-              "DocumentMoniker": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\cross-platform application\\app\\App.xaml.cs",
-              "RelativeDocumentMoniker": "App.xaml.cs",
-              "ToolTip": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\cross-platform application\\app\\App.xaml.cs",
-              "RelativeToolTip": "App.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-19T15:50:29.515Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MauiProgram.cs",
-              "DocumentMoniker": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\cross-platform application\\app\\MauiProgram.cs",
-              "RelativeDocumentMoniker": "MauiProgram.cs",
-              "ToolTip": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\cross-platform application\\app\\MauiProgram.cs",
-              "RelativeToolTip": "MauiProgram.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABwAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-19T08:11:06.103Z"
+              "WhenOpened": "2025-12-20T08:26:57.429Z",
+              "EditorCaption": ""
             }
           ]
         }

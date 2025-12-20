@@ -178,8 +178,98 @@
                         </HorizontalStackLayout>
 
 
-                    </VerticalStackLayout>
 
+
+
+
+
+
+                        <Frame BackgroundColor="#F3E5F5"
+       CornerRadius="12"
+       Padding="12"
+       Margin="0,0,0,16"
+       BorderColor="#CE93D8">
+
+                            <VerticalStackLayout Spacing="8">
+
+                                <!-- Заголовок -->
+                                <Label Text="Курсы валют ЦБ РФ"
+               FontAttributes="Bold"
+               TextColor="#6A1B9A"
+               HorizontalOptions="Center"
+               FontSize="14" />
+
+                                <!-- FlexLayout без RowSpacing/ColumnSpacing (MAUI) -->
+                                <FlexLayout Direction="Row"
+                    Wrap="Wrap"
+                    JustifyContent="Start"
+                    AlignItems="Center"
+                    Padding="4">
+
+                                    <!-- Каждый блок валюты — компактный вертикальный стек с отступом -->
+                                    <VerticalStackLayout WidthRequest="120" Margin="4" Spacing="2" Padding="4">
+                                        <Label Text="USD" TextColor="#4A148C" FontAttributes="Bold" FontSize="12"/>
+                                        <Label Text="{Binding UsdRate}" TextColor="#6A1B9A" FontSize="12"/>
+                                    </VerticalStackLayout>
+
+                                    <VerticalStackLayout WidthRequest="120" Margin="4" Spacing="2" Padding="4">
+                                        <Label Text="EUR" TextColor="#4A148C" FontAttributes="Bold" FontSize="12"/>
+                                        <Label Text="{Binding EurRate}" TextColor="#6A1B9A" FontSize="12"/>
+                                    </VerticalStackLayout>
+
+                                    <VerticalStackLayout WidthRequest="120" Margin="4" Spacing="2" Padding="4">
+                                        <Label Text="CNY" TextColor="#4A148C" FontAttributes="Bold" FontSize="12"/>
+                                        <Label Text="{Binding CnyRate}" TextColor="#6A1B9A" FontSize="12"/>
+                                    </VerticalStackLayout>
+
+                                    <VerticalStackLayout WidthRequest="120" Margin="4" Spacing="2" Padding="4">
+                                        <Label Text="KZT" TextColor="#4A148C" FontAttributes="Bold" FontSize="12"/>
+                                        <Label Text="{Binding KztRate}" TextColor="#6A1B9A" FontSize="12"/>
+                                    </VerticalStackLayout>
+
+                                    <VerticalStackLayout WidthRequest="120" Margin="4" Spacing="2" Padding="4">
+                                        <Label Text="INR" TextColor="#4A148C" FontAttributes="Bold" FontSize="12"/>
+                                        <Label Text="{Binding InrRate}" TextColor="#6A1B9A" FontSize="12"/>
+                                    </VerticalStackLayout>
+
+                                    <VerticalStackLayout WidthRequest="120" Margin="4" Spacing="2" Padding="4">
+                                        <Label Text="TRY" TextColor="#4A148C" FontAttributes="Bold" FontSize="12"/>
+                                        <Label Text="{Binding TryRate}" TextColor="#6A1B9A" FontSize="12"/>
+                                    </VerticalStackLayout>
+
+                                    <VerticalStackLayout WidthRequest="120" Margin="4" Spacing="2" Padding="4">
+                                        <Label Text="BYN" TextColor="#4A148C" FontAttributes="Bold" FontSize="12"/>
+                                        <Label Text="{Binding BynRate}" TextColor="#6A1B9A" FontSize="12"/>
+                                    </VerticalStackLayout>
+
+                                    <VerticalStackLayout WidthRequest="120" Margin="4" Spacing="2" Padding="4">
+                                        <Label Text="UZS" TextColor="#4A148C" FontAttributes="Bold" FontSize="12"/>
+                                        <Label Text="{Binding UzsRate}" TextColor="#6A1B9A" FontSize="12"/>
+                                    </VerticalStackLayout>
+
+                                    <VerticalStackLayout WidthRequest="120" Margin="4" Spacing="2" Padding="4">
+                                        <Label Text="AMD" TextColor="#4A148C" FontAttributes="Bold" FontSize="12"/>
+                                        <Label Text="{Binding AmdRate}" TextColor="#6A1B9A" FontSize="12"/>
+                                    </VerticalStackLayout>
+
+                                    <VerticalStackLayout WidthRequest="120" Margin="4" Spacing="2" Padding="4">
+                                        <Label Text="KRW" TextColor="#4A148C" FontAttributes="Bold" FontSize="12"/>
+                                        <Label Text="{Binding KrwRate}" TextColor="#6A1B9A" FontSize="12"/>
+                                    </VerticalStackLayout>
+
+                                </FlexLayout>
+                            </VerticalStackLayout>
+                        </Frame>
+
+
+
+
+
+
+
+
+
+                    </VerticalStackLayout>
                 </Grid>
             </Frame>
 

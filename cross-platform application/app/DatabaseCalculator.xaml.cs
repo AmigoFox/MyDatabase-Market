@@ -11,13 +11,6 @@ public partial class DatabaseCalculator : ContentPage
         BindingContext = vm;
     }
 
-    protected override async void OnAppearing()
-    {
-        base.OnAppearing();
-        if (BindingContext is app.ViewModels.DatabaseCalculatorViewModel viewModel)
-            await viewModel.InitializeAsync();
-    }
-
     private void OnPickerChanged(object sender, EventArgs e)
     {
 

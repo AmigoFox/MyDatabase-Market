@@ -1,18 +1,16 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using app.Services; // важно: здесь лежит ExchangeRateCache
 
 namespace app.ViewModels;
 
 public partial class DatabaseCalculatorViewModel : ObservableObject
 {
-    private Dictionary<string, decimal> rates = new();
-    private readonly CbrExchangeRateService _rateService;
-    private bool _ratesReady;
+    private readonly ExchangeRateCache _cache;
 
-
-    public DatabaseCalculatorViewModel(CbrExchangeRateService rateService)
+    public DatabaseCalculatorViewModel(ExchangeRateCache cache)
     {
-        _rateService = rateService;
+        _cache = cache;
     }
 
     [ObservableProperty] private string _selectedType = "MySQL";
@@ -39,6 +37,20 @@ public partial class DatabaseCalculatorViewModel : ObservableObject
     [ObservableProperty] private decimal _priceInAmd;
     [ObservableProperty] private decimal _priceInUzs;
 
+
+    public string UsdRate => $"{_cache.Rates.GetValueOrDefault("USD"):N2}";
+    public string CnyRate => $"{_cache.Rates.GetValueOrDefault("CNY"):N2}";
+    public string EurRate => $"{_cache.Rates.GetValueOrDefault("EUR"):N2}";
+    public string KztRate => $"{_cache.Rates.GetValueOrDefault("KZT"):N2}";
+    public string BynRate => $"{_cache.Rates.GetValueOrDefault("BYN"):N2}";
+    public string InrRate => $"{_cache.Rates.GetValueOrDefault("INR"):N2}";
+    public string TryRate => $"{_cache.Rates.GetValueOrDefault("TRY"):N2}";
+    public string KrwRate => $"{_cache.Rates.GetValueOrDefault("KRW"):N2}";
+    public string AmdRate => $"{_cache.Rates.GetValueOrDefault("AMD"):N2}";
+    public string UzsRate => $"{_cache.Rates.GetValueOrDefault("UZS"):N2}";
+
+
+
     public string PriceInRubFormatted => $"{PriceInRub:N2} ₽";
     public string PriceInUsdFormatted => $"{PriceInUsd:N2} $";
     public string PriceInCnyFormatted => $"{PriceInCny:N2} ¥";
@@ -50,9 +62,6 @@ public partial class DatabaseCalculatorViewModel : ObservableObject
     public string PriceInEurFormatted => $"{PriceInEur:N2} €";
     public string PriceInAmdFormatted => $"{PriceInAmd:N2} ֏";
     public string PriceInUzsFormatted => $"{PriceInUzs:N2} сум";
-
-   
-
 
     partial void OnRussiaSelectedChanged(bool value) => ValidateAndUpdate();
     partial void OnKazakhstanSelectedChanged(bool value) => ValidateAndUpdate();
@@ -99,20 +108,6 @@ public partial class DatabaseCalculatorViewModel : ObservableObject
         return total;
     }
 
-
-
-    [RelayCommand]
-    public async Task InitializeAsync()
-    {
-        rates = await _rateService.GetRatesAsync();
-
-        if (!rates.ContainsKey("USD"))
-            throw new InvalidOperationException("Курс USD не загружен. Проверь подключение к ЦБ РФ.");
-
-        _ratesReady = true;
-        ValidateAndUpdate();
-    }
-
     [RelayCommand]
     public void OnSelectionChanged() => ValidateAndUpdate();
 
@@ -139,12 +134,11 @@ public partial class DatabaseCalculatorViewModel : ObservableObject
 
     private decimal GetRate(string code)
     {
-        if (rates.TryGetValue(code, out var rate) && rate > 0)
+        if (_cache.Rates.TryGetValue(code, out var rate))
             return rate;
 
-        throw new InvalidOperationException($"Курс '{code}' не загружен. Проверь подключение к ЦБ РФ.");
+        throw new Exception($"Курс {code} не загружен");
     }
-
 
     private void UpdatePrice(byte countries)
     {
@@ -191,25 +185,6 @@ public partial class DatabaseCalculatorViewModel : ObservableObject
 
         PriceInRub = Math.Round(price, 2);
 
-        if (!_ratesReady)
-        {
-            PriceInUsd = PriceInCny = PriceInInr = PriceInTry = PriceInByn =
-                PriceInKzt = PriceInKrw = PriceInEur = PriceInAmd = PriceInUzs = 0m;
-
-            OnPropertyChanged(nameof(PriceInRubFormatted));
-            OnPropertyChanged(nameof(PriceInUsdFormatted));
-            OnPropertyChanged(nameof(PriceInCnyFormatted));
-            OnPropertyChanged(nameof(PriceInInrFormatted));
-            OnPropertyChanged(nameof(PriceInTryFormatted));
-            OnPropertyChanged(nameof(PriceInBynFormatted));
-            OnPropertyChanged(nameof(PriceInKztFormatted));
-            OnPropertyChanged(nameof(PriceInKrwFormatted));
-            OnPropertyChanged(nameof(PriceInEurFormatted));
-            OnPropertyChanged(nameof(PriceInAmdFormatted));
-            OnPropertyChanged(nameof(PriceInUzsFormatted));
-            return;
-        }
-
         try
         {
             PriceInUsd = Math.Round(PriceInRub / GetRate("USD"), 2);
@@ -223,7 +198,7 @@ public partial class DatabaseCalculatorViewModel : ObservableObject
             PriceInAmd = Math.Round(PriceInRub / GetRate("AMD"), 2);
             PriceInUzs = Math.Round(PriceInRub / GetRate("UZS"), 2);
         }
-        catch (InvalidOperationException)
+        catch (Exception)
         {
             PriceInUsd = PriceInCny = PriceInInr = PriceInTry = PriceInByn =
                 PriceInKzt = PriceInKrw = PriceInEur = PriceInAmd = PriceInUzs = 0m;
