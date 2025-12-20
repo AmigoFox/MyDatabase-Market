@@ -16,4 +16,9 @@
         ContentTemplate="{DataTemplate local:DatabaseCalculator}"
         Route="DatabaseCalculator" />
 
+    <ShellContent
+        Title="Личный кабинет"
+        ContentTemplate="{DataTemplate local:Personal_account}"
+        Route="Personal_account" />
 </Shell>
+    

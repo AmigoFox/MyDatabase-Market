@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="app.Personal_account"
+             Title="Личный кабинет"
+             BackgroundColor="#F8F4FF">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <!-- Заголовок -->
+            <Label Text="Личный кабинет"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="#4A148C" />
+
+            <!-- Добро пожаловать -->
+            <Label Text="Добро пожаловать, Amigo!"
+                   FontSize="18"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="#6A1B9A" />
+
+            <!-- Разделы -->
+            <Grid ColumnDefinitions="*,*,*"
+                  RowDefinitions="Auto"
+                  ColumnSpacing="12">
+
+                <!-- Профиль -->
+                <Frame Grid.Column="0"
+                       BackgroundColor="White"
+                       BorderColor="#D1C4E9"
+                       CornerRadius="12"
+                       Padding="12">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnProfileTapped" />
+                    </Frame.GestureRecognizers>
+                    <VerticalStackLayout>
+                        <Label Text="Профиль"
+                               FontAttributes="Bold"
+                               TextColor="#4A148C" />
+                        <Label Text="Данные аккаунта и безопасность."
+                               FontSize="12"
+                               TextColor="#6A1B9A" />
+                    </VerticalStackLayout>
+                </Frame>
+
+                <!-- Заказы -->
+                <Frame Grid.Column="1"
+                       BackgroundColor="White"
+                       BorderColor="#D1C4E9"
+                       CornerRadius="12"
+                       Padding="12">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOrdersTapped" />
+                    </Frame.GestureRecognizers>
+                    <VerticalStackLayout>
+                        <Label Text="Заказы"
+                               FontAttributes="Bold"
+                               TextColor="#4A148C" />
+                        <Label Text="Список БД, стоимость, статусы."
+                               FontSize="12"
+                               TextColor="#6A1B9A" />
+                    </VerticalStackLayout>
+                </Frame>
+
+                <!-- Платежи -->
+                <Frame Grid.Column="2"
+                       BackgroundColor="White"
+                       BorderColor="#D1C4E9"
+                       CornerRadius="12"
+                       Padding="12">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnPaymentsTapped" />
+                    </Frame.GestureRecognizers>
+                    <VerticalStackLayout>
+                        <Label Text="Платежи"
+                               FontAttributes="Bold"
+                               TextColor="#4A148C" />
+                        <Label Text="История оплат и суммы."
+                               FontSize="12"
+                               TextColor="#6A1B9A" />
+                    </VerticalStackLayout>
+                </Frame>
+
+            </Grid>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
