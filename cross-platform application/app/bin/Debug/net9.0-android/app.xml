@@ -8,6 +8,7 @@
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
+            <inheritdoc/>
         </member>
         <member name="P:app.ViewModels.DatabaseCalculatorViewModel.SelectedType">
             <inheritdoc cref="F:app.ViewModels.DatabaseCalculatorViewModel._selectedType"/>
@@ -44,6 +45,64 @@
         </member>
         <member name="P:app.ViewModels.DatabaseCalculatorViewModel.PriceInUsd">
             <inheritdoc cref="F:app.ViewModels.DatabaseCalculatorViewModel._priceInUsd"/>
+        </member>
+        <member name="P:app.ViewModels.DatabaseCalculatorViewModel.PriceInCny">
+            <inheritdoc cref="F:app.ViewModels.DatabaseCalculatorViewModel._priceInCny"/>
+        </member>
+        <member name="P:app.ViewModels.DatabaseCalculatorViewModel.PriceInInr">
+            <inheritdoc cref="F:app.ViewModels.DatabaseCalculatorViewModel._priceInInr"/>
+        </member>
+        <member name="P:app.ViewModels.DatabaseCalculatorViewModel.PriceInTry">
+            <inheritdoc cref="F:app.ViewModels.DatabaseCalculatorViewModel._priceInTry"/>
+        </member>
+        <member name="P:app.ViewModels.DatabaseCalculatorViewModel.PriceInByn">
+            <inheritdoc cref="F:app.ViewModels.DatabaseCalculatorViewModel._priceInByn"/>
+        </member>
+        <member name="P:app.ViewModels.DatabaseCalculatorViewModel.PriceInKzt">
+            <inheritdoc cref="F:app.ViewModels.DatabaseCalculatorViewModel._priceInKzt"/>
+        </member>
+        <member name="P:app.ViewModels.DatabaseCalculatorViewModel.PriceInKrw">
+            <inheritdoc cref="F:app.ViewModels.DatabaseCalculatorViewModel._priceInKrw"/>
+        </member>
+        <member name="P:app.ViewModels.DatabaseCalculatorViewModel.PriceInEur">
+            <inheritdoc cref="F:app.ViewModels.DatabaseCalculatorViewModel._priceInEur"/>
+        </member>
+        <member name="P:app.ViewModels.DatabaseCalculatorViewModel.PriceInAmd">
+            <inheritdoc cref="F:app.ViewModels.DatabaseCalculatorViewModel._priceInAmd"/>
+        </member>
+        <member name="P:app.ViewModels.DatabaseCalculatorViewModel.PriceInUzs">
+            <inheritdoc cref="F:app.ViewModels.DatabaseCalculatorViewModel._priceInUzs"/>
+        </member>
+        <member name="M:app.ViewModels.DatabaseCalculatorViewModel.OnRussiaSelectedChanged(System.Boolean)">
+            <summary>Executes the logic for when <see cref="P:app.ViewModels.DatabaseCalculatorViewModel.RussiaSelected"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:app.ViewModels.DatabaseCalculatorViewModel.RussiaSelected"/> is changed.</remarks>
+        </member>
+        <member name="M:app.ViewModels.DatabaseCalculatorViewModel.OnKazakhstanSelectedChanged(System.Boolean)">
+            <summary>Executes the logic for when <see cref="P:app.ViewModels.DatabaseCalculatorViewModel.KazakhstanSelected"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:app.ViewModels.DatabaseCalculatorViewModel.KazakhstanSelected"/> is changed.</remarks>
+        </member>
+        <member name="M:app.ViewModels.DatabaseCalculatorViewModel.OnChinaSelectedChanged(System.Boolean)">
+            <summary>Executes the logic for when <see cref="P:app.ViewModels.DatabaseCalculatorViewModel.ChinaSelected"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:app.ViewModels.DatabaseCalculatorViewModel.ChinaSelected"/> is changed.</remarks>
+        </member>
+        <member name="M:app.ViewModels.DatabaseCalculatorViewModel.OnUzbekistanSelectedChanged(System.Boolean)">
+            <summary>Executes the logic for when <see cref="P:app.ViewModels.DatabaseCalculatorViewModel.UzbekistanSelected"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:app.ViewModels.DatabaseCalculatorViewModel.UzbekistanSelected"/> is changed.</remarks>
+        </member>
+        <member name="M:app.ViewModels.DatabaseCalculatorViewModel.OnBelarusSelectedChanged(System.Boolean)">
+            <summary>Executes the logic for when <see cref="P:app.ViewModels.DatabaseCalculatorViewModel.BelarusSelected"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:app.ViewModels.DatabaseCalculatorViewModel.BelarusSelected"/> is changed.</remarks>
+        </member>
+        <member name="F:app.ViewModels.DatabaseCalculatorViewModel.initializeCommand">
+            <summary>The backing field for <see cref="P:app.ViewModels.DatabaseCalculatorViewModel.InitializeCommand"/>.</summary>
+        </member>
+        <member name="P:app.ViewModels.DatabaseCalculatorViewModel.InitializeCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:app.ViewModels.DatabaseCalculatorViewModel.InitializeAsync"/>.</summary>
         </member>
         <member name="F:app.ViewModels.DatabaseCalculatorViewModel.selectionChangedCommand">
             <summary>The backing field for <see cref="P:app.ViewModels.DatabaseCalculatorViewModel.SelectionChangedCommand"/>.</summary>
@@ -105,6 +164,33 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.PriceInUsd">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "PriceInUsd" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.PriceInCny">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "PriceInCny" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.PriceInInr">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "PriceInInr" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.PriceInTry">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "PriceInTry" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.PriceInByn">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "PriceInByn" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.PriceInKzt">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "PriceInKzt" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.PriceInKrw">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "PriceInKrw" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.PriceInEur">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "PriceInEur" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.PriceInAmd">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "PriceInAmd" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.PriceInUzs">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "PriceInUzs" generated properties.</summary>
+        </member>
         <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
             <summary>
             A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
@@ -146,6 +232,33 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.PriceInUsd">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "PriceInUsd" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.PriceInCny">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "PriceInCny" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.PriceInInr">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "PriceInInr" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.PriceInTry">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "PriceInTry" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.PriceInByn">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "PriceInByn" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.PriceInKzt">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "PriceInKzt" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.PriceInKrw">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "PriceInKrw" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.PriceInEur">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "PriceInEur" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.PriceInAmd">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "PriceInAmd" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.PriceInUzs">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "PriceInUzs" generated properties.</summary>
         </member>
     </members>
 </doc>

@@ -1,0 +1,25 @@
+    private decimal GetCountriesMultiplier()
+    {
+        var countries = GetSelectedCountries();
+        if (countries.Count == 0) return 1m;
+
+        decimal total = 0m;
+
+        foreach (var country in countries)
+        {
+            total += country switch
+            {
+                "Россия" => 1.0m,
+                "Беларусь" => 1.2m,
+                "Казахстан" => 1.5m,
+                "Узбекистан" => 1.2m,
+                "Китай" => 1.8m,
+                _ => 1.0m
+            };
+        }
+
+            if (countries.Count > 1)
+                total *= 1.1m;
+
+            return total;
+    }

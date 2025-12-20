@@ -10,7 +10,9 @@
 
         private async void OnCalculatorClicked(object? sender, EventArgs e)
         {
-            await Navigation.PushAsync(new DatabaseCalculator());
+            var page = App.Services.GetService<DatabaseCalculator>();
+            await Navigation.PushAsync(page);
         }
+
     }
 }
