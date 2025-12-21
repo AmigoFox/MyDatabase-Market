@@ -12,6 +12,7 @@ A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\ne
 A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Assets.xcassets\appicon.appiconset\Contents.json
 A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Resources\cassandra.png
 A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Resources\mariadb.png
+<<<<<<< Updated upstream
 A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Resources\postgresql.png
 A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Resources\mongodb.png
 A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Resources\redis.png
@@ -19,3 +20,12 @@ A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\ne
 A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Resources\oracledb.jpeg
 A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Resources\microsoftsqlserver.png
 A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Resources\mysql.png
+=======
+A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Resources\microsoftsqlserver.png
+A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Resources\oracledb.jpeg
+A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Resources\mongodb.png
+A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Resources\postgresql.png
+A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Resources\sqlite.jpg
+A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Resources\mysql.png
+A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\net9.0-ios\iossimulator-x64\resizetizer\r\Resources\redis.png
+>>>>>>> Stashed changes

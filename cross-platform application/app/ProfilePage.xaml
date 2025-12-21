@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="app.ProfilePage"
+             Title="Личный кабинет"
+             BackgroundColor="#F8F4FF">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <!-- ✅ Карточки разделов -->
+            <Grid ColumnDefinitions="*,*,*"
+       ColumnSpacing="12">
+
+                <!-- Профиль -->
+                <Frame Grid.Column="0"
+            BackgroundColor="White"
+            BorderColor="#D1C4E9"
+            CornerRadius="12"
+            Padding="12">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnProfileDetailsTapped" />
+                    </Frame.GestureRecognizers>
+                    <VerticalStackLayout>
+                        <Label Text="Личный кабинет"
+                    FontAttributes="Bold"
+                    TextColor="#4A148C" />
+                        <Label Text="Информация"
+                    FontSize="12"
+                    TextColor="#6A1B9A" />
+                    </VerticalStackLayout>
+                </Frame>
+
+                <!-- Заказы -->
+                <Frame Grid.Column="1"
+            BackgroundColor="White"
+            BorderColor="#D1C4E9"
+            CornerRadius="12"
+            Padding="12">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOrdersTapped" />
+                    </Frame.GestureRecognizers>
+                    <VerticalStackLayout>
+                        <Label Text="Заказы"
+                    FontAttributes="Bold"
+                    TextColor="#4A148C" />
+                        <Label Text="Ваши базы данных"
+                    FontSize="12"
+                    TextColor="#6A1B9A" />
+                    </VerticalStackLayout>
+                </Frame>
+
+                <!-- Платежи -->
+                <Frame Grid.Column="2"
+            BackgroundColor="White"
+            BorderColor="#D1C4E9"
+            CornerRadius="12"
+            Padding="12">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnPaymentsTapped" />
+                    </Frame.GestureRecognizers>
+                    <VerticalStackLayout>
+                        <Label Text="Платежи"
+                    FontAttributes="Bold"
+                    TextColor="#4A148C" />
+                        <Label Text="История оплат"
+                    FontSize="12"
+                    TextColor="#6A1B9A" />
+                    </VerticalStackLayout>
+                </Frame>
+
+            </Grid>
+
+            <!-- Заголовок -->
+            <Label Text="Личный кабинет"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="#4A148C" />
+
+            <!-- ✅ Блок информации о пользователе -->
+            <Frame BackgroundColor="White"
+                   BorderColor="#D1C4E9"
+                   CornerRadius="12"
+                   Padding="16"
+                   Margin="0,0,0,12">
+
+                <VerticalStackLayout Spacing="6">
+
+                    <Label Text="Информация аккаунта"
+                           FontSize="18"
+                           FontAttributes="Bold"
+                           TextColor="#6A1B9A" />
+
+                    <Label Text="Имя: Андрей"
+                           FontSize="14"
+                           TextColor="#4A148C" />
+
+                    <Label Text="Почта: andr***@gmail.com"
+                           FontSize="14"
+                           TextColor="#4A148C" />
+
+                    <Label Text="Дата регистрации: 12.03.2024"
+                           FontSize="14"
+                           TextColor="#4A148C" />
+
+                    <Label Text="Активных подписок: 2"
+                           FontSize="14"
+                           TextColor="#4A148C" />
+
+                    <Label Text="ID аккаунта: #DBM-00421"
+                           FontSize="14"
+                           TextColor="#4A148C" />
+
+                </VerticalStackLayout>
+            </Frame>
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

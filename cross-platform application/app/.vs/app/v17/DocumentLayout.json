@@ -3,6 +3,7 @@
   "WorkspaceRootPath": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\cross-platform application\\app\\",
   "Documents": [
     {
+<<<<<<< Updated upstream
       "AbsoluteMoniker": "D:0:0:{4D5E092E-D4BB-4833-ACBB-2FE19C630E1C}|app.csproj|a:\\mydatabasemarket\\mydatabasemarket\\cross-platform application\\app\\databasecalculator.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{4D5E092E-D4BB-4833-ACBB-2FE19C630E1C}|app.csproj|solutionrelative:databasecalculator.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
@@ -13,6 +14,18 @@
     {
       "AbsoluteMoniker": "D:0:0:{4D5E092E-D4BB-4833-ACBB-2FE19C630E1C}|app.csproj|a:\\mydatabasemarket\\mydatabasemarket\\cross-platform application\\app\\viewmodels\\databasecalculatorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4D5E092E-D4BB-4833-ACBB-2FE19C630E1C}|app.csproj|solutionrelative:viewmodels\\databasecalculatorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+      "AbsoluteMoniker": "D:0:0:{4D5E092E-D4BB-4833-ACBB-2FE19C630E1C}|app.csproj|a:\\mydatabasemarket\\mydatabasemarket\\cross-platform application\\app\\personal_account.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D5E092E-D4BB-4833-ACBB-2FE19C630E1C}|app.csproj|solutionrelative:personal_account.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D5E092E-D4BB-4833-ACBB-2FE19C630E1C}|app.csproj|a:\\mydatabasemarket\\mydatabasemarket\\cross-platform application\\app\\personal_account.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4D5E092E-D4BB-4833-ACBB-2FE19C630E1C}|app.csproj|solutionrelative:personal_account.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D5E092E-D4BB-4833-ACBB-2FE19C630E1C}|app.csproj|a:\\mydatabasemarket\\mydatabasemarket\\cross-platform application\\app\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4D5E092E-D4BB-4833-ACBB-2FE19C630E1C}|app.csproj|solutionrelative:appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+>>>>>>> Stashed changes
     }
   ],
   "DocumentGroupContainers": [
@@ -22,10 +35,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 1,
               "Title": "DatabaseCalculator.xaml.cs",
               "DocumentMoniker": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\cross-platform application\\app\\DatabaseCalculator.xaml.cs",
@@ -62,6 +76,42 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-20T08:26:57.429Z",
               "EditorCaption": ""
+=======
+              "DocumentIndex": 0,
+              "Title": "Personal_account.xaml.cs",
+              "DocumentMoniker": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\cross-platform application\\app\\Personal_account.xaml.cs",
+              "RelativeDocumentMoniker": "Personal_account.xaml.cs",
+              "ToolTip": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\cross-platform application\\app\\Personal_account.xaml.cs",
+              "RelativeToolTip": "Personal_account.xaml.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAUwBcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-21T11:00:53.284Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Personal_account.xaml",
+              "DocumentMoniker": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\cross-platform application\\app\\Personal_account.xaml",
+              "RelativeDocumentMoniker": "Personal_account.xaml",
+              "ToolTip": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\cross-platform application\\app\\Personal_account.xaml",
+              "RelativeToolTip": "Personal_account.xaml",
+              "ViewState": "AgIAAE0AAAAAAAAAAAApwF0AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-21T11:00:44.989Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AppShell.xaml",
+              "DocumentMoniker": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\cross-platform application\\app\\AppShell.xaml",
+              "RelativeDocumentMoniker": "AppShell.xaml",
+              "ToolTip": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\cross-platform application\\app\\AppShell.xaml",
+              "RelativeToolTip": "AppShell.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-21T10:30:56.295Z"
+>>>>>>> Stashed changes
             }
           ]
         }

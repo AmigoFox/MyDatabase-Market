@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="app.OrdersPage"
+             Title="Заказы"
+             BackgroundColor="#F8F4FF">
+    
+    
+
+    <VerticalStackLayout Padding="20" Spacing="16">
+
+        <!-- ✅ Карточки разделов -->
+        <Grid ColumnDefinitions="*,*,*"
+       ColumnSpacing="12">
+
+            <!-- Профиль -->
+            <Frame Grid.Column="0"
+            BackgroundColor="White"
+            BorderColor="#D1C4E9"
+            CornerRadius="12"
+            Padding="12">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnProfileDetailsTapped" />
+                </Frame.GestureRecognizers>
+                <VerticalStackLayout>
+                    <Label Text="Профиль"
+                    FontAttributes="Bold"
+                    TextColor="#4A148C" />
+                    <Label Text="Настройки и безопасность"
+                    FontSize="12"
+                    TextColor="#6A1B9A" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Заказы -->
+            <Frame Grid.Column="1"
+            BackgroundColor="White"
+            BorderColor="#D1C4E9"
+            CornerRadius="12"
+            Padding="12">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnOrdersTapped" />
+                </Frame.GestureRecognizers>
+                <VerticalStackLayout>
+                    <Label Text="Заказы"
+                    FontAttributes="Bold"
+                    TextColor="#4A148C" />
+                    <Label Text="Ваши базы данных"
+                    FontSize="12"
+                    TextColor="#6A1B9A" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Платежи -->
+            <Frame Grid.Column="2"
+            BackgroundColor="White"
+            BorderColor="#D1C4E9"
+            CornerRadius="12"
+            Padding="12">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnPaymentsTapped" />
+                </Frame.GestureRecognizers>
+                <VerticalStackLayout>
+                    <Label Text="Платежи"
+                    FontAttributes="Bold"
+                    TextColor="#4A148C" />
+                    <Label Text="История оплат"
+                    FontSize="12"
+                    TextColor="#6A1B9A" />
+                </VerticalStackLayout>
+            </Frame>
+
+        </Grid>
+        
+        
+
+        <Label Text="Ваши заказы"
+               FontSize="22"
+               FontAttributes="Bold"
+               TextColor="#4A148C" />
+
+        <CollectionView x:Name="OrdersList"
+                        SelectionMode="Single"
+                        SelectionChanged="OnOrdersTapped">
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame BackgroundColor="White"
+                           BorderColor="#D1C4E9"
+                           CornerRadius="12"
+                           Padding="12"
+                           Margin="0,0,0,12">
+
+                        <VerticalStackLayout>
+                            <Label Text="{Binding Name}"
+                                   FontAttributes="Bold"
+                                   TextColor="#4A148C" />
+
+                            <Label Text="{Binding Price}"
+                                   TextColor="#6A1B9A" />
+
+                            <Label Text="{Binding Status}"
+                                   TextColor="#7E57C2" />
+                        </VerticalStackLayout>
+
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+
+    </VerticalStackLayout>
+</ContentPage>
