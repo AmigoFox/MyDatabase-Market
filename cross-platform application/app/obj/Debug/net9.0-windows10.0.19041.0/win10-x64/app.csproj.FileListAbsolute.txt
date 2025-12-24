@@ -1,4 +1,5 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\app.csproj.AssemblyReference.cache
 A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\mauiimage.inputs
 A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\mauifont.inputs
@@ -14,6 +15,9 @@ A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\ne
 =======
 A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Internal.FrameworkUdk.dll
 >>>>>>> Stashed changes
+=======
+A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Microsoft.Internal.FrameworkUdk.dll
+>>>>>>> Stashed changes
 A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\Platforms\Windows\App.xbf
 A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\AboutAssets.txt
 A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\splashSplashScreen.scale-100.png
@@ -23,6 +27,7 @@ A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\bin\Debug\ne
 A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\splashSplashScreen.scale-400.png
 A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\OpenSans-Regular.ttf
 A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\OpenSans-Semibold.ttf
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\cassandra.scale-100.png
 A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\sqlite.scale-100.jpg
@@ -34,6 +39,8 @@ A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\bin\Debug\ne
 A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\redis.scale-100.png
 A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\oracledb.scale-100.jpeg
 =======
+=======
+>>>>>>> Stashed changes
 A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\microsoftsqlserver.scale-100.png
 A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\cassandra.scale-100.png
 A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\postgresql.scale-100.png
@@ -43,6 +50,9 @@ A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\bin\Debug\ne
 A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\mysql.scale-100.png
 A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\redis.scale-100.png
 A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\sqlite.scale-100.jpg
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\appiconLargeTile.scale-400.png
 A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\appiconLargeTile.scale-200.png
@@ -462,6 +472,7 @@ A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\ne
 A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf
 A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Semibold.ttf
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\cassandra.scale-100.png
 A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\sqlite.scale-100.jpg
 A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\postgresql.scale-100.png
@@ -472,6 +483,8 @@ A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\ne
 A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\redis.scale-100.png
 A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\oracledb.scale-100.jpeg
 =======
+=======
+>>>>>>> Stashed changes
 A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\microsoftsqlserver.scale-100.png
 A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\cassandra.scale-100.png
 A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\postgresql.scale-100.png
@@ -481,6 +494,9 @@ A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\ne
 A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\mysql.scale-100.png
 A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\redis.scale-100.png
 A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\sqlite.scale-100.jpg
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png
 A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png

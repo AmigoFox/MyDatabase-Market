@@ -19,6 +19,7 @@ A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\ne
 A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\net9.0-android\resizetizer\f\OpenSans-Regular.ttf
 A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\net9.0-android\resizetizer\f\OpenSans-Semibold.ttf
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\net9.0-android\resizetizer\r\drawable\mariadb.png
 A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\net9.0-android\resizetizer\r\drawable\postgresql.png
 A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\net9.0-android\resizetizer\r\drawable\sqlite.jpg
@@ -34,10 +35,20 @@ A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\ne
 A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\net9.0-android\resizetizer\r\drawable\sqlite.jpg
 A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\net9.0-android\resizetizer\r\drawable\redis.png
 A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\net9.0-android\resizetizer\r\drawable\mongodb.png
+=======
+A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\net9.0-android\resizetizer\r\drawable\mysql.png
+A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\net9.0-android\resizetizer\r\drawable\cassandra.png
+A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\net9.0-android\resizetizer\r\drawable\sqlite.jpg
+A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\net9.0-android\resizetizer\r\drawable\redis.png
+A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\net9.0-android\resizetizer\r\drawable\mongodb.png
+>>>>>>> Stashed changes
 A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\net9.0-android\resizetizer\r\drawable\postgresql.png
 A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\net9.0-android\resizetizer\r\drawable\mariadb.png
 A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\net9.0-android\resizetizer\r\drawable\oracledb.jpeg
 A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\net9.0-android\resizetizer\r\drawable\microsoftsqlserver.png
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\net9.0-android\resizetizer\r\mipmap-xxxhdpi\appicon_round.png
 A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\obj\Debug\net9.0-android\resizetizer\r\mipmap-xxhdpi\appicon_round.png
