@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\API_DatabaseMarket",
+    "\\API_DatabaseMarket\\obj",
+    "\\API_DatabaseMarket\\Properties"
   ],
+  "SelectedNode": "\\API_DatabaseMarket\\OrderItemDto.cs",
   "PreviewInSolutionExplorer": false
 }

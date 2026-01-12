@@ -2,10 +2,13 @@
 
 namespace API_DatabaseMarket
 {
-    public class OrderItemDto
+    namespace API_DatabaseMarket.Models
     {
-        public int OrderId { get; set; }
-        public JsonElement Config { get; set; }
-    }
+        public class OrderItemDto
+        {
+            public int OrderId { get; set; }
+            public JsonElement Config { get; set; }
+        }
 
+    }
 }
