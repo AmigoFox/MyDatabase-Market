@@ -1,8 +1,6 @@
-﻿using API_DatabaseMarket;
+﻿using API_DatabaseMarket.DTOs;
+using API_DatabaseMarket.Services;
 using Microsoft.AspNetCore.Mvc;
-using System.Text.Json;
-using API_DatabaseMarket.DTOs;
-
 
 namespace API_DatabaseMarket.Controllers
 {
@@ -10,57 +8,53 @@ namespace API_DatabaseMarket.Controllers
     [Route("api/[controller]")]
     public class OrderItemsController : ControllerBase
     {
-        private static readonly List<(int Id, OrderItemDto Data)> _items = new();
-        private static int _idCounter = 1;
+        private readonly IOrderItemService _service;
 
-        // GET: api/orderitems
+        public OrderItemsController(IOrderItemService service)
+        {
+            _service = service;
+        }
+
         [HttpGet]
         public IActionResult GetAll()
         {
-            return Ok(_items);
+            return Ok(_service.GetAll());
         }
 
-        // GET: api/orderitems/{id}
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
-            var item = _items.FirstOrDefault(x => x.Id == id);
-            if (item.Id == 0)
+            var item = _service.GetById(id);
+            if (item == null)
                 return NotFound();
 
             return Ok(item);
         }
 
-        // POST: api/orderitems
         [HttpPost]
         public IActionResult Create([FromBody] OrderItemDto dto)
         {
-            var newItem = (_idCounter++, dto);
-            _items.Add(newItem);
-            return CreatedAtAction(nameof(GetById), new { id = newItem.Item1 }, newItem);
+            var newItem = _service.Create(dto);
+            return CreatedAtAction(nameof(GetById), new { id = newItem.Id }, newItem);
         }
 
-        // PUT: api/orderitems/{id}
         [HttpPut("{id}")]
         public IActionResult Update(int id, [FromBody] OrderItemDto dto)
         {
-            var index = _items.FindIndex(x => x.Id == id);
-            if (index == -1)
+            var updated = _service.Update(id, dto);
+            if (!updated)
                 return NotFound();
 
-            _items[index] = (id, dto);
-            return Ok(_items[index]);
+            return Ok();
         }
 
-        // DELETE: api/orderitems/{id}
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            var index = _items.FindIndex(x => x.Id == id);
-            if (index == -1)
+            var deleted = _service.Delete(id);
+            if (!deleted)
                 return NotFound();
 
-            _items.RemoveAt(index);
             return NoContent();
         }
     }

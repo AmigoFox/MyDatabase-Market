@@ -3,150 +3,96 @@
   "WorkspaceRootPath": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\API\\API_DatabaseMarket\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|a:\\mydatabasemarket\\mydatabasemarket\\api\\api_databasemarket\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{58F901C6-B2AA-4C24-B1F7-A4C3F069ACAF}|..\\API_DatabaseMarket.Tests\\API_DatabaseMarket.Tests.csproj|a:\\mydatabasemarket\\mydatabasemarket\\api\\api_databasemarket.tests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|a:\\mydatabasemarket\\mydatabasemarket\\api\\api_databasemarket\\controllers\\orderitemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|solutionrelative:controllers\\orderitemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|a:\\mydatabasemarket\\mydatabasemarket\\api\\api_databasemarket\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|solutionrelative:models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|a:\\mydatabasemarket\\mydatabasemarket\\api\\api_databasemarket\\models\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|solutionrelative:models\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|a:\\mydatabasemarket\\mydatabasemarket\\api\\api_databasemarket\\services\\orderitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|solutionrelative:services\\orderitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|a:\\mydatabasemarket\\mydatabasemarket\\api\\api_databasemarket\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|a:\\mydatabasemarket\\mydatabasemarket\\api\\api_databasemarket\\models\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|solutionrelative:models\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|a:\\mydatabasemarket\\mydatabasemarket\\api\\api_databasemarket\\orderitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|solutionrelative:orderitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|a:\\mydatabasemarket\\mydatabasemarket\\api\\api_databasemarket\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
     {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
+      "Orientation": 1,
+      "VerticalTabListWidth": 163,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "DockedHeight": 360,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\API\\API_DatabaseMarket\\Data\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
-              "ToolTip": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\API\\API_DatabaseMarket\\Data\\AppDbContext.cs",
-              "RelativeToolTip": "Data\\AppDbContext.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-12T16:54:35.696Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "OrderItemsController.cs",
-              "DocumentMoniker": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\API\\API_DatabaseMarket\\Controllers\\OrderItemsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\OrderItemsController.cs",
-              "ToolTip": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\API\\API_DatabaseMarket\\Controllers\\OrderItemsController.cs",
-              "RelativeToolTip": "Controllers\\OrderItemsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Title": "OrderItemService.cs",
+              "DocumentMoniker": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\API\\API_DatabaseMarket\\Services\\OrderItemService.cs",
+              "RelativeDocumentMoniker": "Services\\OrderItemService.cs",
+              "ToolTip": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\API\\API_DatabaseMarket\\Services\\OrderItemService.cs",
+              "RelativeToolTip": "Services\\OrderItemService.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAkwCwAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-12T16:47:24.382Z",
+              "WhenOpened": "2026-01-29T13:20:35.294Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "User.cs",
-              "DocumentMoniker": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\API\\API_DatabaseMarket\\Models\\User.cs",
-              "RelativeDocumentMoniker": "Models\\User.cs",
-              "ToolTip": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\API\\API_DatabaseMarket\\Models\\User.cs",
-              "RelativeToolTip": "Models\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAVAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\API\\API_DatabaseMarket.Tests\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "..\\API_DatabaseMarket.Tests\\UnitTest1.cs",
+              "ToolTip": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\API\\API_DatabaseMarket.Tests\\UnitTest1.cs",
+              "RelativeToolTip": "..\\API_DatabaseMarket.Tests\\UnitTest1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-12T16:38:21.776Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Payment.cs",
-              "DocumentMoniker": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\API\\API_DatabaseMarket\\Models\\Payment.cs",
-              "RelativeDocumentMoniker": "Models\\Payment.cs",
-              "ToolTip": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\API\\API_DatabaseMarket\\Models\\Payment.cs",
-              "RelativeToolTip": "Models\\Payment.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-12T16:38:21.082Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "OrderItem.cs",
-              "DocumentMoniker": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\API\\API_DatabaseMarket\\Models\\OrderItem.cs",
-              "RelativeDocumentMoniker": "Models\\OrderItem.cs",
-              "ToolTip": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\API\\API_DatabaseMarket\\Models\\OrderItem.cs",
-              "RelativeToolTip": "Models\\OrderItem.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-12T16:38:20.499Z",
+              "WhenOpened": "2026-01-29T12:37:18.967Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Order.cs",
-              "DocumentMoniker": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\API\\API_DatabaseMarket\\Models\\Order.cs",
-              "RelativeDocumentMoniker": "Models\\Order.cs",
-              "ToolTip": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\API\\API_DatabaseMarket\\Models\\Order.cs",
-              "RelativeToolTip": "Models\\Order.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-12T16:38:05.706Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\API\\API_DatabaseMarket\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\API\\API_DatabaseMarket\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-12T15:00:51.259Z",
+              "WhenOpened": "2026-01-29T12:32:35.915Z",
               "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedHeight": 31,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "OrderItemDto.cs",
-              "DocumentMoniker": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\API\\API_DatabaseMarket\\OrderItemDto.cs",
-              "RelativeDocumentMoniker": "OrderItemDto.cs",
-              "ToolTip": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\API\\API_DatabaseMarket\\OrderItemDto.cs",
-              "RelativeToolTip": "OrderItemDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-24T16:33:06.283Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{be4d7042-ba3f-11d2-840e-00c04f9902c1}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 198,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
             }
           ]
         }

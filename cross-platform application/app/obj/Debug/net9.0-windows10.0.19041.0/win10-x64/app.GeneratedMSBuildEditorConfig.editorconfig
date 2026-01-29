@@ -1,15 +1,8 @@
 is_global = true
-build_property.MvvmToolkitEnableINotifyPropertyChangingSupport = true
-build_property._MvvmToolkitIsUsingWindowsRuntimePack = true
-build_property.CsWinRTComponent = 
-build_property.CsWinRTAotOptimizerEnabled = true
-build_property.CsWinRTAotOptimizerEnabled = true
-build_property.CsWinRTAotWarningLevel = 
-build_property.CsWinRTAotWarningLevel = 
 build_property.TargetFramework = net9.0-windows10.0.19041.0
-build_property.TargetPlatformMinVersion = 10.0.17763.0
+build_property.TargetPlatformMinVersion = 10.0.19041.0
 build_property.UsingMicrosoftNETSdkWeb = 
-build_property.ProjectTypeGuids = 9A19103F-16F7-4668-BE54-9A1E7A4F7556
+build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
@@ -18,80 +11,13 @@ build_property.RootNamespace = app
 build_property.ProjectDir = A:\MyDatabaseMarket\MyDatabaseMarket\cross-platform application\app\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.CsWinRTAotOptimizerEnabled = true
 build_property.CsWinRTAotExportsEnabled = 
 build_property.CsWinRTRcwFactoryFallbackGeneratorForceOptIn = 
 build_property.CsWinRTRcwFactoryFallbackGeneratorForceOptOut = 
 build_property.CsWinRTCcwLookupTableGeneratorEnabled = true
 build_property.CsWinRTMergeReferencedActivationFactories = 
+build_property.CsWinRTAotWarningLevel = 
 build_property.CsWinRTUseWindowsUIXamlProjections = false
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
-
-[A:/MyDatabaseMarket/MyDatabaseMarket/cross-platform application/app/App.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = app.App.xaml
-build_metadata.AdditionalFiles.TargetPath = App.xaml
-build_metadata.AdditionalFiles.RelativePath = App.xaml
-
-[A:/MyDatabaseMarket/MyDatabaseMarket/cross-platform application/app/AppShell.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = app.AppShell.xaml
-build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
-build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
-
-[A:/MyDatabaseMarket/MyDatabaseMarket/cross-platform application/app/DatabaseCalculator.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = app.DatabaseCalculator.xaml
-build_metadata.AdditionalFiles.TargetPath = DatabaseCalculator.xaml
-build_metadata.AdditionalFiles.RelativePath = DatabaseCalculator.xaml
-
-[A:/MyDatabaseMarket/MyDatabaseMarket/cross-platform application/app/MainPage.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = app.MainPage.xaml
-build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
-build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
-
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> Stashed changes
-[A:/MyDatabaseMarket/MyDatabaseMarket/cross-platform application/app/OrdersPage.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = app.OrdersPage.xaml
-build_metadata.AdditionalFiles.TargetPath = OrdersPage.xaml
-build_metadata.AdditionalFiles.RelativePath = OrdersPage.xaml
-
-[A:/MyDatabaseMarket/MyDatabaseMarket/cross-platform application/app/PaymentsPage.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = app.PaymentsPage.xaml
-build_metadata.AdditionalFiles.TargetPath = PaymentsPage.xaml
-build_metadata.AdditionalFiles.RelativePath = PaymentsPage.xaml
-
-[A:/MyDatabaseMarket/MyDatabaseMarket/cross-platform application/app/Personal_account.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = app.Personal_account.xaml
-build_metadata.AdditionalFiles.TargetPath = Personal_account.xaml
-build_metadata.AdditionalFiles.RelativePath = Personal_account.xaml
-
-[A:/MyDatabaseMarket/MyDatabaseMarket/cross-platform application/app/ProfilePage.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = app.ProfilePage.xaml
-build_metadata.AdditionalFiles.TargetPath = ProfilePage.xaml
-build_metadata.AdditionalFiles.RelativePath = ProfilePage.xaml
-
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-[A:/MyDatabaseMarket/MyDatabaseMarket/cross-platform application/app/Resources/Styles/Colors.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = app.Resources.Styles.Colors.xaml
-build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
-build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
-
-[A:/MyDatabaseMarket/MyDatabaseMarket/cross-platform application/app/Resources/Styles/Styles.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = app.Resources.Styles.Styles.xaml
-build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
-build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml

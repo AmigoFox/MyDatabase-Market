@@ -1,6 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using app.Services; // важно: здесь лежит ExchangeRateCache
+using app.Services;
 
 namespace app.ViewModels;
 
@@ -12,6 +12,25 @@ public partial class DatabaseCalculatorViewModel : ObservableObject
     {
         _cache = cache;
     }
+
+
+    [ObservableProperty]
+    private ValidationState _validationState = ValidationState.None;
+
+    [ObservableProperty]
+    private string _validationMessage;
+
+
+    private async Task HideValidationAfterDelayAsync(int milliseconds)
+    {
+        await Task.Delay(milliseconds);
+
+        ValidationState = ValidationState.None;
+        ValidationMessage = string.Empty;
+    }
+
+
+
 
     [ObservableProperty] private string _selectedType = "MySQL";
     [ObservableProperty] private int _sizeGB = 10;
@@ -103,7 +122,7 @@ public partial class DatabaseCalculatorViewModel : ObservableObject
         }
 
         if (countries.Count > 1)
-            total *= 1.1m;
+            total *= 1.2m;
 
         return total;
     }
@@ -119,26 +138,43 @@ public partial class DatabaseCalculatorViewModel : ObservableObject
         {
             RussiaSelected = true;
             countries = new List<string> { "Россия" };
+
+            ValidationState = ValidationState.Info;
+            ValidationMessage = "Должна быть выбрана хоть одна страна. Стандартно выбрана Россия.";
+            _ = HideValidationAfterDelayAsync(8000);
         }
 
         if (StorageType == "HDD" &&
             (SelectedIOPS == "Высокая (5000)" || SelectedIOPS == "Очень высокая (10000)"))
         {
             SelectedIOPS = "Средняя (1000)";
+
+            ValidationState = ValidationState.Info;
+            ValidationMessage = "Для HDD недоступны высокие значения IOPS. Установлено среднее значение.";
+            _ = HideValidationAfterDelayAsync(8000);
+        }
+
+
+        if (SizeGB <= 0)
+        {
+            ValidationState = ValidationState.Error;
+            ValidationMessage = "Объём хранилища должен быть больше 0 GB.";
+
+            _ = HideValidationAfterDelayAsync(8000);
+            return;
         }
 
         UpdatePrice((byte)countries.Count);
         OnPropertyChanged(nameof(SelectedCountriesCount));
         OnPropertyChanged(nameof(SelectedCountriesText));
+        _ = HideValidationAfterDelayAsync(8000);
     }
 
-    private decimal GetRate(string code)
+    private bool TryGetRate(string code, out decimal rate)
     {
-        if (_cache.Rates.TryGetValue(code, out var rate))
-            return rate;
-
-        throw new Exception($"Курс {code} не загружен");
+        return _cache.Rates.TryGetValue(code, out rate);
     }
+
 
     private void UpdatePrice(byte countries)
     {
@@ -185,23 +221,43 @@ public partial class DatabaseCalculatorViewModel : ObservableObject
 
         PriceInRub = Math.Round(price, 2);
 
-        try
+        decimal usd, cny, inr, tr, byn, kzt, krw, eur, amd, uzs;
+
+        bool ratesAvailable =
+            TryGetRate("USD", out usd) &
+            TryGetRate("CNY", out cny) &
+            TryGetRate("INR", out inr) &
+            TryGetRate("TRY", out tr) &
+            TryGetRate("BYN", out byn) &
+            TryGetRate("KZT", out kzt) &
+            TryGetRate("KRW", out krw) &
+            TryGetRate("EUR", out eur) &
+            TryGetRate("AMD", out amd) &
+            TryGetRate("UZS", out uzs);
+
+
+        if (ratesAvailable)
         {
-            PriceInUsd = Math.Round(PriceInRub / GetRate("USD"), 2);
-            PriceInCny = Math.Round(PriceInRub / GetRate("CNY"), 2);
-            PriceInInr = Math.Round(PriceInRub / GetRate("INR"), 2);
-            PriceInTry = Math.Round(PriceInRub / GetRate("TRY"), 2);
-            PriceInByn = Math.Round(PriceInRub / GetRate("BYN"), 2);
-            PriceInKzt = Math.Round(PriceInRub / GetRate("KZT"), 2);
-            PriceInKrw = Math.Round(PriceInRub / GetRate("KRW"), 2);
-            PriceInEur = Math.Round(PriceInRub / GetRate("EUR"), 2);
-            PriceInAmd = Math.Round(PriceInRub / GetRate("AMD"), 2);
-            PriceInUzs = Math.Round(PriceInRub / GetRate("UZS"), 2);
+            PriceInUsd = Math.Round(PriceInRub / usd, 2);
+            PriceInCny = Math.Round(PriceInRub / cny, 2);
+            PriceInInr = Math.Round(PriceInRub / inr, 2);
+            PriceInTry = Math.Round(PriceInRub / tr, 2);
+            PriceInByn = Math.Round(PriceInRub / byn, 2);
+            PriceInKzt = Math.Round(PriceInRub / kzt, 2);
+            PriceInKrw = Math.Round(PriceInRub / krw, 2);
+            PriceInEur = Math.Round(PriceInRub / eur, 2);
+            PriceInAmd = Math.Round(PriceInRub / amd, 2);
+            PriceInUzs = Math.Round(PriceInRub / uzs, 2);
         }
-        catch (Exception)
+        else
         {
+            ValidationState = ValidationState.Info;
+            ValidationMessage = "Курсы валют временно недоступны.";
+
             PriceInUsd = PriceInCny = PriceInInr = PriceInTry = PriceInByn =
                 PriceInKzt = PriceInKrw = PriceInEur = PriceInAmd = PriceInUzs = 0m;
+
+            _ = HideValidationAfterDelayAsync(8000);
         }
 
         OnPropertyChanged(nameof(PriceInRubFormatted));

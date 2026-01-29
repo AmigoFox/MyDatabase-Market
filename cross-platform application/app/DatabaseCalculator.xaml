@@ -2,12 +2,41 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:app.ViewModels"
+             xmlns:converters="clr-namespace:app.Converters"
              x:Class="app.DatabaseCalculator"
              Title="Калькулятор баз данных"
              BackgroundColor="#F8F4FF">
 
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:ValidationVisibleConverter x:Key="ValidationVisibleConverter" />
+            <converters:ValidationTextColorConverter x:Key="ValidationTextColorConverter" />
+            <converters:ValidationBorderColorConverter x:Key="ValidationBorderColorConverter" />
+            <converters:ValidationBackgroundColorConverter x:Key="ValidationBackgroundColorConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
     <ScrollView>
+        
         <VerticalStackLayout Padding="20" Spacing="25">
+
+
+            <!-- Блок валидации -->
+            <Frame IsVisible="{Binding ValidationState, Converter={StaticResource ValidationVisibleConverter}}"
+               CornerRadius="12"
+               Padding="12"
+               Margin="0,0,0,10"
+               BorderColor="{Binding ValidationState, Converter={StaticResource ValidationBorderColorConverter}}"
+               BackgroundColor="{Binding ValidationState, Converter={StaticResource ValidationBackgroundColorConverter}}">
+
+                        <Label Text="{Binding ValidationMessage}"
+                   FontAttributes="Bold"
+                   TextColor="{Binding ValidationState, Converter={StaticResource ValidationTextColorConverter}}"
+                   LineBreakMode="WordWrap" />
+            </Frame>
+
+
+
 
             <Frame BackgroundColor="#FFFFFF"
                    CornerRadius="16"

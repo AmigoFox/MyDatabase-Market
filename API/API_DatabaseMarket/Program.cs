@@ -1,10 +1,14 @@
 ﻿using API_DatabaseMarket.Data;
+using API_DatabaseMarket.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Controllers
 builder.Services.AddControllers();
+builder.Services.AddScoped<IOrderItemService, OrderItemService>();
+
+
 
 // Swagger
 builder.Services.AddEndpointsApiExplorer();
