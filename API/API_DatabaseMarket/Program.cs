@@ -8,6 +8,17 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddScoped<IOrderItemService, OrderItemService>();
 
+// CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("DefaultCorsPolicy", policy =>
+    {
+        policy // Нужно для разработки, в продакшене стоит ограничить до конкретных доменов
+            .AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader();
+    });
+});
 
 
 // Swagger
@@ -30,5 +41,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseAuthorization();
+
+app.UseRouting();
+app.UseCors("DefaultCorsPolicy");
 app.MapControllers();
 app.Run();

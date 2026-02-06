@@ -5,7 +5,7 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/OrderItems": {
+    "/api/v1/OrderItems": {
       "get": {
         "tags": [
           "OrderItems"
@@ -46,7 +46,7 @@
         }
       }
     },
-    "/api/OrderItems/{id}": {
+    "/api/v1/OrderItems/{id}": {
       "get": {
         "tags": [
           "OrderItems"
@@ -134,9 +134,15 @@
   "components": {
     "schemas": {
       "OrderItemDto": {
+        "required": [
+          "config",
+          "orderId"
+        ],
         "type": "object",
         "properties": {
           "orderId": {
+            "maximum": 2147483647,
+            "minimum": 1,
             "type": "integer",
             "format": "int32"
           },

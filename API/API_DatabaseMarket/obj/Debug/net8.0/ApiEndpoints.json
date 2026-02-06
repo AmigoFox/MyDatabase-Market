@@ -2,7 +2,7 @@
   {
     "ContainingType": "API_DatabaseMarket.Controllers.OrderItemsController",
     "Method": "GetAll",
-    "RelativePath": "api/OrderItems",
+    "RelativePath": "api/v1/OrderItems",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -12,7 +12,7 @@
   {
     "ContainingType": "API_DatabaseMarket.Controllers.OrderItemsController",
     "Method": "Create",
-    "RelativePath": "api/OrderItems",
+    "RelativePath": "api/v1/OrderItems",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -28,7 +28,7 @@
   {
     "ContainingType": "API_DatabaseMarket.Controllers.OrderItemsController",
     "Method": "GetById",
-    "RelativePath": "api/OrderItems/{id}",
+    "RelativePath": "api/v1/OrderItems/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -44,7 +44,7 @@
   {
     "ContainingType": "API_DatabaseMarket.Controllers.OrderItemsController",
     "Method": "Update",
-    "RelativePath": "api/OrderItems/{id}",
+    "RelativePath": "api/v1/OrderItems/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -65,7 +65,7 @@
   {
     "ContainingType": "API_DatabaseMarket.Controllers.OrderItemsController",
     "Method": "Delete",
-    "RelativePath": "api/OrderItems/{id}",
+    "RelativePath": "api/v1/OrderItems/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,

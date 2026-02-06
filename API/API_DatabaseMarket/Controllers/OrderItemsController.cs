@@ -11,7 +11,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace API_DatabaseMarket.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     public class OrderItemsController : ControllerBase
     {
         private readonly IOrderItemService _service;
@@ -31,6 +31,7 @@ namespace API_DatabaseMarket.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
+
             var item = await _service.GetByIdAsync(id);
             if (item == null)
                 return NotFound();
@@ -43,6 +44,10 @@ namespace API_DatabaseMarket.Controllers
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
+
+            var configError = ValidateConfig(dto);
+            if (configError != null)
+                return configError;
 
             var entity = new OrderItem
             {
@@ -61,6 +66,10 @@ namespace API_DatabaseMarket.Controllers
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
+
+            var configError = ValidateConfig(dto);
+            if (configError != null)
+                return configError;
 
             var entity = new OrderItem
             {
@@ -87,5 +96,15 @@ namespace API_DatabaseMarket.Controllers
 
             return NoContent();
         }
+
+
+        private IActionResult? ValidateConfig(OrderItemDto dto)
+        {
+            if (dto.Config.ValueKind != JsonValueKind.Object)
+                return BadRequest("Config must be a JSON object");
+
+            return null;
+        }
+
     }
 }
