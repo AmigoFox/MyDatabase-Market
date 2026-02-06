@@ -17,7 +17,14 @@ A:\MyDatabaseMarket\MyDatabaseMarket\API\API_DatabaseMarket.Tests\bin\Debug\net8
 A:\MyDatabaseMarket\MyDatabaseMarket\API\API_DatabaseMarket.Tests\bin\Debug\net8.0\Microsoft.VisualStudio.CodeCoverage.Shim.dll
 A:\MyDatabaseMarket\MyDatabaseMarket\API\API_DatabaseMarket.Tests\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
 A:\MyDatabaseMarket\MyDatabaseMarket\API\API_DatabaseMarket.Tests\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+A:\MyDatabaseMarket\MyDatabaseMarket\API\API_DatabaseMarket.Tests\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.InMemory.dll
 A:\MyDatabaseMarket\MyDatabaseMarket\API\API_DatabaseMarket.Tests\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+A:\MyDatabaseMarket\MyDatabaseMarket\API\API_DatabaseMarket.Tests\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
+A:\MyDatabaseMarket\MyDatabaseMarket\API\API_DatabaseMarket.Tests\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+A:\MyDatabaseMarket\MyDatabaseMarket\API\API_DatabaseMarket.Tests\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+A:\MyDatabaseMarket\MyDatabaseMarket\API\API_DatabaseMarket.Tests\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
+A:\MyDatabaseMarket\MyDatabaseMarket\API\API_DatabaseMarket.Tests\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+A:\MyDatabaseMarket\MyDatabaseMarket\API\API_DatabaseMarket.Tests\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
 A:\MyDatabaseMarket\MyDatabaseMarket\API\API_DatabaseMarket.Tests\bin\Debug\net8.0\Microsoft.OpenApi.dll
 A:\MyDatabaseMarket\MyDatabaseMarket\API\API_DatabaseMarket.Tests\bin\Debug\net8.0\Microsoft.TestPlatform.CoreUtilities.dll
 A:\MyDatabaseMarket\MyDatabaseMarket\API\API_DatabaseMarket.Tests\bin\Debug\net8.0\Microsoft.TestPlatform.PlatformAbstractions.dll

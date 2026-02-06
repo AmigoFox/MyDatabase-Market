@@ -1,51 +1,68 @@
-﻿using API_DatabaseMarket.DTOs;
+﻿using API_DatabaseMarket.Data;
 using API_DatabaseMarket.Models;
+using Microsoft.EntityFrameworkCore;
 
 
 namespace API_DatabaseMarket.Services
 {
+
     public class OrderItemService : IOrderItemService
     {
-        private readonly List<(int Id, OrderItemDto Data)> _items = new();
-        private int _idCounter = 1;
+        private readonly AppDbContext _context;
 
-        public IEnumerable<(int Id, OrderItemDto Data)> GetAll()
-            => _items;
-
-        public (int Id, OrderItemDto Data)? GetById(int id)
+        public OrderItemService(AppDbContext context)
         {
-            var item = _items.FirstOrDefault(x => x.Id == id);
-            return item.Id == 0 ? null : item;
+            _context = context;
         }
 
-        public (int Id, OrderItemDto Data) Create(OrderItemDto dto)
+        public async Task<IEnumerable<OrderItem>> GetAllAsync()
         {
-            if (dto == null)
-                throw new ArgumentNullException(nameof(dto));
-
-            var newItem = (_idCounter++, dto);
-            _items.Add(newItem);
-            return newItem;
+            return await _context.OrderItems
+                .AsNoTracking()
+                .ToListAsync();
         }
 
-        public bool Update(int id, OrderItemDto dto)
+        public async Task<OrderItem?> GetByIdAsync(int id)
         {
-            var index = _items.FindIndex(x => x.Id == id);
-            if (index == -1)
+            return await _context.OrderItems
+                .AsNoTracking()
+                .FirstOrDefaultAsync(x => x.Id == id);
+        }
+
+        public async Task<OrderItem> CreateAsync(OrderItem item)
+        {
+            item.CreatedAt = DateTime.UtcNow;
+
+            _context.OrderItems.Add(item);
+            await _context.SaveChangesAsync();
+
+            return item;
+        }
+
+        public async Task<bool> UpdateAsync(int id, OrderItem item)
+        {
+            var existing = await _context.OrderItems.FindAsync(id);
+            if (existing == null)
                 return false;
 
-            _items[index] = (id, dto);
+            existing.Config = item.Config;
+            await _context.SaveChangesAsync();
+
             return true;
         }
 
-        public bool Delete(int id)
+        public async Task<bool> DeleteAsync(int id)
         {
-            var index = _items.FindIndex(x => x.Id == id);
-            if (index == -1)
+            var item = await _context.OrderItems.FindAsync(id);
+            if (item == null)
                 return false;
 
-            _items.RemoveAt(index);
+            _context.OrderItems.Remove(item);
+            await _context.SaveChangesAsync();
+
             return true;
         }
     }
+
+
 }

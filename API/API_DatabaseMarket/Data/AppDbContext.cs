@@ -1,5 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using API_DatabaseMarket.Models;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using System.Text.Json;
 
 namespace API_DatabaseMarket.Data
 {
@@ -18,6 +21,16 @@ namespace API_DatabaseMarket.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+
+            var jsonConverter = new ValueConverter<JsonDocument, string>(
+            v => v.RootElement.GetRawText(),
+            v => JsonDocument.Parse(v, new JsonDocumentOptions())
+);
+
+            modelBuilder.Entity<OrderItem>()
+                .Property(x => x.Config)
+                .HasConversion(jsonConverter);
+
             base.OnModelCreating(modelBuilder);
 
             // USERS
@@ -92,6 +105,9 @@ namespace API_DatabaseMarket.Data
                       .HasForeignKey(e => e.OrderId)
                       .OnDelete(DeleteBehavior.Cascade);
             });
+
+
+
         }
     }
 }

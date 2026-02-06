@@ -1,6 +1,12 @@
 ﻿using API_DatabaseMarket.DTOs;
+using API_DatabaseMarket.Models;
 using API_DatabaseMarket.Services;
 using Microsoft.AspNetCore.Mvc;
+using System.Text.Json;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+
 
 namespace API_DatabaseMarket.Controllers
 {
@@ -16,15 +22,16 @@ namespace API_DatabaseMarket.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetAll()
+        public async Task<IActionResult> GetAll()
         {
-            return Ok(_service.GetAll());
+            var items = await _service.GetAllAsync();
+            return Ok(items);
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetById(int id)
+        public async Task<IActionResult> GetById(int id)
         {
-            var item = _service.GetById(id);
+            var item = await _service.GetByIdAsync(id);
             if (item == null)
                 return NotFound();
 
@@ -32,26 +39,49 @@ namespace API_DatabaseMarket.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create([FromBody] OrderItemDto dto)
+        public async Task<IActionResult> Create([FromBody] OrderItemDto dto)
         {
-            var newItem = _service.Create(dto);
-            return CreatedAtAction(nameof(GetById), new { id = newItem.Id }, newItem);
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var entity = new OrderItem
+            {
+                OrderId = dto.OrderId,
+                Config = JsonDocument.Parse(dto.Config.GetRawText()),
+                CreatedAt = DateTime.UtcNow
+            };
+
+
+            var created = await _service.CreateAsync(entity);
+            return CreatedAtAction(nameof(GetById), new { id = created.Id }, created);
         }
 
         [HttpPut("{id}")]
-        public IActionResult Update(int id, [FromBody] OrderItemDto dto)
+        public async Task<IActionResult> Update(int id, [FromBody] OrderItemDto dto)
         {
-            var updated = _service.Update(id, dto);
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var entity = new OrderItem
+            {
+
+                OrderId = dto.OrderId,
+                Config = JsonDocument.Parse(dto.Config.GetRawText()),
+                CreatedAt = DateTime.UtcNow
+            };
+
+            var updated =  await _service.UpdateAsync(id, entity);
+
             if (!updated)
                 return NotFound();
 
-            return Ok();
+            return NoContent();
         }
 
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-            var deleted = _service.Delete(id);
+            var deleted = await _service.DeleteAsync(id);
             if (!deleted)
                 return NotFound();
 
