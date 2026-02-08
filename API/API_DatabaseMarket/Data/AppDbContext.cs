@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using API_DatabaseMarket.Models;
+﻿using API_DatabaseMarket.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using System.Text.Json;
@@ -13,7 +12,7 @@ namespace API_DatabaseMarket.Data
         {
         }
 
-        // Таблицы
+        // Tables
         public DbSet<User> Users { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderItem> OrderItems { get; set; }
@@ -21,17 +20,10 @@ namespace API_DatabaseMarket.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-
             var jsonConverter = new ValueConverter<JsonDocument, string>(
-            v => v.RootElement.GetRawText(),
-            v => JsonDocument.Parse(v, new JsonDocumentOptions())
-);
-
-            modelBuilder.Entity<OrderItem>()
-                .Property(x => x.Config)
-                .HasConversion(jsonConverter);
-
-            base.OnModelCreating(modelBuilder);
+                v => v.RootElement.GetRawText(),
+                v => JsonDocument.Parse(v, new JsonDocumentOptions())
+            );
 
             // USERS
             modelBuilder.Entity<User>(entity =>
@@ -40,9 +32,19 @@ namespace API_DatabaseMarket.Data
 
                 entity.HasKey(e => e.Id);
 
-                entity.Property(e => e.Email).IsRequired();
-                entity.Property(e => e.PasswordHash).IsRequired();
+                entity.Property(e => e.Id)
+                      .HasColumnName("id");
+
+                entity.Property(e => e.Email)
+                      .HasColumnName("email")
+                      .IsRequired();
+
+                entity.Property(e => e.PasswordHash)
+                      .HasColumnName("password_hash")
+                      .IsRequired();
+
                 entity.Property(e => e.CreatedAt)
+                      .HasColumnName("created_at")
                       .HasDefaultValueSql("now()");
             });
 
@@ -53,14 +55,25 @@ namespace API_DatabaseMarket.Data
 
                 entity.HasKey(e => e.Id);
 
+                entity.Property(e => e.Id)
+                      .HasColumnName("id");
+
+                entity.Property(e => e.UserId)
+                      .HasColumnName("user_id");
+
                 entity.Property(e => e.TotalAmount)
+                      .HasColumnName("total_amount")
                       .HasColumnType("numeric(10,2)");
 
+                entity.Property(e => e.Status)
+                      .HasColumnName("status");
+
                 entity.Property(e => e.CreatedAt)
+                      .HasColumnName("created_at")
                       .HasDefaultValueSql("now()");
 
                 entity.Property(e => e.UpdatedAt)
-                      .HasDefaultValueSql("now()");
+                      .HasColumnName("updated_at");
 
                 entity.HasOne(e => e.User)
                       .WithMany(u => u.Orders)
@@ -75,10 +88,21 @@ namespace API_DatabaseMarket.Data
 
                 entity.HasKey(e => e.Id);
 
+                entity.Property(e => e.Id)
+                      .HasColumnName("id");
+
+                entity.Property(e => e.OrderId)
+                      .HasColumnName("order_id")
+                      .IsRequired();
+
                 entity.Property(e => e.Config)
-                      .HasColumnType("jsonb");
+                      .HasColumnName("config")
+                      .HasColumnType("jsonb")
+                      .HasConversion(jsonConverter)
+                      .IsRequired();
 
                 entity.Property(e => e.CreatedAt)
+                      .HasColumnName("created_at")
                       .HasDefaultValueSql("now()");
 
                 entity.HasOne(e => e.Order)
@@ -94,10 +118,27 @@ namespace API_DatabaseMarket.Data
 
                 entity.HasKey(e => e.Id);
 
+                entity.Property(e => e.Id)
+                      .HasColumnName("id");
+
+                entity.Property(e => e.OrderId)
+                      .HasColumnName("order_id");
+
                 entity.Property(e => e.Amount)
+                      .HasColumnName("amount")
                       .HasColumnType("numeric(10,2)");
 
+                entity.Property(e => e.Status)
+                      .HasColumnName("status");
+
+                entity.Property(e => e.PaymentMethod)
+                      .HasColumnName("payment_method");
+
+                entity.Property(e => e.TransactionId)
+                      .HasColumnName("transaction_id");
+
                 entity.Property(e => e.CreatedAt)
+                      .HasColumnName("created_at")
                       .HasDefaultValueSql("now()");
 
                 entity.HasOne(e => e.Order)
@@ -106,8 +147,7 @@ namespace API_DatabaseMarket.Data
                       .OnDelete(DeleteBehavior.Cascade);
             });
 
-
-
+            base.OnModelCreating(modelBuilder);
         }
     }
 }

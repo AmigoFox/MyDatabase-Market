@@ -1,0 +1,26 @@
+"id","email","password_hash","full_name","phone","created_at","is_active"
+1,"alex.ivanov@gmail.com","dev_hash_1","Alex Ivanov","+491511234501","2026-02-08 02:08:42.927806",True
+2,"maria.petrov@mail.com","dev_hash_2","Maria Petrova","+491511234502","2026-02-08 02:08:42.927806",True
+3,"john.smith@gmail.com","dev_hash_3","John Smith","+12025550101","2026-02-08 02:08:42.927806",True
+4,"emily.johnson@yahoo.com","dev_hash_4","Emily Johnson","+12025550102","2026-02-08 02:08:42.927806",True
+5,"daniel.brown@gmail.com","dev_hash_5","Daniel Brown","+12025550103","2026-02-08 02:08:42.927806",True
+6,"olga.smirnova@mail.ru","dev_hash_6","Olga Smirnova","+79161234506","2026-02-08 02:08:42.927806",True
+7,"max.mustermann@test.de","dev_hash_7","Max Mustermann","+491511234507","2026-02-08 02:08:42.927806",True
+8,"li.wei@example.cn","dev_hash_8","Li Wei","+8613712345678","2026-02-08 02:08:42.927806",True
+9,"carlos.mendez@gmail.com","dev_hash_9","Carlos Mendez","+34600123456","2026-02-08 02:08:42.927806",True
+10,"sophie.martin@outlook.com","dev_hash_10","Sophie Martin","+33612345678","2026-02-08 02:08:42.927806",True
+12,"andrew.miller@gmail.com","dev_hash_11","Andrew Miller","+12025550111","2026-02-08 02:18:11.53254",True
+13,"lucas.schmidt@test.de","dev_hash_12","Lucas Schmidt","+491511234512","2026-02-08 02:18:11.53254",True
+14,"anna.kowalska@gmail.com","dev_hash_13","Anna Kowalska","+48500123456","2026-02-08 02:18:11.53254",True
+15,"pierre.dupont@yahoo.fr","dev_hash_14","Pierre Dupont","+33612345123","2026-02-08 02:18:11.53254",True
+16,"sofia.rossi@gmail.com","dev_hash_15","Sofia Rossi","+393331234567","2026-02-08 02:18:11.53254",True
+17,"mateo.garcia@gmail.com","dev_hash_16","Mateo García","+34600123456","2026-02-08 02:18:11.53254",True
+18,"emma.wilson@gmail.com","dev_hash_17","Emma Wilson","+447700123456","2026-02-08 02:18:11.53254",True
+19,"nathan.taylor@gmail.com","dev_hash_18","Nathan Taylor","+12025550118","2026-02-08 02:18:11.53254",True
+20,"isabella.martinez@gmail.com","dev_hash_19","Isabella Martinez","+5215512345678","2026-02-08 02:18:11.53254",True
+21,"henry.walker@gmail.com","dev_hash_20","Henry Walker","+12025550120","2026-02-08 02:18:11.53254",True
+22,"yuki.tanaka@example.jp","dev_hash_21","Yuki Tanaka","+819012345678","2026-02-08 02:18:11.53254",True
+23,"noah.andersen@mail.dk","dev_hash_22","Noah Andersen","+4520123456","2026-02-08 02:18:11.53254",True
+24,"lena.mueller@gmail.com","dev_hash_23","Lena Müller","+491511234523","2026-02-08 02:18:11.53254",True
+25,"amir.hassan@gmail.com","dev_hash_24","Amir Hassan","+201001234567","2026-02-08 02:18:11.53254",True
+26,"oliver.bennett@gmail.com","dev_hash_25","Oliver Bennett","+447700987654","2026-02-08 02:18:11.53254",True
