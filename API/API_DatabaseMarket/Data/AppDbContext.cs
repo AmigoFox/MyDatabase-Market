@@ -20,10 +20,14 @@ namespace API_DatabaseMarket.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            var jsonConverter = new ValueConverter<JsonDocument, string>(
-                v => v.RootElement.GetRawText(),
-                v => JsonDocument.Parse(v, new JsonDocumentOptions())
+            var jsonConverter = new ValueConverter<JsonElement, string>(
+                v => v.GetRawText(),
+                v => JsonDocument
+                        .Parse(v, new JsonDocumentOptions())
+                        .RootElement
+                        .Clone()
             );
+
 
             // USERS
             modelBuilder.Entity<User>(entity =>
@@ -121,10 +125,13 @@ namespace API_DatabaseMarket.Data
                       .HasColumnName("order_id")
                       .IsRequired();
 
+
                 entity.Property(e => e.Config)
                       .HasColumnName("config")
-                      .HasColumnType("jsonb")   // ✅ ЭТОГО ДОСТАТОЧНО
+                      .HasColumnType("jsonb")
+                      .HasConversion(jsonConverter)
                       .IsRequired();
+
 
                 entity.Property(e => e.CreatedAt)
                       .HasColumnName("created_at")

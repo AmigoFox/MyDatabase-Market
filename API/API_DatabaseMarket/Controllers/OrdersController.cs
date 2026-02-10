@@ -39,9 +39,8 @@ namespace API_DatabaseMarket.Controllers
                 CreatedAt = DateTime.UtcNow,
                 OrderItems = request.Items.Select(i => new OrderItem
                 {
-                    Config = i.Config
-
-
+                    Config = i.Config, // ✅ JsonElement → JsonElement
+                    CreatedAt = DateTime.UtcNow
                 }).ToList()
             };
 
@@ -51,13 +50,11 @@ namespace API_DatabaseMarket.Controllers
             return Ok(order.Id);
         }
 
-
-
         // ============================
         // GET /api/v1/orders
         // ============================
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Order>>> GetMyOrders()
+        public async Task<ActionResult<IEnumerable<OrderResponse>>> GetMyOrders()
         {
             var userIdClaim = User.FindFirst("UserId")?.Value;
             if (userIdClaim == null)
@@ -69,6 +66,19 @@ namespace API_DatabaseMarket.Controllers
                 .Where(o => o.UserId == userId)
                 .Include(o => o.OrderItems)
                 .OrderByDescending(o => o.CreatedAt)
+                .Select(o => new OrderResponse
+                {
+                    Id = o.Id,
+                    TotalAmount = o.TotalAmount,
+                    Status = o.Status,
+                    CreatedAt = o.CreatedAt,
+                    Items = o.OrderItems.Select(i => new OrderItemResponse
+                    {
+                        Id = i.Id,
+                        Config = i.Config, // ✅ уже JsonElement
+                        CreatedAt = i.CreatedAt
+                    }).ToList()
+                })
                 .ToListAsync();
 
             return Ok(orders);
@@ -78,7 +88,7 @@ namespace API_DatabaseMarket.Controllers
         // GET /api/v1/orders/{id}
         // ============================
         [HttpGet("{id:int}")]
-        public async Task<ActionResult<Order>> GetOrderById(int id)
+        public async Task<ActionResult<OrderResponse>> GetOrderById(int id)
         {
             var userIdClaim = User.FindFirst("UserId")?.Value;
             if (userIdClaim == null)
@@ -86,17 +96,28 @@ namespace API_DatabaseMarket.Controllers
 
             int userId = int.Parse(userIdClaim);
 
-            var orders = await _db.Orders
-               .Where(o => o.UserId == userId)
-               .Include(o => o.OrderItems)
-               .OrderByDescending(o => o.CreatedAt)
-               .ToListAsync();
+            var order = await _db.Orders
+                .Where(o => o.Id == id && o.UserId == userId)
+                .Include(o => o.OrderItems)
+                .Select(o => new OrderResponse
+                {
+                    Id = o.Id,
+                    TotalAmount = o.TotalAmount,
+                    Status = o.Status,
+                    CreatedAt = o.CreatedAt,
+                    Items = o.OrderItems.Select(i => new OrderItemResponse
+                    {
+                        Id = i.Id,
+                        Config = i.Config,
+                        CreatedAt = i.CreatedAt
+                    }).ToList()
+                })
+                .FirstOrDefaultAsync();
 
-
-            if (orders == null)
+            if (order == null)
                 return NotFound();
 
-            return Ok(orders);
+            return Ok(order);
         }
     }
 }

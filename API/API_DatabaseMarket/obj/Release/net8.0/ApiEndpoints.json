@@ -176,7 +176,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[API_DatabaseMarket.Models.Order, API_DatabaseMarket, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[API_DatabaseMarket.DTOs.Orders.OrderResponse, API_DatabaseMarket, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -202,7 +202,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "API_DatabaseMarket.Models.Order",
+        "Type": "API_DatabaseMarket.DTOs.Orders.OrderResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
