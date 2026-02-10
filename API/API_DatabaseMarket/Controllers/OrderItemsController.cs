@@ -52,7 +52,7 @@ namespace API_DatabaseMarket.Controllers
             var entity = new OrderItem
             {
                 OrderId = dto.OrderId,
-                Config = JsonDocument.Parse(dto.Config.GetRawText()),
+                Config = dto.Config,
                 CreatedAt = DateTime.UtcNow
             };
 
@@ -75,7 +75,7 @@ namespace API_DatabaseMarket.Controllers
             {
 
                 OrderId = dto.OrderId,
-                Config = JsonDocument.Parse(dto.Config.GetRawText()),
+                Config = dto.Config,
                 CreatedAt = DateTime.UtcNow
             };
 

@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("API_DatabaseMarket")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9340e62f90c56c7b1c715005a226413066a1fb8a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ec8105834cdba8de3ff5ac14f695d1f3d6736f5b")]
 [assembly: System.Reflection.AssemblyProductAttribute("API_DatabaseMarket")]
 [assembly: System.Reflection.AssemblyTitleAttribute("API_DatabaseMarket")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -46,6 +46,33 @@ namespace API_DatabaseMarket.Data
                 entity.Property(e => e.CreatedAt)
                       .HasColumnName("created_at")
                       .HasDefaultValueSql("now()");
+
+                entity.Property(e => e.FullName)
+                       .HasColumnName("full_name")
+                       .IsRequired();
+
+
+                entity.Property(e => e.Phone)
+                       .HasColumnName("phone")
+                        .IsRequired();
+
+                entity.Property(e => e.Login)
+                      .HasColumnName("login")
+                      .IsRequired();
+
+                entity.Property(e => e.Role)
+                      .HasColumnName("role")
+                      .HasDefaultValue("user")
+                      .IsRequired();
+
+                entity.Property(e => e.IsActive)
+                      .HasColumnName("is_active")
+                      .HasDefaultValue(true);
+
+                entity.HasIndex(e => e.Login).IsUnique();
+                entity.HasIndex(e => e.Email).IsUnique();
+
+
             });
 
             // ORDERS
@@ -54,7 +81,6 @@ namespace API_DatabaseMarket.Data
                 entity.ToTable("orders");
 
                 entity.HasKey(e => e.Id);
-
                 entity.Property(e => e.Id)
                       .HasColumnName("id");
 
@@ -97,8 +123,7 @@ namespace API_DatabaseMarket.Data
 
                 entity.Property(e => e.Config)
                       .HasColumnName("config")
-                      .HasColumnType("jsonb")
-                      .HasConversion(jsonConverter)
+                      .HasColumnType("jsonb")   // ✅ ЭТОГО ДОСТАТОЧНО
                       .IsRequired();
 
                 entity.Property(e => e.CreatedAt)
@@ -110,6 +135,7 @@ namespace API_DatabaseMarket.Data
                       .HasForeignKey(e => e.OrderId)
                       .OnDelete(DeleteBehavior.Cascade);
             });
+
 
             // PAYMENTS
             modelBuilder.Entity<Payment>(entity =>

@@ -1,5 +1,4 @@
 using API_DatabaseMarket.Data;
-using API_DatabaseMarket.DTOs;
 using API_DatabaseMarket.Models;
 using API_DatabaseMarket.Services;
 using Microsoft.EntityFrameworkCore;
@@ -26,7 +25,7 @@ namespace API_DatabaseMarket.Tests
             return new OrderItem
             {
                 OrderId = 1,
-                Config = JsonDocument.Parse("{\"key\":\"value\"}"),
+                Config = CreateJson("{\"test\":true}"),
                 CreatedAt = DateTime.UtcNow
             };
         }
@@ -93,7 +92,7 @@ namespace API_DatabaseMarket.Tests
             var updatedEntity = new OrderItem
             {
                 OrderId = 1,
-                Config = JsonDocument.Parse("{\"updated\":true}"),
+                Config = CreateJson("{\"updated\":true}"),
                 CreatedAt = created.CreatedAt
             };
 
@@ -146,6 +145,12 @@ namespace API_DatabaseMarket.Tests
 
             
             Assert.False(result);
+        }
+
+        private static JsonElement CreateJson(string json)
+        {
+            using var doc = JsonDocument.Parse(json);
+            return doc.RootElement.Clone();
         }
     }
 }

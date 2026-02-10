@@ -14,12 +14,18 @@ namespace API_DatabaseMarket.Models
         [Required]
         public string PasswordHash { get; set; }
 
-        public string? FullName { get; set; }
-        public string? Phone { get; set; }
+        [Required]
+        public string Role { get; set; }
 
-        public DateTime CreatedAt { get; set; }
-        public bool IsActive { get; set; }
+        [Required]
+        public string Login { get; set; }
 
-        public ICollection<Order> Orders { get; set; }
+        public string FullName { get; set; }
+        public string Phone { get; set; }
+
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        public bool IsActive { get; set; } = true;
+
+        public ICollection<Order> Orders { get; set; } = new List<Order>();
     }
 }

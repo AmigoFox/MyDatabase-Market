@@ -12,11 +12,10 @@ namespace API_DatabaseMarket.Models
         [ForeignKey(nameof(Order))]
         public int OrderId { get; set; }
 
-
         // PostgreSQL jsonb
-        public JsonDocument Config { get; set; }
+        public JsonElement Config { get; set; }
 
-        public DateTime CreatedAt { get; set; }
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
         // Navigation
         public Order Order { get; set; }
