@@ -7,13 +7,18 @@
     Title="app">
 
     <ShellContent
-        Title="Главное меню"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        Title="Вход"
+        Route="LoginPage"
+        ContentTemplate="{DataTemplate local:LoginPage}" />
 
     <ShellContent
-        Title="Калькулятор"
-        ContentTemplate="{DataTemplate local:DatabaseCalculator}"
-        Route="DatabaseCalculator" />
+        Title="Главное меню"
+        Route="MainPage"
+        ContentTemplate="{DataTemplate local:MainPage}" />
+
+    <ShellContent
+        Title="Заказы"
+        Route="OrdersPage"
+        ContentTemplate="{DataTemplate local:OrdersPage}" />
 
 </Shell>

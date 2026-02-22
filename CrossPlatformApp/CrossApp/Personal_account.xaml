@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CrossApp.Personal_account"
+             Title="Личный кабинет"
+             BackgroundColor="#F8F4FF">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <!-- ✅ Заголовок -->
+            <Label Text="Личный кабинет"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="#4A148C" />
+
+            <!-- ✅ Приветствие -->
+            <Label Text="Добро пожаловать, Amigo!"
+                   FontSize="18"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="#6A1B9A" />
+
+            <!-- ✅ Кнопка выхода -->
+            <Button Text="Выйти из аккаунта"
+                    BackgroundColor="#E57373"
+                    TextColor="White"
+                    CornerRadius="12"
+                    Padding="12"
+                    Clicked="OnLogoutClicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

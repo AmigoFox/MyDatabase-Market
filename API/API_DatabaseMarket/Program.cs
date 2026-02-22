@@ -8,20 +8,13 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// =====================
-// Services
-// =====================
-
-// Controllers
 builder.Services.AddControllers();
 builder.Services.AddScoped<IOrderItemService, OrderItemService>();
 
-// EF Core
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"))
 );
 
-// CORS
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("DefaultCorsPolicy", policy =>
@@ -33,7 +26,6 @@ builder.Services.AddCors(options =>
     });
 });
 
-// Authentication (JWT)
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
@@ -54,10 +46,8 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         };
     });
 
-// Authorization
 builder.Services.AddAuthorization();
 
-// Swagger + JWT support
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
 {
@@ -88,10 +78,6 @@ builder.Services.AddSwaggerGen(options =>
 });
 
 var app = builder.Build();
-
-// =====================
-// Middleware pipeline
-// =====================
 
 if (app.Environment.IsDevelopment())
 {

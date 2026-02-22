@@ -3,31 +3,214 @@
   "WorkspaceRootPath": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\cross-platform application\\app\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|A:\\MyDatabaseMarket\\MyDatabaseMarket\\cross-platform application\\app\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4D5E092E-D4BB-4833-ACBB-2FE19C630E1C}|app.csproj|a:\\mydatabasemarket\\mydatabasemarket\\cross-platform application\\app\\app.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{4D5E092E-D4BB-4833-ACBB-2FE19C630E1C}|app.csproj|solutionrelative:app.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D5E092E-D4BB-4833-ACBB-2FE19C630E1C}|app.csproj|a:\\mydatabasemarket\\mydatabasemarket\\cross-platform application\\app\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{4D5E092E-D4BB-4833-ACBB-2FE19C630E1C}|app.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D5E092E-D4BB-4833-ACBB-2FE19C630E1C}|app.csproj|a:\\mydatabasemarket\\mydatabasemarket\\cross-platform application\\app\\personal_account.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D5E092E-D4BB-4833-ACBB-2FE19C630E1C}|app.csproj|solutionrelative:personal_account.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D5E092E-D4BB-4833-ACBB-2FE19C630E1C}|app.csproj|a:\\mydatabasemarket\\mydatabasemarket\\cross-platform application\\app\\profilepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D5E092E-D4BB-4833-ACBB-2FE19C630E1C}|app.csproj|solutionrelative:profilepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D5E092E-D4BB-4833-ACBB-2FE19C630E1C}|app.csproj|a:\\mydatabasemarket\\mydatabasemarket\\cross-platform application\\app\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D5E092E-D4BB-4833-ACBB-2FE19C630E1C}|app.csproj|solutionrelative:mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D5E092E-D4BB-4833-ACBB-2FE19C630E1C}|app.csproj|a:\\mydatabasemarket\\mydatabasemarket\\cross-platform application\\app\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D5E092E-D4BB-4833-ACBB-2FE19C630E1C}|app.csproj|solutionrelative:loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D5E092E-D4BB-4833-ACBB-2FE19C630E1C}|app.csproj|a:\\mydatabasemarket\\mydatabasemarket\\cross-platform application\\app\\databasecalculator.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4D5E092E-D4BB-4833-ACBB-2FE19C630E1C}|app.csproj|solutionrelative:databasecalculator.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D5E092E-D4BB-4833-ACBB-2FE19C630E1C}|app.csproj|a:\\mydatabasemarket\\mydatabasemarket\\cross-platform application\\app\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4D5E092E-D4BB-4833-ACBB-2FE19C630E1C}|app.csproj|solutionrelative:appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D5E092E-D4BB-4833-ACBB-2FE19C630E1C}|app.csproj|a:\\mydatabasemarket\\mydatabasemarket\\cross-platform application\\app\\orderspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D5E092E-D4BB-4833-ACBB-2FE19C630E1C}|app.csproj|solutionrelative:orderspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D5E092E-D4BB-4833-ACBB-2FE19C630E1C}|app.csproj|a:\\mydatabasemarket\\mydatabasemarket\\cross-platform application\\app\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D5E092E-D4BB-4833-ACBB-2FE19C630E1C}|app.csproj|solutionrelative:mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
     {
-      "Orientation": 0,
-      "VerticalTabListWidth": 185,
+      "Orientation": 1,
+      "VerticalTabListWidth": 209,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "DockedHeight": 344,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
+              "Title": "MainPage.xaml.cs",
+              "DocumentMoniker": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\cross-platform application\\app\\MainPage.xaml.cs",
+              "RelativeDocumentMoniker": "MainPage.xaml.cs",
+              "ToolTip": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\cross-platform application\\app\\MainPage.xaml.cs",
+              "RelativeToolTip": "MainPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T16:34:03.54Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "app.csproj",
               "DocumentMoniker": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\cross-platform application\\app\\app.csproj",
               "RelativeDocumentMoniker": "app.csproj",
               "ToolTip": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\cross-platform application\\app\\app.csproj",
               "RelativeToolTip": "app.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-01-27T08:59:18.943Z",
+              "WhenOpened": "2026-02-13T09:19:56.332Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\cross-platform application\\app\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\cross-platform application\\app\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-02-13T09:13:28.679Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DatabaseCalculator.xaml",
+              "DocumentMoniker": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\cross-platform application\\app\\DatabaseCalculator.xaml",
+              "RelativeDocumentMoniker": "DatabaseCalculator.xaml",
+              "ToolTip": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\cross-platform application\\app\\DatabaseCalculator.xaml",
+              "RelativeToolTip": "DatabaseCalculator.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-02-12T16:59:11.039Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "App.g.i.cs",
+              "DocumentMoniker": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\cross-platform application\\app\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs",
+              "RelativeDocumentMoniker": "obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs",
+              "ToolTip": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\cross-platform application\\app\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs",
+              "RelativeToolTip": "obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\Platforms\\Windows\\App.g.i.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAUwEoAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T16:58:08.963Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "OrdersPage.xaml.cs",
+              "DocumentMoniker": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\cross-platform application\\app\\OrdersPage.xaml.cs",
+              "RelativeDocumentMoniker": "OrdersPage.xaml.cs",
+              "ToolTip": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\cross-platform application\\app\\OrdersPage.xaml.cs",
+              "RelativeToolTip": "OrdersPage.xaml.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAcwCQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T15:45:37.581Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Personal_account.xaml.cs",
+              "DocumentMoniker": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\cross-platform application\\app\\Personal_account.xaml.cs",
+              "RelativeDocumentMoniker": "Personal_account.xaml.cs",
+              "ToolTip": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\cross-platform application\\app\\Personal_account.xaml.cs",
+              "RelativeToolTip": "Personal_account.xaml.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAmwCMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T16:48:16.515Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LoginPage.xaml.cs",
+              "DocumentMoniker": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\cross-platform application\\app\\LoginPage.xaml.cs",
+              "RelativeDocumentMoniker": "LoginPage.xaml.cs",
+              "ToolTip": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\cross-platform application\\app\\LoginPage.xaml.cs",
+              "RelativeToolTip": "LoginPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T16:47:53.551Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProfilePage.xaml.cs",
+              "DocumentMoniker": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\cross-platform application\\app\\ProfilePage.xaml.cs",
+              "RelativeDocumentMoniker": "ProfilePage.xaml.cs",
+              "ToolTip": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\cross-platform application\\app\\ProfilePage.xaml.cs",
+              "RelativeToolTip": "ProfilePage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T16:48:19.074Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MauiProgram.cs",
+              "DocumentMoniker": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\cross-platform application\\app\\MauiProgram.cs",
+              "RelativeDocumentMoniker": "MauiProgram.cs",
+              "ToolTip": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\cross-platform application\\app\\MauiProgram.cs",
+              "RelativeToolTip": "MauiProgram.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAcwCAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T16:42:37.626Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AppShell.xaml",
+              "DocumentMoniker": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\cross-platform application\\app\\AppShell.xaml",
+              "RelativeDocumentMoniker": "AppShell.xaml",
+              "ToolTip": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\cross-platform application\\app\\AppShell.xaml",
+              "RelativeToolTip": "AppShell.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-02-12T16:39:45.989Z"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 380,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
             }
           ]
         }

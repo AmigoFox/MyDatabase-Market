@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CrossApp.OrdersPage"
+             Title="Заказы"
+             BackgroundColor="#F8F4FF">
+
+    <Grid RowDefinitions="Auto,Auto,*"
+          Padding="20"
+          RowSpacing="16">
+
+        <Label Grid.Row="1"
+               Text="Ваши заказы"
+               FontSize="22"
+               FontAttributes="Bold"
+               TextColor="#4A148C"/>
+
+
+        <CollectionView Grid.Row="2"
+                        ItemsSource="{Binding Orders}"
+                        SelectionMode="None">
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame BackgroundColor="White"
+                           BorderColor="#D1C4E9"
+                           CornerRadius="16"
+                           Padding="16"
+                           Margin="0,0,0,14">
+
+                        <VerticalStackLayout Spacing="6">
+
+                            <Label Text="{Binding Id, StringFormat='Заказ №{0}'}"
+                                   FontSize="18"
+                                   FontAttributes="Bold"
+                                   TextColor="#4A148C"/>
+
+                            <Label Text="{Binding FormattedAmount}"
+                                   FontSize="16"
+                                   TextColor="#6A1B9A"/>
+
+                            <!-- Количество позиций -->
+                            <Label Text="{Binding ItemsCount, StringFormat='Позиций: {0}'}"
+                                   FontSize="14"
+                                   TextColor="#7E57C2"/>
+
+                            <!-- Дата -->
+                            <Label Text="{Binding FormattedDate}"
+                                   FontSize="12"
+                                   TextColor="#999999"/>
+
+                            <!-- Статус -->
+                            <Label Text="{Binding Status}"
+                                   FontAttributes="Bold"
+                                   TextColor="#FF7043"/>
+
+                        </VerticalStackLayout>
+
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+    </Grid>
+</ContentPage>

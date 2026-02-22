@@ -1,39 +1,36 @@
-﻿namespace app;
+﻿using app.ViewModels;
+using app.Services.Api;
+
+namespace app;
 
 public partial class OrdersPage : ContentPage
 {
+    private readonly OrdersViewModel _vm;
+
     public OrdersPage()
     {
         InitializeComponent();
 
-        // Заглушка — позже заменим на реальные данные
-        OrdersList.ItemsSource = new List<OrderModel>
-        {
-            new OrderModel { Id = 1, Name = "MySQL 10GB", Price = "1200 ₽", Status = "Активен" },
-            new OrderModel { Id = 2, Name = "PostgreSQL 20GB", Price = "2400 ₽", Status = "Ожидает оплаты" }
-        };
+        var api = App.Services.GetService<ApiService>();
+        _vm = new OrdersViewModel(api);
+        BindingContext = _vm;
+    }
+
+    protected override async void OnAppearing()
+    {
+        base.OnAppearing();
+        await _vm.LoadOrders();
     }
 
     private async void OnProfileDetailsTapped(object sender, TappedEventArgs e)
     {
-        await Navigation.PushAsync(new ProfilePage());
-    }
-
-    private async void OnOrdersTapped(object sender, TappedEventArgs e)
-    {
-        await Navigation.PushAsync(new OrdersPage());
+        var page = App.Services.GetService<ProfilePage>();
+        await Navigation.PushAsync(page);
     }
 
     private async void OnPaymentsTapped(object sender, TappedEventArgs e)
     {
-        await Navigation.PushAsync(new PaymentsPage());
+        var page = App.Services.GetService<PaymentsPage>();
+        await Navigation.PushAsync(page);
     }
-}
-
-public class OrderModel
-{
-    public int Id { get; set; }
-    public string Name { get; set; }
-    public string Price { get; set; }
-    public string Status { get; set; }
 }

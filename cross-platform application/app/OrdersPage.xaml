@@ -4,103 +4,126 @@
              x:Class="app.OrdersPage"
              Title="Заказы"
              BackgroundColor="#F8F4FF">
-    
-    
 
-    <VerticalStackLayout Padding="20" Spacing="16">
+    <Grid RowDefinitions="Auto,Auto,*"
+          Padding="20"
+          RowSpacing="16">
 
-        <!-- ✅ Карточки разделов -->
-        <Grid ColumnDefinitions="*,*,*"
-       ColumnSpacing="12">
+        <!-- ========================= -->
+        <!-- Верхняя панель навигации -->
+        <!-- ========================= -->
+        <Grid Grid.Row="0"
+              ColumnDefinitions="*,*,*"
+              ColumnSpacing="12">
 
             <!-- Профиль -->
             <Frame Grid.Column="0"
-            BackgroundColor="White"
-            BorderColor="#D1C4E9"
-            CornerRadius="12"
-            Padding="12">
+                   BackgroundColor="White"
+                   BorderColor="#D1C4E9"
+                   CornerRadius="12"
+                   Padding="12">
                 <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="OnProfileDetailsTapped" />
+                    <TapGestureRecognizer Tapped="OnProfileDetailsTapped"/>
                 </Frame.GestureRecognizers>
+
                 <VerticalStackLayout>
                     <Label Text="Профиль"
-                    FontAttributes="Bold"
-                    TextColor="#4A148C" />
+                           FontAttributes="Bold"
+                           TextColor="#4A148C"/>
                     <Label Text="Настройки и безопасность"
-                    FontSize="12"
-                    TextColor="#6A1B9A" />
+                           FontSize="12"
+                           TextColor="#6A1B9A"/>
                 </VerticalStackLayout>
             </Frame>
 
             <!-- Заказы -->
             <Frame Grid.Column="1"
-            BackgroundColor="White"
-            BorderColor="#D1C4E9"
-            CornerRadius="12"
-            Padding="12">
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="OnOrdersTapped" />
-                </Frame.GestureRecognizers>
+                   BackgroundColor="White"
+                   BorderColor="#D1C4E9"
+                   CornerRadius="12"
+                   Padding="12">
                 <VerticalStackLayout>
                     <Label Text="Заказы"
-                    FontAttributes="Bold"
-                    TextColor="#4A148C" />
+                           FontAttributes="Bold"
+                           TextColor="#4A148C"/>
                     <Label Text="Ваши базы данных"
-                    FontSize="12"
-                    TextColor="#6A1B9A" />
+                           FontSize="12"
+                           TextColor="#6A1B9A"/>
                 </VerticalStackLayout>
             </Frame>
 
             <!-- Платежи -->
             <Frame Grid.Column="2"
-            BackgroundColor="White"
-            BorderColor="#D1C4E9"
-            CornerRadius="12"
-            Padding="12">
+                   BackgroundColor="White"
+                   BorderColor="#D1C4E9"
+                   CornerRadius="12"
+                   Padding="12">
                 <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="OnPaymentsTapped" />
+                    <TapGestureRecognizer Tapped="OnPaymentsTapped"/>
                 </Frame.GestureRecognizers>
+
                 <VerticalStackLayout>
                     <Label Text="Платежи"
-                    FontAttributes="Bold"
-                    TextColor="#4A148C" />
+                           FontAttributes="Bold"
+                           TextColor="#4A148C"/>
                     <Label Text="История оплат"
-                    FontSize="12"
-                    TextColor="#6A1B9A" />
+                           FontSize="12"
+                           TextColor="#6A1B9A"/>
                 </VerticalStackLayout>
             </Frame>
 
         </Grid>
-        
-        
 
-        <Label Text="Ваши заказы"
+        <!-- Заголовок -->
+        <Label Grid.Row="1"
+               Text="Ваши заказы"
                FontSize="22"
                FontAttributes="Bold"
-               TextColor="#4A148C" />
+               TextColor="#4A148C"/>
 
-        <CollectionView x:Name="OrdersList"
-                        SelectionMode="Single"
-                        SelectionChanged="OnOrdersTapped">
+        <!-- ========================= -->
+        <!-- Список заказов -->
+        <!-- ========================= -->
+        <CollectionView Grid.Row="2"
+                        ItemsSource="{Binding Orders}"
+                        SelectionMode="None">
 
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <Frame BackgroundColor="White"
                            BorderColor="#D1C4E9"
-                           CornerRadius="12"
-                           Padding="12"
-                           Margin="0,0,0,12">
+                           CornerRadius="16"
+                           Padding="16"
+                           Margin="0,0,0,14">
 
-                        <VerticalStackLayout>
-                            <Label Text="{Binding Name}"
+                        <VerticalStackLayout Spacing="6">
+
+                            <!-- Номер заказа -->
+                            <Label Text="{Binding Id, StringFormat='Заказ №{0}'}"
+                                   FontSize="18"
                                    FontAttributes="Bold"
-                                   TextColor="#4A148C" />
+                                   TextColor="#4A148C"/>
 
-                            <Label Text="{Binding Price}"
-                                   TextColor="#6A1B9A" />
+                            <!-- Сумма -->
+                            <Label Text="{Binding FormattedAmount}"
+                                   FontSize="16"
+                                   TextColor="#6A1B9A"/>
 
+                            <!-- Количество позиций -->
+                            <Label Text="{Binding ItemsCount, StringFormat='Позиций: {0}'}"
+                                   FontSize="14"
+                                   TextColor="#7E57C2"/>
+
+                            <!-- Дата -->
+                            <Label Text="{Binding FormattedDate}"
+                                   FontSize="12"
+                                   TextColor="#999999"/>
+
+                            <!-- Статус -->
                             <Label Text="{Binding Status}"
-                                   TextColor="#7E57C2" />
+                                   FontAttributes="Bold"
+                                   TextColor="#FF7043"/>
+
                         </VerticalStackLayout>
 
                     </Frame>
@@ -109,5 +132,5 @@
 
         </CollectionView>
 
-    </VerticalStackLayout>
+    </Grid>
 </ContentPage>

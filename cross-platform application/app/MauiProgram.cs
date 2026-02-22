@@ -1,8 +1,6 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using app.Services;
+using app.Services.Api;
 using Microsoft.Extensions.Logging;
-using app.Services;
-
-
 
 namespace app
 {
@@ -11,6 +9,7 @@ namespace app
         public static MauiApp CreateMauiApp()
         {
             var builder = MauiApp.CreateBuilder();
+
             builder
                 .UseMauiApp<App>()
                 .ConfigureFonts(fonts =>
@@ -18,18 +17,16 @@ namespace app
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
+
             builder.Services.AddSingleton<ExchangeRateCache>();
             builder.Services.AddHttpClient<CbrExchangeRateService>();
-            builder.Services.AddTransient<ViewModels.DatabaseCalculatorViewModel>();
-            builder.Services.AddTransient<DatabaseCalculator>();
-
-
+            builder.Services.AddSingleton<ApiService>();
 
 #if DEBUG
-            builder.Logging.AddDebug(); 
+            builder.Logging.AddDebug();
 #endif
-            return builder.Build();
 
+            return builder.Build();
         }
     }
 }

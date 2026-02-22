@@ -14,6 +14,8 @@ namespace app
             var cache = services.GetService<ExchangeRateCache>();
             var api = services.GetService<CbrExchangeRateService>();
 
+    
+
             // Загружаем курсы в фоне
             Task.Run(async () =>
             {
@@ -30,7 +32,15 @@ namespace app
 
         protected override Window CreateWindow(IActivationState? activationState)
         {
-            return new Window(new AppShell());
+            var shell = new AppShell();
+
+            shell.Loaded += async (s, e) =>
+            {
+                await Shell.Current.GoToAsync(nameof(LoginPage));
+            };
+
+            return new Window(shell);
         }
+
     }
 }

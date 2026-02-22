@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="CrossApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:CrossApp"
+    Title="CrossApp">
+
+    <ShellContent
+        Title="Вход / регистрация"
+        ContentTemplate="{DataTemplate local:LoginPage}"
+        Route="LoginPage" /> 
+
+    <ShellContent
+        Title="Главное меню"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+    <ShellContent
+        Title="Конфигурация заказа"
+        ContentTemplate="{DataTemplate local:DatabaseCalculator}"
+        Route="DatabaseCalculator" />
+    
+    <ShellContent
+        Title="Заказы"
+        ContentTemplate="{DataTemplate local:OrdersPage}"
+        Route="OrdersPage" />
+
+    <ShellContent
+        Title="Платежи"
+        ContentTemplate="{DataTemplate local:PaymentsPage}"
+        Route="PaymentsPage" />
+
+    <ShellContent
+        Title="Профиль"
+        ContentTemplate="{DataTemplate local:ProfilePage}"
+        Route="ProfilePage" />
+
+    <ShellContent
+        Title="Личный кабинет"
+        ContentTemplate="{DataTemplate local:Personal_account}"
+        Route="Personal_account" />
+</Shell>

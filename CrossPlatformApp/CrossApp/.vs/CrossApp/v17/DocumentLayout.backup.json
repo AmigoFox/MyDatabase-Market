@@ -1,0 +1,150 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\CrossPlatformApp\\CrossApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|a:\\mydatabasemarket\\mydatabasemarket\\crossplatformapp\\crossapp\\crossapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|solutionrelative:crossapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|a:\\mydatabasemarket\\mydatabasemarket\\crossplatformapp\\crossapp\\orderspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|solutionrelative:orderspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|a:\\mydatabasemarket\\mydatabasemarket\\crossplatformapp\\crossapp\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|solutionrelative:mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|a:\\mydatabasemarket\\mydatabasemarket\\crossplatformapp\\crossapp\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|solutionrelative:appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|a:\\mydatabasemarket\\mydatabasemarket\\crossplatformapp\\crossapp\\personal_account.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|solutionrelative:personal_account.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|a:\\mydatabasemarket\\mydatabasemarket\\crossplatformapp\\crossapp\\profilepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|solutionrelative:profilepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 349,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CrossApp",
+              "DocumentMoniker": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\CrossPlatformApp\\CrossApp\\CrossApp.csproj",
+              "RelativeDocumentMoniker": "CrossApp.csproj",
+              "ToolTip": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\CrossPlatformApp\\CrossApp\\CrossApp.csproj",
+              "RelativeToolTip": "CrossApp.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-02-15T18:51:56.119Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MauiProgram.cs",
+              "DocumentMoniker": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\CrossPlatformApp\\CrossApp\\MauiProgram.cs",
+              "RelativeDocumentMoniker": "MauiProgram.cs",
+              "ToolTip": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\CrossPlatformApp\\CrossApp\\MauiProgram.cs",
+              "RelativeToolTip": "MauiProgram.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAIwBgAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-14T07:48:46.104Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Personal_account.xaml.cs",
+              "DocumentMoniker": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\CrossPlatformApp\\CrossApp\\Personal_account.xaml.cs",
+              "RelativeDocumentMoniker": "Personal_account.xaml.cs",
+              "ToolTip": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\CrossPlatformApp\\CrossApp\\Personal_account.xaml.cs",
+              "RelativeToolTip": "Personal_account.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-13T17:44:29.95Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProfilePage.xaml",
+              "DocumentMoniker": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\CrossPlatformApp\\CrossApp\\ProfilePage.xaml",
+              "RelativeDocumentMoniker": "ProfilePage.xaml",
+              "ToolTip": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\CrossPlatformApp\\CrossApp\\ProfilePage.xaml",
+              "RelativeToolTip": "ProfilePage.xaml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAAgAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-02-13T17:42:37.156Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OrdersPage.xaml",
+              "DocumentMoniker": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\CrossPlatformApp\\CrossApp\\OrdersPage.xaml",
+              "RelativeDocumentMoniker": "OrdersPage.xaml",
+              "ToolTip": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\CrossPlatformApp\\CrossApp\\OrdersPage.xaml",
+              "RelativeToolTip": "OrdersPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-02-13T17:41:26.383Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AppShell.xaml",
+              "DocumentMoniker": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\CrossPlatformApp\\CrossApp\\AppShell.xaml",
+              "RelativeDocumentMoniker": "AppShell.xaml",
+              "ToolTip": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\CrossPlatformApp\\CrossApp\\AppShell.xaml",
+              "RelativeToolTip": "AppShell.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-02-13T17:13:16.63Z"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 229,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 380,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
