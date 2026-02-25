@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "A:\\MyDatabaseMarket\\MyDatabaseMarket\\API\\API_DatabaseMarket\\API_DatabaseMarket.csproj": {}
+    "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket\\API_DatabaseMarket.csproj": {}
   },
   "projects": {
-    "A:\\MyDatabaseMarket\\MyDatabaseMarket\\API\\API_DatabaseMarket\\API_DatabaseMarket.csproj": {
+    "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket\\API_DatabaseMarket.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\API\\API_DatabaseMarket\\API_DatabaseMarket.csproj",
+        "projectUniqueName": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket\\API_DatabaseMarket.csproj",
         "projectName": "API_DatabaseMarket",
-        "projectPath": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\API\\API_DatabaseMarket\\API_DatabaseMarket.csproj",
-        "packagesPath": "C:\\Users\\prost\\.nuget\\packages\\",
-        "outputPath": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\API\\API_DatabaseMarket\\obj\\",
+        "projectPath": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket\\API_DatabaseMarket.csproj",
+        "packagesPath": "C:\\Users\\Andrey\\.nuget\\packages\\",
+        "outputPath": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\prost\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Andrey\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

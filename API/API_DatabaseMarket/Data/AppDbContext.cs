@@ -17,6 +17,7 @@ namespace API_DatabaseMarket.Data
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderItem> OrderItems { get; set; }
         public DbSet<Payment> Payments { get; set; }
+        public DbSet<OrderItemCountry> OrderItemCountries { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -114,6 +115,12 @@ namespace API_DatabaseMarket.Data
             // ORDER_ITEMS
             modelBuilder.Entity<OrderItem>(entity =>
             {
+
+                entity.HasIndex(e => e.DatabaseType);
+                entity.HasIndex(e => e.StorageType);
+                entity.HasIndex(e => e.Scalability);
+                entity.HasIndex(e => e.SizeGB);
+
                 entity.ToTable("order_items");
 
                 entity.HasKey(e => e.Id);
@@ -132,7 +139,6 @@ namespace API_DatabaseMarket.Data
                       .HasConversion(jsonConverter)
                       .IsRequired();
 
-
                 entity.Property(e => e.CreatedAt)
                       .HasColumnName("created_at")
                       .HasDefaultValueSql("now()");
@@ -141,6 +147,34 @@ namespace API_DatabaseMarket.Data
                       .WithMany(o => o.OrderItems)
                       .HasForeignKey(e => e.OrderId)
                       .OnDelete(DeleteBehavior.Cascade);
+
+                entity.Property(e => e.DatabaseType)
+                      .HasColumnName("database_type")
+                      .HasMaxLength(100)
+                      .IsRequired();
+
+                entity.Property(e => e.SizeGB)
+                      .HasColumnName("size_gb")
+                       .IsRequired();
+
+                entity.Property(e => e.Iops)
+                      .HasColumnName("iops")
+                      .HasMaxLength(100)
+                      .IsRequired();
+
+                entity.Property(e => e.StorageType)
+                      .HasColumnName("storage_type")
+                      .HasMaxLength(50)
+                      .IsRequired();
+
+                entity.Property(e => e.Scalability)
+                      .HasColumnName("scalability")
+                      .HasMaxLength(50)
+                      .IsRequired();
+
+                entity.Property(e => e.FinalPriceRub)
+                      .HasColumnName("final_price_rub")
+                      .HasColumnType("numeric(10,2)");
             });
 
 
@@ -162,7 +196,8 @@ namespace API_DatabaseMarket.Data
                       .HasColumnType("numeric(10,2)");
 
                 entity.Property(e => e.Status)
-                      .HasColumnName("status");
+                      .HasColumnName("status")
+                      .HasMaxLength(50);
 
                 entity.Property(e => e.PaymentMethod)
                       .HasColumnName("payment_method");
@@ -177,6 +212,34 @@ namespace API_DatabaseMarket.Data
                 entity.HasOne(e => e.Order)
                       .WithMany(o => o.Payments)
                       .HasForeignKey(e => e.OrderId)
+                      .OnDelete(DeleteBehavior.Cascade);
+            });
+
+            // Countries
+            modelBuilder.Entity<OrderItemCountry>(entity =>
+            {
+                entity.HasIndex(e => e.CountryCode);
+                entity.HasIndex(e => new { e.OrderItemId, e.CountryCode }).IsUnique();
+
+                entity.ToTable("order_item_countries");
+
+                entity.HasKey(e => e.Id);
+
+                entity.Property(e => e.Id)
+                      .HasColumnName("id");
+
+                entity.Property(e => e.OrderItemId)
+                      .HasColumnName("order_item_id")
+                      .IsRequired();
+
+                entity.Property(e => e.CountryCode)
+                      .HasColumnName("country_code")
+                      .HasMaxLength(5)
+                      .IsRequired();
+
+                entity.HasOne(e => e.OrderItem)
+                      .WithMany(o => o.Countries)
+                      .HasForeignKey(e => e.OrderItemId)
                       .OnDelete(DeleteBehavior.Cascade);
             });
 

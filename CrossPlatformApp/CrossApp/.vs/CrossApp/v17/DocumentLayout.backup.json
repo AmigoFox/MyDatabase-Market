@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\CrossPlatformApp\\CrossApp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|a:\\mydatabasemarket\\mydatabasemarket\\crossplatformapp\\crossapp\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|solutionrelative:mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|a:\\mydatabasemarket\\mydatabasemarket\\crossplatformapp\\crossapp\\crossapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|solutionrelative:crossapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|a:\\mydatabasemarket\\mydatabasemarket\\crossplatformapp\\crossapp\\orderspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|solutionrelative:orderspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|a:\\mydatabasemarket\\mydatabasemarket\\crossplatformapp\\crossapp\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|solutionrelative:mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|a:\\mydatabasemarket\\mydatabasemarket\\crossplatformapp\\crossapp\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -34,12 +34,12 @@
       "DocumentGroups": [
         {
           "DockedHeight": 349,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CrossApp",
+              "DocumentIndex": 1,
+              "Title": "CrossApp.csproj",
               "DocumentMoniker": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\CrossPlatformApp\\CrossApp\\CrossApp.csproj",
               "RelativeDocumentMoniker": "CrossApp.csproj",
               "ToolTip": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\CrossPlatformApp\\CrossApp\\CrossApp.csproj",
@@ -51,15 +51,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "MauiProgram.cs",
               "DocumentMoniker": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\CrossPlatformApp\\CrossApp\\MauiProgram.cs",
               "RelativeDocumentMoniker": "MauiProgram.cs",
               "ToolTip": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\CrossPlatformApp\\CrossApp\\MauiProgram.cs",
               "RelativeToolTip": "MauiProgram.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAIwBgAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAswC0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-14T07:48:46.104Z"
+              "WhenOpened": "2026-02-14T07:48:46.104Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -87,7 +88,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "OrdersPage.xaml",
               "DocumentMoniker": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\CrossPlatformApp\\CrossApp\\OrdersPage.xaml",
               "RelativeDocumentMoniker": "OrdersPage.xaml",
@@ -95,8 +96,7 @@
               "RelativeToolTip": "OrdersPage.xaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-02-13T17:41:26.383Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-13T17:41:26.383Z"
             },
             {
               "$type": "Document",

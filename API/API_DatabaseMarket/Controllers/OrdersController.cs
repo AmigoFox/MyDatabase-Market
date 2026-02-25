@@ -31,18 +31,46 @@ namespace API_DatabaseMarket.Controllers
 
             int userId = int.Parse(userIdClaim);
 
+            if (request.Items == null || !request.Items.Any())
+                return BadRequest("Order must contain at least one item.");
+
             var order = new Order
             {
                 UserId = userId,
-                TotalAmount = request.TotalAmount,
                 Status = "created",
                 CreatedAt = DateTime.UtcNow,
-                OrderItems = request.Items.Select(i => new OrderItem
-                {
-                    Config = i.Config, // ✅ JsonElement → JsonElement
-                    CreatedAt = DateTime.UtcNow
-                }).ToList()
+                OrderItems = new List<OrderItem>()
             };
+
+            decimal totalAmount = 0m;
+
+            foreach (var itemDto in request.Items)
+            {
+                // 🔥 Пока временный расчёт (заглушка)
+                decimal calculatedPrice = itemDto.SizeGB * 10m;
+
+                var orderItem = new OrderItem
+                {
+                    DatabaseType = itemDto.DatabaseType,
+                    SizeGB = itemDto.SizeGB,
+                    Iops = itemDto.Iops,
+                    StorageType = itemDto.StorageType,
+                    Scalability = itemDto.Scalability,
+                    FinalPriceRub = calculatedPrice,
+                    Config = itemDto.Config ?? default,
+                    CreatedAt = DateTime.UtcNow,
+                    Countries = itemDto.Countries
+                        .Select(c => new OrderItemCountry
+                        {
+                            CountryCode = c
+                        }).ToList()
+                };
+
+                totalAmount += calculatedPrice;
+                order.OrderItems.Add(orderItem);
+            }
+
+            order.TotalAmount = totalAmount;
 
             _db.Orders.Add(order);
             await _db.SaveChangesAsync();
@@ -65,6 +93,7 @@ namespace API_DatabaseMarket.Controllers
             var orders = await _db.Orders
                 .Where(o => o.UserId == userId)
                 .Include(o => o.OrderItems)
+                    .ThenInclude(i => i.Countries)
                 .OrderByDescending(o => o.CreatedAt)
                 .Select(o => new OrderResponse
                 {
@@ -75,7 +104,16 @@ namespace API_DatabaseMarket.Controllers
                     Items = o.OrderItems.Select(i => new OrderItemResponse
                     {
                         Id = i.Id,
-                        Config = i.Config, // ✅ уже JsonElement
+                        DatabaseType = i.DatabaseType,
+                        SizeGB = i.SizeGB,
+                        Iops = i.Iops,
+                        StorageType = i.StorageType,
+                        Scalability = i.Scalability,
+                        FinalPriceRub = i.FinalPriceRub,
+                        Countries = i.Countries
+                            .Select(c => c.CountryCode)
+                            .ToList(),
+                        Config = i.Config,
                         CreatedAt = i.CreatedAt
                     }).ToList()
                 })
@@ -99,6 +137,7 @@ namespace API_DatabaseMarket.Controllers
             var order = await _db.Orders
                 .Where(o => o.Id == id && o.UserId == userId)
                 .Include(o => o.OrderItems)
+                    .ThenInclude(i => i.Countries)
                 .Select(o => new OrderResponse
                 {
                     Id = o.Id,
@@ -108,6 +147,15 @@ namespace API_DatabaseMarket.Controllers
                     Items = o.OrderItems.Select(i => new OrderItemResponse
                     {
                         Id = i.Id,
+                        DatabaseType = i.DatabaseType,
+                        SizeGB = i.SizeGB,
+                        Iops = i.Iops,
+                        StorageType = i.StorageType,
+                        Scalability = i.Scalability,
+                        FinalPriceRub = i.FinalPriceRub,
+                        Countries = i.Countries
+                            .Select(c => c.CountryCode)
+                            .ToList(),
                         Config = i.Config,
                         CreatedAt = i.CreatedAt
                     }).ToList()

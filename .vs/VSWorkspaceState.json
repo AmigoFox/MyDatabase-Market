@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\cross-platform application"
+    "\\API\\API_DatabaseMarket",
+    "\\CrossPlatformApp",
+    "\\CrossPlatformApp\\CrossApp"
   ],
-  "SelectedNode": "\\cross-platform application",
+  "SelectedNode": "\\CrossPlatformApp\\CrossApp\\CrossApp.sln",
   "PreviewInSolutionExplorer": false
 }

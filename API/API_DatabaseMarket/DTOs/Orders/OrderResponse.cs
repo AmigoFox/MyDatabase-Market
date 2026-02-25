@@ -6,15 +6,22 @@ namespace API_DatabaseMarket.DTOs.Orders
     {
         public int Id { get; set; }
         public decimal TotalAmount { get; set; }
-        public string Status { get; set; }
+        public string Status { get; set; } = default!;
         public DateTime CreatedAt { get; set; }
 
-        public List<OrderItemResponse> Items { get; set; }
+        public List<OrderItemResponse> Items { get; set; } = new();
     }
 
     public class OrderItemResponse
     {
         public int Id { get; set; }
+        public string DatabaseType { get; set; } = default!;
+        public int SizeGB { get; set; }
+        public string Iops { get; set; } = default!;
+        public string StorageType { get; set; } = default!;
+        public string Scalability { get; set; } = default!;
+        public decimal FinalPriceRub { get; set; }
+        public List<string> Countries { get; set; } = new();
         public JsonElement Config { get; set; }
         public DateTime CreatedAt { get; set; }
     }

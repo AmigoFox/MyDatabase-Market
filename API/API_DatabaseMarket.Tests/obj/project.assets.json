@@ -7161,23 +7161,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\prost\\.nuget\\packages\\": {},
+    "C:\\Users\\Andrey\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\API\\API_DatabaseMarket.Tests\\API_DatabaseMarket.Tests.csproj",
+      "projectUniqueName": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket.Tests\\API_DatabaseMarket.Tests.csproj",
       "projectName": "API_DatabaseMarket.Tests",
-      "projectPath": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\API\\API_DatabaseMarket.Tests\\API_DatabaseMarket.Tests.csproj",
-      "packagesPath": "C:\\Users\\prost\\.nuget\\packages\\",
-      "outputPath": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\API\\API_DatabaseMarket.Tests\\obj\\",
+      "projectPath": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket.Tests\\API_DatabaseMarket.Tests.csproj",
+      "packagesPath": "C:\\Users\\Andrey\\.nuget\\packages\\",
+      "outputPath": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\prost\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Andrey\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -7193,8 +7193,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "A:\\MyDatabaseMarket\\MyDatabaseMarket\\API\\API_DatabaseMarket\\API_DatabaseMarket.csproj": {
-              "projectPath": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\API\\API_DatabaseMarket\\API_DatabaseMarket.csproj"
+            "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket\\API_DatabaseMarket.csproj": {
+              "projectPath": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket\\API_DatabaseMarket.csproj"
             }
           }
         }

@@ -1,18 +1,83 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\API\\API_DatabaseMarket\\",
+  "WorkspaceRootPath": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|a:\\mydatabasemarket\\mydatabasemarket\\api\\api_databasemarket\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|a:\\git\\mydatabase-market\\api\\api_databasemarket\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|a:\\git\\mydatabase-market\\api\\api_databasemarket\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|a:\\mydatabasemarket\\mydatabasemarket\\api\\api_databasemarket\\orderitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|solutionrelative:orderitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|a:\\git\\mydatabase-market\\api\\api_databasemarket\\services\\orderitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|solutionrelative:services\\orderitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|a:\\mydatabasemarket\\mydatabasemarket\\api\\api_databasemarket\\controllers\\orderitemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|a:\\git\\mydatabase-market\\api\\api_databasemarket\\services\\iorderitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|solutionrelative:services\\iorderitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|a:\\git\\mydatabase-market\\api\\api_databasemarket\\dtos\\auth\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|solutionrelative:dtos\\auth\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|a:\\git\\mydatabase-market\\api\\api_databasemarket\\dtos\\auth\\meresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|solutionrelative:dtos\\auth\\meresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|a:\\git\\mydatabase-market\\api\\api_databasemarket\\dtos\\auth\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|solutionrelative:dtos\\auth\\loginrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|a:\\git\\mydatabase-market\\api\\api_databasemarket\\dtos\\auth\\authresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|solutionrelative:dtos\\auth\\authresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|a:\\git\\mydatabase-market\\api\\api_databasemarket\\dtos\\orderitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|solutionrelative:dtos\\orderitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|a:\\git\\mydatabase-market\\api\\api_databasemarket\\dtos\\orders\\orderresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|solutionrelative:dtos\\orders\\orderresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|a:\\git\\mydatabase-market\\api\\api_databasemarket\\dtos\\orders\\createorderrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|solutionrelative:dtos\\orders\\createorderrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|a:\\git\\mydatabase-market\\api\\api_databasemarket\\dtos\\orders\\createorderitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|solutionrelative:dtos\\orders\\createorderitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|a:\\git\\mydatabase-market\\api\\api_databasemarket\\dtos\\users\\updateprofilerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|solutionrelative:dtos\\users\\updateprofilerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|a:\\git\\mydatabase-market\\api\\api_databasemarket\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|a:\\git\\mydatabase-market\\api\\api_databasemarket\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|a:\\git\\mydatabase-market\\api\\api_databasemarket\\controllers\\orderitemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|solutionrelative:controllers\\orderitemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|a:\\git\\mydatabase-market\\api\\api_databasemarket\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58F901C6-B2AA-4C24-B1F7-A4C3F069ACAF}|..\\API_DatabaseMarket.Tests\\API_DatabaseMarket.Tests.csproj|a:\\git\\mydatabase-market\\api\\api_databasemarket.tests\\api_databasemarket.tests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58F901C6-B2AA-4C24-B1F7-A4C3F069ACAF}|..\\API_DatabaseMarket.Tests\\API_DatabaseMarket.Tests.csproj|a:\\git\\mydatabase-market\\api\\api_databasemarket.tests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58F901C6-B2AA-4C24-B1F7-A4C3F069ACAF}|..\\API_DatabaseMarket.Tests\\API_DatabaseMarket.Tests.csproj|a:\\git\\mydatabase-market\\api\\api_databasemarket.tests\\loadtest.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,34 +87,8 @@
       "DocumentGroups": [
         {
           "DockedHeight": 349,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\API\\API_DatabaseMarket\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\API\\API_DatabaseMarket\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAUwGMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-19T09:03:06.877Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "OrderItemDto.cs",
-              "DocumentMoniker": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\API\\API_DatabaseMarket\\OrderItemDto.cs",
-              "RelativeDocumentMoniker": "OrderItemDto.cs",
-              "ToolTip": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\API\\API_DatabaseMarket\\OrderItemDto.cs",
-              "RelativeToolTip": "OrderItemDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-19T09:03:06.251Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
@@ -60,16 +99,246 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "OrderItemsController.cs",
-              "DocumentMoniker": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\API\\API_DatabaseMarket\\Controllers\\OrderItemsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\OrderItemsController.cs",
-              "ToolTip": "A:\\MyDatabaseMarket\\MyDatabaseMarket\\API\\API_DatabaseMarket\\Controllers\\OrderItemsController.cs",
-              "RelativeToolTip": "Controllers\\OrderItemsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-12T16:11:46.305Z",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-02-25T14:43:17.12Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T14:43:10.757Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OrderItemService.cs",
+              "DocumentMoniker": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket\\Services\\OrderItemService.cs",
+              "RelativeDocumentMoniker": "Services\\OrderItemService.cs",
+              "ToolTip": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket\\Services\\OrderItemService.cs",
+              "RelativeToolTip": "Services\\OrderItemService.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAgwDUAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T10:13:05.047Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IOrderItemService.cs",
+              "DocumentMoniker": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket\\Services\\IOrderItemService.cs",
+              "RelativeDocumentMoniker": "Services\\IOrderItemService.cs",
+              "ToolTip": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket\\Services\\IOrderItemService.cs",
+              "RelativeToolTip": "Services\\IOrderItemService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T10:12:57.797Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RegisterRequest.cs",
+              "DocumentMoniker": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket\\DTOs\\Auth\\RegisterRequest.cs",
+              "RelativeDocumentMoniker": "DTOs\\Auth\\RegisterRequest.cs",
+              "ToolTip": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket\\DTOs\\Auth\\RegisterRequest.cs",
+              "RelativeToolTip": "DTOs\\Auth\\RegisterRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T10:12:49.349Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MeResponse.cs",
+              "DocumentMoniker": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket\\DTOs\\Auth\\MeResponse.cs",
+              "RelativeDocumentMoniker": "DTOs\\Auth\\MeResponse.cs",
+              "ToolTip": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket\\DTOs\\Auth\\MeResponse.cs",
+              "RelativeToolTip": "DTOs\\Auth\\MeResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T10:12:45.055Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LoginRequest.cs",
+              "DocumentMoniker": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket\\DTOs\\Auth\\LoginRequest.cs",
+              "RelativeDocumentMoniker": "DTOs\\Auth\\LoginRequest.cs",
+              "ToolTip": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket\\DTOs\\Auth\\LoginRequest.cs",
+              "RelativeToolTip": "DTOs\\Auth\\LoginRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T10:12:41.148Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AuthResponse.cs",
+              "DocumentMoniker": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket\\DTOs\\Auth\\AuthResponse.cs",
+              "RelativeDocumentMoniker": "DTOs\\Auth\\AuthResponse.cs",
+              "ToolTip": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket\\DTOs\\Auth\\AuthResponse.cs",
+              "RelativeToolTip": "DTOs\\Auth\\AuthResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T10:12:36.38Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "OrderItemDto.cs",
+              "DocumentMoniker": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket\\DTOs\\OrderItemDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\OrderItemDto.cs",
+              "ToolTip": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket\\DTOs\\OrderItemDto.cs",
+              "RelativeToolTip": "DTOs\\OrderItemDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T10:12:27.377Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "OrderResponse.cs",
+              "DocumentMoniker": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket\\DTOs\\Orders\\OrderResponse.cs",
+              "RelativeDocumentMoniker": "DTOs\\Orders\\OrderResponse.cs",
+              "ToolTip": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket\\DTOs\\Orders\\OrderResponse.cs",
+              "RelativeToolTip": "DTOs\\Orders\\OrderResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T10:12:20.519Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CreateOrderRequest.cs",
+              "DocumentMoniker": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket\\DTOs\\Orders\\CreateOrderRequest.cs",
+              "RelativeDocumentMoniker": "DTOs\\Orders\\CreateOrderRequest.cs",
+              "ToolTip": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket\\DTOs\\Orders\\CreateOrderRequest.cs",
+              "RelativeToolTip": "DTOs\\Orders\\CreateOrderRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T10:12:15.147Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CreateOrderItemDto.cs",
+              "DocumentMoniker": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket\\DTOs\\Orders\\CreateOrderItemDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\Orders\\CreateOrderItemDto.cs",
+              "ToolTip": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket\\DTOs\\Orders\\CreateOrderItemDto.cs",
+              "RelativeToolTip": "DTOs\\Orders\\CreateOrderItemDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T10:12:04.547Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UpdateProfileRequest.cs",
+              "DocumentMoniker": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket\\DTOs\\Users\\UpdateProfileRequest.cs",
+              "RelativeDocumentMoniker": "DTOs\\Users\\UpdateProfileRequest.cs",
+              "ToolTip": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket\\DTOs\\Users\\UpdateProfileRequest.cs",
+              "RelativeToolTip": "DTOs\\Users\\UpdateProfileRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T10:11:10.213Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
+              "ToolTip": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "Controllers\\UsersController.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAowC0AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T10:10:52.548Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "OrderItemsController.cs",
+              "DocumentMoniker": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket\\Controllers\\OrderItemsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\OrderItemsController.cs",
+              "ToolTip": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket\\Controllers\\OrderItemsController.cs",
+              "RelativeToolTip": "Controllers\\OrderItemsController.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T10:10:50.28Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
+              "ToolTip": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Controllers\\AuthController.cs",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAkwH4AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T10:10:14.471Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
+              "ToolTip": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Data\\AppDbContext.cs",
+              "ViewState": "AgIAAJgAAAAAAAAAAAAqwLoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T10:08:35.118Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "API_DatabaseMarket.Tests.csproj",
+              "DocumentMoniker": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket.Tests\\API_DatabaseMarket.Tests.csproj",
+              "RelativeDocumentMoniker": "..\\API_DatabaseMarket.Tests\\API_DatabaseMarket.Tests.csproj",
+              "ToolTip": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket.Tests\\API_DatabaseMarket.Tests.csproj",
+              "RelativeToolTip": "..\\API_DatabaseMarket.Tests\\API_DatabaseMarket.Tests.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-02-25T10:04:39.609Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket.Tests\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "..\\API_DatabaseMarket.Tests\\UnitTest1.cs",
+              "ToolTip": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket.Tests\\UnitTest1.cs",
+              "RelativeToolTip": "..\\API_DatabaseMarket.Tests\\UnitTest1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T10:04:38.267Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "loadtest.js",
+              "DocumentMoniker": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket.Tests\\loadtest.js",
+              "RelativeDocumentMoniker": "..\\API_DatabaseMarket.Tests\\loadtest.js",
+              "ToolTip": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket.Tests\\loadtest.js",
+              "RelativeToolTip": "..\\API_DatabaseMarket.Tests\\loadtest.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-02-25T10:04:28.571Z"
             }
           ]
         },
