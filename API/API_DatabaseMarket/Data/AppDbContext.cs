@@ -18,6 +18,8 @@ namespace API_DatabaseMarket.Data
         public DbSet<OrderItem> OrderItems { get; set; }
         public DbSet<Payment> Payments { get; set; }
         public DbSet<OrderItemCountry> OrderItemCountries { get; set; }
+        public DbSet<ExchangeRate> ExchangeRates { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

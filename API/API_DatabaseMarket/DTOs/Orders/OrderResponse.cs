@@ -8,8 +8,8 @@ namespace API_DatabaseMarket.DTOs.Orders
         public decimal TotalAmount { get; set; }
         public string Status { get; set; } = default!;
         public DateTime CreatedAt { get; set; }
-
         public List<OrderItemResponse> Items { get; set; } = new();
+        public Dictionary<string, decimal> Prices { get; set; } = new();
     }
 
     public class OrderItemResponse
@@ -24,5 +24,6 @@ namespace API_DatabaseMarket.DTOs.Orders
         public List<string> Countries { get; set; } = new();
         public JsonElement Config { get; set; }
         public DateTime CreatedAt { get; set; }
+        public Dictionary<string, decimal> Prices { get; set; } = new();
     }
 }

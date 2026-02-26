@@ -24,8 +24,6 @@ namespace API_DatabaseMarket.DTOs.Orders
         [Required]
         [MinLength(1)]
         public List<string> Countries { get; set; } = new();
-
-        // Дополнительные параметры (если понадобятся)
         public JsonElement? Config { get; set; }
     }
 }

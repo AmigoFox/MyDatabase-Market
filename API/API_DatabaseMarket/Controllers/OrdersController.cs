@@ -1,9 +1,11 @@
 ﻿using API_DatabaseMarket.Data;
 using API_DatabaseMarket.DTOs.Orders;
 using API_DatabaseMarket.Models;
+using API_DatabaseMarket.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace API_DatabaseMarket.Controllers
 {
@@ -13,10 +15,13 @@ namespace API_DatabaseMarket.Controllers
     public class OrdersController : ControllerBase
     {
         private readonly AppDbContext _db;
-
-        public OrdersController(AppDbContext db)
+        private readonly IPricingService _pricingService;
+        private readonly IExchangeRateService _exchangeService;
+        public OrdersController(AppDbContext db, IPricingService pricingService, IExchangeRateService exchangeService)
         {
             _db = db;
+            _pricingService = pricingService;
+            _exchangeService = exchangeService;
         }
 
         // ============================
@@ -46,9 +51,8 @@ namespace API_DatabaseMarket.Controllers
 
             foreach (var itemDto in request.Items)
             {
-                // 🔥 Пока временный расчёт (заглушка)
-                decimal calculatedPrice = itemDto.SizeGB * 10m;
 
+                decimal calculatedPrice = _pricingService.Calculate(itemDto);
                 var orderItem = new OrderItem
                 {
                     DatabaseType = itemDto.DatabaseType,
@@ -82,26 +86,64 @@ namespace API_DatabaseMarket.Controllers
         // GET /api/v1/orders
         // ============================
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<OrderResponse>>> GetMyOrders()
+        public async Task<ActionResult<IEnumerable<OrderResponse>>> GetMyOrders([FromQuery] string? currencies)
         {
             var userIdClaim = User.FindFirst("UserId")?.Value;
+
             if (userIdClaim == null)
                 return Unauthorized();
 
             int userId = int.Parse(userIdClaim);
+
+
+
+            var requestedCurrencies = string.IsNullOrWhiteSpace(currencies)
+                ? new List<string>()
+                : currencies.Split(',', StringSplitOptions.RemoveEmptyEntries)
+                            .Select(c => c.Trim().ToUpper())
+                            .ToList();
+
+            Dictionary<string, decimal> rates = new();
+
+            if (requestedCurrencies.Any())
+            {
+                rates = await _db.ExchangeRates
+                    .Where(x => requestedCurrencies.Contains(x.CurrencyCode))
+                    .ToDictionaryAsync(x => x.CurrencyCode, x => x.RateToRub);
+            }
 
             var orders = await _db.Orders
                 .Where(o => o.UserId == userId)
                 .Include(o => o.OrderItems)
                     .ThenInclude(i => i.Countries)
                 .OrderByDescending(o => o.CreatedAt)
-                .Select(o => new OrderResponse
+                .ToListAsync();
+
+
+            var result = new List<OrderResponse>();
+
+            foreach (var o in orders)
+            {
+                var response = new OrderResponse
                 {
                     Id = o.Id,
                     TotalAmount = o.TotalAmount,
                     Status = o.Status,
-                    CreatedAt = o.CreatedAt,
-                    Items = o.OrderItems.Select(i => new OrderItemResponse
+                    CreatedAt = o.CreatedAt
+                };
+
+                foreach (var currency in requestedCurrencies)
+                {
+                    if (rates.TryGetValue(currency, out var rate))
+                    {
+                        response.Prices[currency] =
+                            Math.Round(o.TotalAmount / rate, 2);
+                    }
+                }
+
+                foreach (var i in o.OrderItems)
+                {
+                    var itemResponse = new OrderItemResponse
                     {
                         Id = i.Id,
                         DatabaseType = i.DatabaseType,
@@ -110,16 +152,26 @@ namespace API_DatabaseMarket.Controllers
                         StorageType = i.StorageType,
                         Scalability = i.Scalability,
                         FinalPriceRub = i.FinalPriceRub,
-                        Countries = i.Countries
-                            .Select(c => c.CountryCode)
-                            .ToList(),
+                        Countries = i.Countries.Select(c => c.CountryCode).ToList(),
                         Config = i.Config,
                         CreatedAt = i.CreatedAt
-                    }).ToList()
-                })
-                .ToListAsync();
+                    };
 
-            return Ok(orders);
+                    foreach (var currency in requestedCurrencies)
+                    {
+                        if (rates.TryGetValue(currency, out var rate))
+                        {
+                            itemResponse.Prices[currency] =
+                                Math.Round(i.FinalPriceRub / rate, 2);
+                        }
+                    }
+
+                    response.Items.Add(itemResponse);
+                }
+
+                result.Add(response);
+            }
+            return Ok(result);
         }
 
         // ============================

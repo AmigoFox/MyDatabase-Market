@@ -41,13 +41,33 @@ namespace API_DatabaseMarket.Services
 
         public async Task<bool> UpdateAsync(int id, OrderItem item)
         {
-            var existing = await _context.OrderItems.FindAsync(id);
+            var existing = await _context.OrderItems
+                .Include(x => x.Countries)
+                .FirstOrDefaultAsync(x => x.Id == id);
+
             if (existing == null)
                 return false;
 
+            existing.DatabaseType = item.DatabaseType;
+            existing.SizeGB = item.SizeGB;
+            existing.Iops = item.Iops;
+            existing.StorageType = item.StorageType;
+            existing.Scalability = item.Scalability;
+            existing.FinalPriceRub = item.FinalPriceRub;
             existing.Config = item.Config;
-            await _context.SaveChangesAsync();
 
+            // Обновляем страны
+            existing.Countries.Clear();
+
+            foreach (var country in item.Countries)
+            {
+                existing.Countries.Add(new OrderItemCountry
+                {
+                    CountryCode = country.CountryCode
+                });
+            }
+
+            await _context.SaveChangesAsync();
             return true;
         }
 

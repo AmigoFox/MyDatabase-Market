@@ -47,6 +47,11 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     });
 
 builder.Services.AddAuthorization();
+builder.Services.AddScoped<IPricingService, PricingService>();
+builder.Services.AddHttpClient<ICbrExchangeRateService, CbrExchangeRateService>();
+builder.Services.AddScoped<IExchangeRateService, ExchangeRateService>();
+builder.Services.AddScoped<ExchangeRateUpdater>();
+builder.Services.AddHostedService<ExchangeRateBackgroundService>();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
