@@ -16,14 +16,19 @@ namespace API_DatabaseMarket.Services
         }
         public async Task UpdateRatesAsync(CancellationToken ct = default)
         {
-            var rates = await _cbr.GetRatesAsync(ct);
+            var ratesFromCbr = await _cbr.GetRatesAsync(ct);
 
-            foreach (var (code, rate) in rates)
+            var existingRates = await _db.ExchangeRates
+                .ToDictionaryAsync(x => x.CurrencyCode, ct);
+
+            foreach (var (code, rate) in ratesFromCbr)
             {
-                var existing = await _db.ExchangeRates
-                    .FirstOrDefaultAsync(x => x.CurrencyCode == code, ct);
-
-                if (existing == null)
+                if (existingRates.TryGetValue(code, out var existing))
+                {
+                    existing.RateToRub = rate;
+                    existing.UpdatedAt = DateTime.UtcNow;
+                }
+                else
                 {
                     _db.ExchangeRates.Add(new ExchangeRate
                     {
@@ -31,11 +36,6 @@ namespace API_DatabaseMarket.Services
                         RateToRub = rate,
                         UpdatedAt = DateTime.UtcNow
                     });
-                }
-                else
-                {
-                    existing.RateToRub = rate;
-                    existing.UpdatedAt = DateTime.UtcNow;
                 }
             }
 

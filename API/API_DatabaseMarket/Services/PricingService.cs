@@ -1,4 +1,5 @@
 ﻿using API_DatabaseMarket.DTOs.Orders;
+using System.Diagnostics.Metrics;
 
 namespace API_DatabaseMarket.Services
 {
@@ -55,30 +56,45 @@ namespace API_DatabaseMarket.Services
             return Math.Round(price, 2);
         }
 
+        private static readonly Dictionary<string, decimal> CountryMultipliers =
+        new()
+        {
+            ["RU"] = 1.0m,
+            ["BY"] = 1.2m,
+            ["KZ"] = 1.5m,
+            ["UZ"] = 1.2m,
+            ["CN"] = 1.8m,
+            ["US"] = 2.0m,
+            ["DE"] = 1.9m,
+            ["GB"] = 2.1m,
+            ["FR"] = 1.8m,
+            ["JP"] = 2.2m,
+            ["SG"] = 2.3m
+        };
+
         private decimal GetCountriesMultiplier(List<string> countries)
         {
             if (countries == null || countries.Count == 0)
                 return 1m;
 
-            decimal total = 0m;
+            decimal max = 1m;
 
             foreach (var country in countries)
             {
-                total += country switch
-                {
-                    "Россия" => 1.0m,
-                    "Беларусь" => 1.2m,
-                    "Казахстан" => 1.5m,
-                    "Узбекистан" => 1.2m,
-                    "Китай" => 1.8m,
-                    _ => 1.0m
-                };
+                var code = country.ToUpperInvariant();
+
+                var multiplier = CountryMultipliers.TryGetValue(code, out var value)
+                    ? value
+                    : 1.0m;
+
+                if (multiplier > max)
+                    max = multiplier;
             }
 
             if (countries.Count > 1)
-                total *= 1.2m;
+                max *= 1.2m;
 
-            return total;
+            return max;
         }
     }
 }

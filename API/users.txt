@@ -1,0 +1,26 @@
+{
+  "login": "alex_dev",
+  "email": "alex.dev@example.com",
+  "password": "StrongPass123!",
+  "fullName": "Александр Смирнов",
+  "phone": "+79161234567"
+}
+
+
+
+{
+  "login": "maria_admin",
+  "email": "maria.admin@example.com",
+  "password": "AdminPass456!",
+  "fullName": "Мария Иванова",
+  "phone": "+79035554433"
+}
+
+
+{
+  "login": "test_user01",
+  "email": "test.user01@example.com",
+  "password": "TestPass789!",
+  "fullName": "Иван Петров",
+  "phone": "+79267778899"
+}

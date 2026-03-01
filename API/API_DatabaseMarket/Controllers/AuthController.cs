@@ -50,21 +50,8 @@ namespace API_DatabaseMarket.Controllers
 
 
 
-        [HttpPost("login")]
-        public async Task<ActionResult<AuthResponse>> Login(LoginRequest request)
-        {
-            var user = await _db.Users
-                .FirstOrDefaultAsync(u => u.Login == request.Login);
-
-            if (user == null)
-                return Unauthorized();
-
-            var token = GenerateToken(user);
-            return Ok(new AuthResponse(token));
-        }
 
 
-        /* для продакшена, там уже проверяется хэш пароля
         [HttpPost("login")]
         public async Task<ActionResult<AuthResponse>> Login(LoginRequest request)
         {
@@ -78,7 +65,6 @@ namespace API_DatabaseMarket.Controllers
             var token = GenerateToken(user);
             return Ok(new AuthResponse(token));
         }
-        */
 
 
         [Authorize]

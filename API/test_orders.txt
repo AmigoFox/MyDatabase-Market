@@ -1,0 +1,111 @@
+Вариант 1 — PostgreSQL, средняя нагрузка
+
+{
+  "items": [
+    {
+      "databaseType": "PostgreSQL",
+      "sizeGB": 100,
+      "iops": "Средняя (3000)",
+      "storageType": "SSD",
+      "scalability": "Manual scaling",
+      "countries": ["US", "DE"],
+      "config": {
+        "replication": true,
+        "backup": true
+      }
+    }
+  ]
+}
+
+
+{
+  "items": [
+    {
+      "databaseType": "MySQL",
+      "sizeGB": 500,
+      "iops": "Высокая (8000)",
+      "storageType": "NVMe",
+      "scalability": "Autoscaling",
+      "countries": ["US", "GB", "FR"],
+      "config": {
+        "replication": true,
+        "backup": true,
+        "multiAZ": true
+      }
+    }
+  ]
+}
+
+
+
+
+{
+  "items": [
+    {
+      "databaseType": "MongoDB",
+      "sizeGB": 250,
+      "iops": "Средняя (4000)",
+      "storageType": "SSD",
+      "scalability": "Cluster scaling",
+      "countries": ["SG", "JP"],
+      "config": {
+        "sharding": true,
+        "backup": true,
+        "replicaSet": true
+      }
+    }
+  ]
+}
+
+
+
+
+{
+  "items": [
+    {
+      "databaseType": "PostgreSQL",
+      "sizeGB": 50,
+      "iops": "Низкая (1000)",
+      "storageType": "SSD",
+      "scalability": "Manual scaling",
+      "countries": ["RU"],
+      "config": {
+        "replication": false,
+        "backup": true
+      }
+    },
+    {
+      "databaseType": "Redis",
+      "sizeGB": 20,
+      "iops": "Очень высокая (10000)",
+      "storageType": "NVMe",
+      "scalability": "Autoscaling",
+      "countries": ["DE", "PL"],
+      "config": {
+        "clusterMode": true,
+        "persistence": true
+      }
+    }
+  ]
+}
+
+
+
+
+{
+  "items": [
+    {
+      "databaseType": "MySQL",
+      "sizeGB": 750,
+      "iops": "Высокая (9000)",
+      "storageType": "NVMe",
+      "scalability": "Autoscaling",
+      "countries": ["SG", "JP", "CN"],
+      "config": {
+        "replication": true,
+        "backup": true,
+        "multiRegion": true
+      }
+    }
+  ]
+}

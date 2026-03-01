@@ -32,6 +32,26 @@ namespace API_DatabaseMarket.Data
             );
 
 
+            modelBuilder.Entity<ExchangeRate>(entity =>
+            {
+                entity.ToTable("exchange_rates");
+
+                entity.HasKey(e => e.Id);
+
+                entity.Property(e => e.Id)
+                      .HasColumnName("id");
+
+                entity.Property(e => e.CurrencyCode)
+                      .HasColumnName("currency_code");
+
+                entity.Property(e => e.RateToRub)
+                      .HasColumnName("rate_to_rub");
+
+                entity.Property(e => e.UpdatedAt)
+                      .HasColumnName("updated_at");
+            });
+
+
             // USERS
             modelBuilder.Entity<User>(entity =>
             {

@@ -228,6 +228,7 @@ A:\Git\MyDatabase-Market\API\API_DatabaseMarket\obj\Debug\net8.0\staticwebassets
 A:\Git\MyDatabase-Market\API\API_DatabaseMarket\obj\Debug\net8.0\staticwebassets.build.json.cache
 A:\Git\MyDatabase-Market\API\API_DatabaseMarket\obj\Debug\net8.0\staticwebassets.development.json
 A:\Git\MyDatabase-Market\API\API_DatabaseMarket\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+A:\Git\MyDatabase-Market\API\API_DatabaseMarket\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 A:\Git\MyDatabase-Market\API\API_DatabaseMarket\obj\Debug\net8.0\API_Data.6C138F76.Up2Date
 A:\Git\MyDatabase-Market\API\API_DatabaseMarket\obj\Debug\net8.0\API_DatabaseMarket.dll
 A:\Git\MyDatabase-Market\API\API_DatabaseMarket\obj\Debug\net8.0\refint\API_DatabaseMarket.dll
