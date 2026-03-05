@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "VoWn3wj04DQ=",
+  "dgSpecHash": "4bwgjM0+ILk=",
   "success": true,
   "projectFilePath": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\CrossApp.csproj",
   "expectedPackageFiles": [
@@ -123,7 +123,7 @@
     "C:\\Users\\Andrey\\.nuget\\packages\\xamarin.kotlin.stdlib.jdk8\\1.9.0.1\\xamarin.kotlin.stdlib.jdk8.1.9.0.1.nupkg.sha512",
     "C:\\Users\\Andrey\\.nuget\\packages\\xamarin.kotlinx.coroutines.android\\1.7.2.1\\xamarin.kotlinx.coroutines.android.1.7.2.1.nupkg.sha512",
     "C:\\Users\\Andrey\\.nuget\\packages\\xamarin.kotlinx.coroutines.core.jvm\\1.7.2.1\\xamarin.kotlinx.coroutines.core.jvm.1.7.2.1.nupkg.sha512",
-    "C:\\Users\\Andrey\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.19041.57\\microsoft.windows.sdk.net.ref.10.0.19041.57.nupkg.sha512"
+    "C:\\Users\\Andrey\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.19041.56\\microsoft.windows.sdk.net.ref.10.0.19041.56.nupkg.sha512"
   ],
   "logs": []
 }

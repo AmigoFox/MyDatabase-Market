@@ -6,8 +6,6 @@ using System.Threading.Tasks;
 
 namespace CrossApp.Models
 {
-
-
         public class CbrDailyResponse
         {
             public DateTime Date { get; set; }
@@ -21,6 +19,4 @@ namespace CrossApp.Models
             public int Nominal { get; set; }
             public decimal Value { get; set; }
         }
-
-    
 }

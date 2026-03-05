@@ -18,6 +18,7 @@ namespace API_DatabaseMarket.Services
         public async Task<IEnumerable<OrderItem>> GetAllAsync()
         {
             return await _context.OrderItems
+                .Include(x => x.Countries)
                 .AsNoTracking()
                 .ToListAsync();
         }
@@ -25,6 +26,7 @@ namespace API_DatabaseMarket.Services
         public async Task<OrderItem?> GetByIdAsync(int id)
         {
             return await _context.OrderItems
+                .Include(x => x.Countries)
                 .AsNoTracking()
                 .FirstOrDefaultAsync(x => x.Id == id);
         }

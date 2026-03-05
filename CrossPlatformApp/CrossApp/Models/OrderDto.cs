@@ -19,6 +19,16 @@ namespace CrossApp.Models
 
         public string FormattedDate => CreatedAt.ToString("dd.MM.yyyy HH:mm");
 
+
+        public string DatabaseType => Items?.FirstOrDefault()?.DatabaseType ?? "";
+
+        public int SizeGB => Items?.FirstOrDefault()?.SizeGB ?? 0;
+
+        public string Iops => Items?.FirstOrDefault()?.Iops ?? "";
+
+        public decimal FinalPriceRub => Items?.FirstOrDefault()?.FinalPriceRub ?? 0;
+
         public string FormattedAmount => $"{TotalAmount:0.00} €";
+
     }
 }

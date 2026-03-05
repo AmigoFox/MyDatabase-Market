@@ -6,7 +6,7 @@
   "phone": "+79161234567"
 }
 
-
+alex_devStrongPass123!
 
 {
   "login": "maria_admin",

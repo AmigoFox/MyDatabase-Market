@@ -1,4 +1,5 @@
 ﻿using CrossApp.Models;
+using CrossApp.Services;
 using CrossApp.Services.Api;
 using System;
 using System.Collections.Generic;
@@ -10,25 +11,31 @@ namespace CrossApp.ViewModels
 {
     public class LoginViewModel
     {
-        private readonly ApiService _api;
+        private readonly ApiClient _api;
+        private readonly AuthTokenStore _tokenStore;
 
-        public LoginViewModel(ApiService api)
+        public LoginViewModel(ApiClient api, AuthTokenStore tokenStore)
         {
             _api = api;
+            _tokenStore = tokenStore;
         }
 
         public async Task Login(string login, string password)
         {
-            Console.WriteLine("LOGIN BUTTON CLICKED");
+            Console.WriteLine("LOIN BUTTON CLICKED");
+            var request = new LoginRequest
+            {
+                Login = login,
+                Password = password
+            };
+            var result = await _api.PostAsync<LoginRequest, LoginResponse>("auth/login", request);
 
-            var response = await _api.LoginAsync(login, password);
+            if (result != null)
+            {
+                _tokenStore.SetToken(result.Token);
 
-            if (response == null)
-                return;
-
-            _api.SetJwt(response.Token);
-
-            await Shell.Current.GoToAsync("//MainPage");
+                await Shell.Current.GoToAsync("//MainPage");
+            }
         }
     }
 }

@@ -1,1 +1,1 @@
-A:\MyDatabaseMarket\MyDatabaseMarket\CrossPlatformApp\CrossApp\CrossApp.csproj;x64
+A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\CrossApp.csproj;x64

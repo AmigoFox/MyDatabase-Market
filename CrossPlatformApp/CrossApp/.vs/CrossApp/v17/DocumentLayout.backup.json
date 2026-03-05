@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|a:\\git\\mydatabase-market\\crossplatformapp\\crossapp\\viewmodels\\databasecalculatorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|solutionrelative:viewmodels\\databasecalculatorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|a:\\git\\mydatabase-market\\crossplatformapp\\crossapp\\orderdetailspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|solutionrelative:orderdetailspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|a:\\git\\mydatabase-market\\crossplatformapp\\crossapp\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|solutionrelative:mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|a:\\git\\mydatabase-market\\crossplatformapp\\crossapp\\orderdetailspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|solutionrelative:orderdetailspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +18,32 @@
       "DocumentGroups": [
         {
           "DockedHeight": 349,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DatabaseCalculatorViewModel.cs",
-              "DocumentMoniker": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\ViewModels\\DatabaseCalculatorViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\DatabaseCalculatorViewModel.cs",
-              "ToolTip": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\ViewModels\\DatabaseCalculatorViewModel.cs",
-              "RelativeToolTip": "ViewModels\\DatabaseCalculatorViewModel.cs",
-              "ViewState": "AgIAABYBAAAAAAAAAAAowCoBAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-25T10:18:36.519Z",
+              "DocumentIndex": 1,
+              "Title": "OrderDetailsPage.xaml",
+              "DocumentMoniker": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\OrderDetailsPage.xaml",
+              "RelativeDocumentMoniker": "OrderDetailsPage.xaml",
+              "ToolTip": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\OrderDetailsPage.xaml",
+              "RelativeToolTip": "OrderDetailsPage.xaml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-05T16:27:18.473Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MauiProgram.cs",
-              "DocumentMoniker": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\MauiProgram.cs",
-              "RelativeDocumentMoniker": "MauiProgram.cs",
-              "ToolTip": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\MauiProgram.cs",
-              "RelativeToolTip": "MauiProgram.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "OrderDetailsPage.xaml.cs",
+              "DocumentMoniker": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\OrderDetailsPage.xaml.cs",
+              "RelativeDocumentMoniker": "OrderDetailsPage.xaml.cs",
+              "ToolTip": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\OrderDetailsPage.xaml.cs",
+              "RelativeToolTip": "OrderDetailsPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-25T10:18:12.719Z",
+              "WhenOpened": "2026-03-05T16:17:42.116Z",
               "EditorCaption": ""
             }
           ]

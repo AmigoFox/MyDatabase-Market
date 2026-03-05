@@ -25,18 +25,48 @@ namespace API_DatabaseMarket.Controllers
         public async Task<IActionResult> GetAll()
         {
             var items = await _service.GetAllAsync();
-            return Ok(items);
+
+            var result = items.Select(i => new OrderItemResponse
+            {
+                Id = i.Id,
+                DatabaseType = i.DatabaseType,
+                SizeGB = i.SizeGB,
+                Iops = i.Iops,
+                StorageType = i.StorageType,
+                Scalability = i.Scalability,
+                FinalPriceRub = i.FinalPriceRub,
+                Countries = i.Countries
+                    .Select(c => c.CountryCode)
+                    .ToList()
+            });
+
+            return Ok(result);
         }
+
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
+            var i = await _service.GetByIdAsync(id);
 
-            var item = await _service.GetByIdAsync(id);
-            if (item == null)
+            if (i == null)
                 return NotFound();
 
-            return Ok(item);
+            var result = new OrderItemResponse
+            {
+                Id = i.Id,
+                DatabaseType = i.DatabaseType,
+                SizeGB = i.SizeGB,
+                Iops = i.Iops,
+                StorageType = i.StorageType,
+                Scalability = i.Scalability,
+                FinalPriceRub = i.FinalPriceRub,
+                Countries = i.Countries
+                    .Select(c => c.CountryCode)
+                    .ToList()
+            };
+
+            return Ok(result);
         }
 
         [HttpPost]
