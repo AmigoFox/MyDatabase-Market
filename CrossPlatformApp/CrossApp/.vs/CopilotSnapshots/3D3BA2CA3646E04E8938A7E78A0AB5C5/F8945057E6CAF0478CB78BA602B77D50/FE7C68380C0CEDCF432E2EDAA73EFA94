@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CrossApp.OrderDetailsPage"
+             Title="Детали заказа"
+             BackgroundColor="#F8F4FF">
+
+    <ScrollView>
+
+        <VerticalStackLayout Padding="20" Spacing="16">
+
+            <!-- Заголовок -->
+            <Label Text="Информация о заказе"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   TextColor="#4A148C"/>
+
+            <Frame BackgroundColor="White"
+                   BorderColor="#D1C4E9"
+                   CornerRadius="16"
+                   Padding="16">
+
+                <VerticalStackLayout Spacing="10">
+
+                    <!-- Diagnostic labels to verify binding values and visibility -->
+                    <Label Text="{Binding Order.DatabaseType}"
+                           FontSize="18"
+                           TextColor="Black"
+                           HorizontalOptions="Start" />
+
+                    <Label Text="{Binding CountriesText}"
+                           FontSize="18"
+                           TextColor="Black"
+                           HorizontalOptions="Start" />
+
+                    <Label Text="{Binding Order.SizeGB, StringFormat='Размер: {0} GB'}"
+                           FontSize="16"
+                           TextColor="Black" />
+
+                    <Label Text="{Binding Order.Iops}"
+                           FontSize="16"
+                           TextColor="Black" />
+
+                    <Label Text="{Binding Order.FinalPriceRub, StringFormat='Цена: {0} ₽'}"
+                           FontSize="16"
+                           TextColor="Black" />
+
+                </VerticalStackLayout>
+
+            </Frame>
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+</ContentPage>

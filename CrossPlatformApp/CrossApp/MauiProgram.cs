@@ -39,8 +39,7 @@ namespace CrossApp
             builder.Services.AddTransient<AuthHandler>();
             builder.Services.AddTransient<OrderDetailsViewModel>();
             builder.Services.AddTransient<OrderDetailsPage>();
-            builder.Services.AddTransient<OrderDetailsViewModel>();
-            builder.Services.AddTransient<OrderDetailsPage>();
+   
 
 
 

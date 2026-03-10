@@ -16,7 +16,6 @@
                    FontAttributes="Bold"
                    TextColor="#4A148C"/>
 
-            <!-- Карточка -->
             <Frame BackgroundColor="White"
                    BorderColor="#D1C4E9"
                    CornerRadius="16"
@@ -24,50 +23,28 @@
 
                 <VerticalStackLayout Spacing="10">
 
-                            <Label Text="{Binding Order.DatabaseType, StringFormat='Тип БД: {0}'}"
-                   FontSize="16"/>
+                    <!-- Diagnostic labels to verify binding values and visibility -->
+                    <Label Text="{Binding Order.DatabaseType, StringFormat='Тип базы данных: {0}'}"
+                           FontSize="18"
+                           TextColor="Black"
+                           HorizontalOptions="Start" />
 
-                            <Label Text="{Binding Order.SizeGB, StringFormat='Размер: {0} GB'}"
-                   FontSize="16"/>
+                    <Label Text="{Binding CountriesText, StringFormat='Страны, в которых находятся сервера: {0}'}"
+                           FontSize="18"
+                           TextColor="Black"
+                           HorizontalOptions="Start" />
 
-                            <Label Text="{Binding Order.Iops, StringFormat='IOPS: {0}'}"
-                   FontSize="16"/>
+                    <Label Text="{Binding Order.SizeGB, StringFormat='Обьем: {0} GB'}"
+                           FontSize="16"
+                           TextColor="Black" />
 
-                            <Label Text="{Binding Order.Countries, StringFormat='Страны: {0}'}"
-                   FontSize="16"/>
+                    <Label Text="{Binding Order.Iops}"
+                           FontSize="16"
+                           TextColor="Black" />
 
-                            <Label Text="{Binding Order.FinalPriceRub, StringFormat='Цена позиции: {0} ₽'}"
-                   FontSize="16"/>
-
-                </VerticalStackLayout>
-
-            </Frame>
-
-
-            <!-- Параметры БД -->
-            <Label Text="Параметры базы"
-                   FontSize="20"
-                   FontAttributes="Bold"
-                   TextColor="#4A148C"/>
-
-            <Frame BackgroundColor="White"
-                   BorderColor="#D1C4E9"
-                   CornerRadius="16"
-                   Padding="16">
-
-                <VerticalStackLayout Spacing="10">
-
-                    <Label Text="{Binding Order.DatabaseType, StringFormat='Тип БД: {0}'}"
-                           FontSize="16"/>
-
-                    <Label Text="{Binding Order.SizeGB, StringFormat='Размер: {0} GB'}"
-                           FontSize="16"/>
-
-                    <Label Text="{Binding Order.Iops, StringFormat='IOPS: {0}'}"
-                           FontSize="16"/>
-
-                    <Label Text="{Binding Order.FinalPriceRub, StringFormat='Цена позиции: {0} ₽'}"
-                           FontSize="16"/>
+                    <Label Text="{Binding Order.FinalPriceRub, StringFormat='Стоимость в рублях: {0} '}"
+                           FontSize="16"
+                           TextColor="Black" />
 
                 </VerticalStackLayout>
 

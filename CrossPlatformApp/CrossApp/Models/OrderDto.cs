@@ -1,34 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CrossApp.Models;
 
-namespace CrossApp.Models
+namespace CrossApp.Models;
+
+public class OrderDto
 {
-    public class OrderDto
-    {
-        public int Id { get; set; }
-        public decimal TotalAmount { get; set; }
-        public string Status { get; set; } = "";
-        public DateTime CreatedAt { get; set; }
+    public int Id { get; set; }
+    public decimal TotalAmount { get; set; }
+    public string Status { get; set; } = "";
+    public DateTime CreatedAt { get; set; }
 
-        public List<OrderItemDto> Items { get; set; } = new();
+    public List<OrderItemDto> Items { get; set; } = new();
 
-        public int ItemsCount => Items?.Count ?? 0;
+    public int ItemsCount => Items?.Count ?? 0;
 
-        public string FormattedDate => CreatedAt.ToString("dd.MM.yyyy HH:mm");
+    public string FormattedDate => CreatedAt.ToString("dd.MM.yyyy HH:mm");
 
+    public string DatabaseType => Items?.FirstOrDefault()?.DatabaseType ?? "";
 
-        public string DatabaseType => Items?.FirstOrDefault()?.DatabaseType ?? "";
+    public int SizeGB => Items?.FirstOrDefault()?.SizeGB ?? 0;
 
-        public int SizeGB => Items?.FirstOrDefault()?.SizeGB ?? 0;
+    public string Iops => Items?.FirstOrDefault()?.Iops ?? "";
 
-        public string Iops => Items?.FirstOrDefault()?.Iops ?? "";
+    public decimal FinalPriceRub => Items?.FirstOrDefault()?.FinalPriceRub ?? 0;
 
-        public decimal FinalPriceRub => Items?.FirstOrDefault()?.FinalPriceRub ?? 0;
+    public string Countries =>
+        Items?.FirstOrDefault()?.Countries != null
+            ? string.Join(", ", Items.First().Countries)
+            : "";
 
-        public string FormattedAmount => $"{TotalAmount:0.00} €";
-
-    }
+    public string FormattedAmount => $"{TotalAmount:0.00} €";
 }

@@ -1,8 +1,9 @@
 ﻿using CrossApp.ViewModels;
-using CrossApp.Services.Api;
+using CrossApp.Models;
 
 namespace CrossApp;
 public partial class OrdersPage : ContentPage
+
 {
     private readonly OrdersViewModel _vm;
 
@@ -28,4 +29,23 @@ public partial class OrdersPage : ContentPage
     {
         await Shell.Current.GoToAsync(nameof(PaymentsPage));
     }
+
+
+    private async void OnMoreDetailsClicked(object sender, EventArgs e)
+    {
+        var button = sender as Button;
+        var order = button?.BindingContext as OrderDto;
+
+        if (order == null)
+            return;
+
+        var parameters = new Dictionary<string, object>
+        {
+            ["id"] = order.Id
+        };
+
+        //await Shell.Current.GoToAsync(nameof(OrderDetailsPage), parameters);
+        await Shell.Current.GoToAsync($"{nameof(OrderDetailsPage)}?id={order.Id}");
+    }
 }
+

@@ -1,11 +1,13 @@
 ﻿using CrossApp.Models;
 using CrossApp.Services.Api;
+
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 
@@ -14,15 +16,17 @@ namespace CrossApp.ViewModels
     public class OrdersViewModel
     {
         private readonly ApiClient _api;
-        public Command<OrderDto> OpenOrderCommand { get; }
 
         public ObservableCollection<OrderDto> Orders { get; set; } = new();
+        private readonly IServiceProvider _services;
 
-        public OrdersViewModel(ApiClient api)
+        public OrdersViewModel(ApiClient api, IServiceProvider services)
         {
             _api = api;
-            OpenOrderCommand = new Command<OrderDto>(OpenOrder);
+            _services = services;
+
         }
+
 
         public async Task LoadOrders()
         {
@@ -31,6 +35,9 @@ namespace CrossApp.ViewModels
             var result = await _api.GetAsync<List<OrderDto>>("orders");
 
             Debug.WriteLine("RESULT COUNT: " + (result?.Count ?? 0));
+            Debug.WriteLine("RESULT COUNT: " + (result));
+            Debug.WriteLine(JsonSerializer.Serialize(result));
+
 
             if (result == null)
                 return;
@@ -41,14 +48,17 @@ namespace CrossApp.ViewModels
             {
                 Orders.Add(order);
             }
+
+            Console.WriteLine("ORDER OrdersViewModel:");
+            Console.WriteLine(System.Text.Json.JsonSerializer.Serialize(Orders));
         }
 
-        private async void OpenOrder(OrderDto order)
+        public async Task LoadOrder(int id)
         {
-            if (order == null)
-                return;
+            var item = await _api.GetAsync<OrderItemDto>($"OrderItems/{id}");
 
-            await Shell.Current.GoToAsync($"{nameof(OrderDetailsPage)}?id={order.Id}");
+            if (item == null)
+                return;
         }
 
     }

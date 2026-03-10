@@ -40,15 +40,6 @@
                             <Label Text="{Binding DatabaseType}"
                        FontSize="16"
                        TextColor="#6A1B9A"/>
-
-                            <!-- Размер -->
-                            <Label Text="{Binding SizeGB, StringFormat='Размер: {0} GB'}"
-                       FontSize="14"/>
-
-                            <!-- IOPS -->
-                            <Label Text="{Binding Iops, StringFormat='IOPS: {0}'}"
-                       FontSize="14"/>
-
                             <!-- Цена -->
                             <Label Text="{Binding FinalPriceRub, StringFormat='Цена: {0} ₽'}"
                        FontSize="16"
@@ -59,9 +50,7 @@
                             <Button Text="Подробнее"
                         BackgroundColor="#7E57C2"
                         TextColor="White"
-                        Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.OpenOrderCommand}"
-                        CommandParameter="{Binding .}" />
-
+                        Clicked="OnMoreDetailsClicked"/>
                         </VerticalStackLayout>
 
                     </Frame>

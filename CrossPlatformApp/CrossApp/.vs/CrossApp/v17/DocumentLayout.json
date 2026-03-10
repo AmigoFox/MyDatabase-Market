@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|a:\\git\\mydatabase-market\\crossplatformapp\\crossapp\\orderdetailspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|solutionrelative:orderdetailspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|a:\\git\\mydatabase-market\\crossplatformapp\\crossapp\\viewmodels\\orderdetailsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|solutionrelative:viewmodels\\orderdetailsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|a:\\git\\mydatabase-market\\crossplatformapp\\crossapp\\orderdetailspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|solutionrelative:orderdetailspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|a:\\git\\mydatabase-market\\crossplatformapp\\crossapp\\orderdetailspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|solutionrelative:orderdetailspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|a:\\git\\mydatabase-market\\crossplatformapp\\crossapp\\orderspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|solutionrelative:orderspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|a:\\git\\mydatabase-market\\crossplatformapp\\crossapp\\orderspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|solutionrelative:orderspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +30,76 @@
       "DocumentGroups": [
         {
           "DockedHeight": 349,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "OrderDetailsPage.xaml",
-              "DocumentMoniker": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\OrderDetailsPage.xaml",
-              "RelativeDocumentMoniker": "OrderDetailsPage.xaml",
-              "ToolTip": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\OrderDetailsPage.xaml",
-              "RelativeToolTip": "OrderDetailsPage.xaml",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-05T16:27:18.473Z"
+              "Title": "OrderDetailsViewModel.cs",
+              "DocumentMoniker": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\ViewModels\\OrderDetailsViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\OrderDetailsViewModel.cs",
+              "ToolTip": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\ViewModels\\OrderDetailsViewModel.cs",
+              "RelativeToolTip": "ViewModels\\OrderDetailsViewModel.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAwwCcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-10T16:48:14.036Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "OrderDetailsPage.xaml.cs",
               "DocumentMoniker": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\OrderDetailsPage.xaml.cs",
               "RelativeDocumentMoniker": "OrderDetailsPage.xaml.cs",
               "ToolTip": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\OrderDetailsPage.xaml.cs",
               "RelativeToolTip": "OrderDetailsPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-05T16:17:42.116Z",
+              "WhenOpened": "2026-03-10T11:32:50.232Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "OrdersPage.xaml",
+              "DocumentMoniker": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\OrdersPage.xaml",
+              "RelativeDocumentMoniker": "OrdersPage.xaml",
+              "ToolTip": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\OrdersPage.xaml",
+              "RelativeToolTip": "OrdersPage.xaml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAADQAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-10T15:33:17.266Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "OrdersPage.xaml.cs",
+              "DocumentMoniker": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\OrdersPage.xaml.cs",
+              "RelativeDocumentMoniker": "OrdersPage.xaml.cs",
+              "ToolTip": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\OrdersPage.xaml.cs",
+              "RelativeToolTip": "OrdersPage.xaml.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAADwvy8AAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-10T15:32:22.769Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OrderDetailsPage.xaml",
+              "DocumentMoniker": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\OrderDetailsPage.xaml",
+              "RelativeDocumentMoniker": "OrderDetailsPage.xaml",
+              "ToolTip": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\OrderDetailsPage.xaml",
+              "RelativeToolTip": "OrderDetailsPage.xaml",
+              "ViewState": "AgIAABQAAAAAAAAAAAAcwB0AAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-10T11:59:34.35Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
             }
           ]
         },
@@ -66,16 +122,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            }
-          ]
-        },
-        {
-          "DockedHeight": 380,
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
             }
           ]
         }

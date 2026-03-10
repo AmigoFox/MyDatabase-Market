@@ -1,16 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|a:\\git\\mydatabase-market\\api\\api_databasemarket\\controllers\\orderitemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|solutionrelative:controllers\\orderitemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|a:\\git\\mydatabase-market\\api\\api_databasemarket\\dtos\\orderitemresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|solutionrelative:dtos\\orderitemresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 1,
@@ -18,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 349,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -31,32 +22,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "OrderItemResponse.cs",
-              "DocumentMoniker": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket\\DTOs\\OrderItemResponse.cs",
-              "RelativeDocumentMoniker": "DTOs\\OrderItemResponse.cs",
-              "ToolTip": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket\\DTOs\\OrderItemResponse.cs",
-              "RelativeToolTip": "DTOs\\OrderItemResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-05T16:57:27.241Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "OrderItemsController.cs",
-              "DocumentMoniker": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket\\Controllers\\OrderItemsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\OrderItemsController.cs",
-              "ToolTip": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket\\Controllers\\OrderItemsController.cs",
-              "RelativeToolTip": "Controllers\\OrderItemsController.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAUwEUAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-05T16:56:08.684Z",
-              "EditorCaption": ""
             }
           ]
         },

@@ -1,40 +1,72 @@
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using CrossApp.Models;
+﻿using CrossApp.ViewModels;
+using System.Collections.Generic;
 using CrossApp.Services.Api;
-using CrossApp.Services;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Microsoft.Maui.Controls;
+using System.Diagnostics;
 
-namespace CrossApp.ViewModels;
+namespace CrossApp;
 
-public class OrderDetailsViewModel : INotifyPropertyChanged
+[QueryProperty(nameof(OrderId), "id")]
+public partial class OrderDetailsPage : ContentPage, IQueryAttributable
 {
-    private readonly ApiClient _api;
+    private readonly OrderDetailsViewModel _vm;
 
-    private OrderDto? _order;
-    public OrderDto? Order
+    public int OrderId
     {
-        get => _order;
         set
         {
-            _order = value;
-            OnPropertyChanged();
+            // оставляем совместимость — но основной механизм ниже (ApplyQueryAttributes)
+            _ = Load(value);
         }
     }
 
-    public OrderDetailsViewModel(ApiClient api)
+    public OrderDetailsPage(OrderDetailsViewModel vm)
     {
-        _api = api;
+        InitializeComponent();
+
+        Debug.WriteLine("OrderDetailsPage.ctor");
+        _vm = vm;
+        BindingContext = _vm;
+        Debug.WriteLine("OrderDetailsPage: BindingContext set to vm");
     }
 
-    public async Task LoadOrder(string id)
+    private async Task Load(int id)
     {
-        Order = await _api.GetAsync<OrderDto>($"orders/{id}");
+        await _vm.LoadOrder(id);
     }
 
-    public event PropertyChangedEventHandler? PropertyChanged;
-
-    protected void OnPropertyChanged([CallerMemberName] string name = "")
+    // Обратите внимание: IDictionary<string, object>
+    public void ApplyQueryAttributes(IDictionary<string, object> query)
     {
-        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+        Debug.WriteLine("ApplyQueryAttributes called: " + (query == null ? "null" : string.Join(", ", query.Keys)));
+
+        if (query == null)
+            return;
+
+        if (!query.TryGetValue("id", out var raw))
+            return;
+
+        int id;
+
+        switch (raw)
+        {
+            case int i:
+                id = i;
+                break;
+            case long l:
+                id = (int)l;
+                break;
+            case string s when int.TryParse(s, out var parsed):
+                id = parsed;
+                break;
+            default:
+                // Невозможный/неподдерживаемый тип
+                return;
+        }
+
+        Debug.WriteLine($"ApplyQueryAttributes parsed id={id}");
+        _ = Load(id);
     }
 }

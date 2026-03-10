@@ -1,0 +1,54 @@
+﻿using System.ComponentModel;
+using System.Runtime.CompilerServices;
+using Microsoft.Maui.ApplicationModel;
+using CrossApp.Models;
+using CrossApp.Services.Api;
+
+namespace CrossApp.ViewModels;
+
+public class OrderDetailsViewModel : INotifyPropertyChanged
+{
+    private readonly ApiClient _api;
+
+    private OrderItemDto? _order;
+
+    public OrderItemDto? Order
+    {
+        get => _order;
+        set
+        {
+            _order = value;
+            OnPropertyChanged();
+            OnPropertyChanged(nameof(CountriesText));
+        }
+    }
+
+    public string CountriesText =>
+        Order == null ? "" : string.Join(", ", Order.Countries);
+
+    public OrderDetailsViewModel(ApiClient api)
+    {
+        _api = api;
+    }
+
+    public async Task LoadOrder(int id)
+    {
+        var item = await _api.GetAsync<OrderItemDto>($"OrderItems/{id}");
+
+        if (item == null)
+            return;
+
+        // Обновляем свойство в UI-потоке, чтобы биндинги отработали корректно
+        MainThread.BeginInvokeOnMainThread(() =>
+        {
+            Order = item;
+        });
+    }
+
+    public event PropertyChangedEventHandler? PropertyChanged;
+
+    protected void OnPropertyChanged([CallerMemberName] string name = "")
+    {
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+    }
+}
