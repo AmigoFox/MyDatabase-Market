@@ -32,12 +32,12 @@
         Route="PaymentsPage" />
 
     <ShellContent
-        Title="Профиль"
+        Title="Личный кабинет"
         ContentTemplate="{DataTemplate local:ProfilePage}"
         Route="ProfilePage" />
 
     <ShellContent
-        Title="Личный кабинет"
-        ContentTemplate="{DataTemplate local:Personal_account}"
-        Route="Personal_account" />
+        Title="Настройки"
+        ContentTemplate="{DataTemplate local:SettingsPage}"
+        Route="SettingsPage" />
 </Shell>

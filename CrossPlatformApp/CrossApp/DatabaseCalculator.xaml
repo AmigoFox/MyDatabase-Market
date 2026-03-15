@@ -181,36 +181,78 @@
                            TextColor="#4A148C" />
 
                     <VerticalStackLayout Grid.Row="5" Grid.Column="1" Spacing="12">
-                        <HorizontalStackLayout Spacing="12">
-                            <CheckBox IsChecked="{Binding RussiaSelected}" Scale="1.2" Color="#9C27B0" />
-                            <Label Text="Россия" VerticalOptions="Center" TextColor="#4A148C" />
-                        </HorizontalStackLayout>
+                        <Grid ColumnDefinitions="*,*"
+      RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto"
+      ColumnSpacing="20"
+      RowSpacing="10">
 
-                        <HorizontalStackLayout Spacing="12">
-                            <CheckBox IsChecked="{Binding KazakhstanSelected}" Scale="1.2" Color="#9C27B0" />
-                            <Label Text="Казахстан" VerticalOptions="Center" TextColor="#4A148C" />
-                        </HorizontalStackLayout>
+                            <!-- Россия -->
+                            <HorizontalStackLayout Grid.Row="0" Grid.Column="0" Spacing="12">
+                                <CheckBox IsChecked="{Binding RussiaSelected}" Scale="1.2" Color="#9C27B0"/>
+                                <Label Text="Россия" VerticalOptions="Center" TextColor="#4A148C"/>
+                            </HorizontalStackLayout>
 
-                        <HorizontalStackLayout Spacing="12">
-                            <CheckBox IsChecked="{Binding ChinaSelected}" Scale="1.2" Color="#9C27B0" />
-                            <Label Text="Китай" VerticalOptions="Center" TextColor="#4A148C" />
-                        </HorizontalStackLayout>
+                            <!-- Беларусь -->
+                            <HorizontalStackLayout Grid.Row="0" Grid.Column="1" Spacing="12">
+                                <CheckBox IsChecked="{Binding BelarusSelected}" Scale="1.2" Color="#9C27B0"/>
+                                <Label Text="Беларусь" VerticalOptions="Center" TextColor="#4A148C"/>
+                            </HorizontalStackLayout>
 
-                        <HorizontalStackLayout Spacing="12">
-                            <CheckBox IsChecked="{Binding UzbekistanSelected}" Scale="1.2" Color="#9C27B0" />
-                            <Label Text="Узбекистан" VerticalOptions="Center" TextColor="#4A148C" />
-                        </HorizontalStackLayout>
+                            <!-- Казахстан -->
+                            <HorizontalStackLayout Grid.Row="1" Grid.Column="0" Spacing="12">
+                                <CheckBox IsChecked="{Binding KazakhstanSelected}" Scale="1.2" Color="#9C27B0"/>
+                                <Label Text="Казахстан" VerticalOptions="Center" TextColor="#4A148C"/>
+                            </HorizontalStackLayout>
 
-                        <HorizontalStackLayout Spacing="12">
-                            <CheckBox IsChecked="{Binding BelarusSelected}" Scale="1.2" Color="#9C27B0" />
-                            <Label Text="Беларусь" VerticalOptions="Center" TextColor="#4A148C" />
-                        </HorizontalStackLayout>
+                            <!-- Узбекистан -->
+                            <HorizontalStackLayout Grid.Row="1" Grid.Column="1" Spacing="12">
+                                <CheckBox IsChecked="{Binding UzbekistanSelected}" Scale="1.2" Color="#9C27B0"/>
+                                <Label Text="Узбекистан" VerticalOptions="Center" TextColor="#4A148C"/>
+                            </HorizontalStackLayout>
 
+                            <!-- Китай -->
+                            <HorizontalStackLayout Grid.Row="2" Grid.Column="0" Spacing="12">
+                                <CheckBox IsChecked="{Binding ChinaSelected}" Scale="1.2" Color="#9C27B0"/>
+                                <Label Text="Китай" VerticalOptions="Center" TextColor="#4A148C"/>
+                            </HorizontalStackLayout>
 
+                            <!-- США -->
+                            <HorizontalStackLayout Grid.Row="2" Grid.Column="1" Spacing="12">
+                                <CheckBox IsChecked="{Binding UsaSelected}" Scale="1.2" Color="#9C27B0"/>
+                                <Label Text="США" VerticalOptions="Center" TextColor="#4A148C"/>
+                            </HorizontalStackLayout>
 
+                            <!-- Индия -->
+                            <HorizontalStackLayout Grid.Row="3" Grid.Column="0" Spacing="12">
+                                <CheckBox IsChecked="{Binding IndiaSelected}" Scale="1.2" Color="#9C27B0"/>
+                                <Label Text="Индия" VerticalOptions="Center" TextColor="#4A148C"/>
+                            </HorizontalStackLayout>
 
+                            <!-- Турция -->
+                            <HorizontalStackLayout Grid.Row="3" Grid.Column="1" Spacing="12">
+                                <CheckBox IsChecked="{Binding TurkeySelected}" Scale="1.2" Color="#9C27B0"/>
+                                <Label Text="Турция" VerticalOptions="Center" TextColor="#4A148C"/>
+                            </HorizontalStackLayout>
 
+                            <!-- Южная Корея -->
+                            <HorizontalStackLayout Grid.Row="4" Grid.Column="0" Spacing="12">
+                                <CheckBox IsChecked="{Binding KoreaSelected}" Scale="1.2" Color="#9C27B0"/>
+                                <Label Text="Южная Корея" VerticalOptions="Center" TextColor="#4A148C"/>
+                            </HorizontalStackLayout>
 
+                            <!-- Армения -->
+                            <HorizontalStackLayout Grid.Row="4" Grid.Column="1" Spacing="12">
+                                <CheckBox IsChecked="{Binding ArmeniaSelected}" Scale="1.2" Color="#9C27B0"/>
+                                <Label Text="Армения" VerticalOptions="Center" TextColor="#4A148C"/>
+                            </HorizontalStackLayout>
+
+                            <!-- ЕС -->
+                            <HorizontalStackLayout Grid.Row="5" Grid.Column="0" Spacing="12">
+                                <CheckBox IsChecked="{Binding EuropeSelected}" Scale="1.2" Color="#9C27B0"/>
+                                <Label Text="Евросоюз" VerticalOptions="Center" TextColor="#4A148C"/>
+                            </HorizontalStackLayout>
+
+                        </Grid>
 
 
                         <Frame BackgroundColor="#F3E5F5"
@@ -289,15 +331,6 @@
                                 </FlexLayout>
                             </VerticalStackLayout>
                         </Frame>
-
-
-
-
-
-
-
-
-
                     </VerticalStackLayout>
                 </Grid>
             </Frame>
@@ -371,11 +404,8 @@
 
             </Frame>
 
-
-
-
             <Button Text="Сохранить конфигурацию"
-                    Command="{Binding SaveOrderCommand}"
+                    Command="{Binding CreateOrderCommand}"
                     BackgroundColor="#6A1B9A"
                     TextColor="White"
                     CornerRadius="12"

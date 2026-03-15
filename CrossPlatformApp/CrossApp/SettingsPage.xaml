@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CrossApp.SettingsPage"
+             Title="Настройки"
+             BackgroundColor="#F8F4FF">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <Label Text="{Binding FullName}"
+       FontSize="18"
+       HorizontalOptions="Center"
+                   TextColor="Black"/>
+
+            <Label Text="{Binding Email}"
+       FontSize="16"
+       HorizontalOptions="Center"
+                   TextColor="Black"/>
+
+            <Label Text="{Binding Login}"
+       FontSize="16"
+       HorizontalOptions="Center"
+                   TextColor="Black"/>
+
+
+
+
+            <Frame Padding="15"
+               CornerRadius="12"
+               BackgroundColor="White">
+
+                <VerticalStackLayout Spacing="10">
+
+                    <Label Text="💳 Метод оплаты"
+               FontSize="18"
+               FontAttributes="Bold"
+               TextColor="Black"/>
+
+                    <Label Text="Выберите способ оплаты по умолчанию"
+               FontSize="14"
+               TextColor="Gray"/>
+
+                    <Picker
+                        x:Name="PaymentMethodPicker"
+                        Title="Метод оплаты"
+                        BackgroundColor="#7E57C2"
+                        TextColor="White"
+                        SelectedIndexChanged="OnPaymentMethodChanged">
+
+                        <Picker.Items>
+                            <x:String>Банковская карта</x:String>
+                            <x:String>PayPal</x:String>
+                            <x:String>Криптовалюта</x:String>
+                        </Picker.Items>
+
+                    </Picker>
+
+                </VerticalStackLayout>
+
+            </Frame>
+            
+
+
+
+            <Frame Padding="15"
+               CornerRadius="12"
+               BackgroundColor="White">
+
+                <VerticalStackLayout Spacing="10">
+
+                    <Label Text="Тема приложения"
+                       FontSize="18"
+                       FontAttributes="Bold"
+                       TextColor="Black"/>
+
+                    <Picker
+                        x:Name="ThemePicker"
+                        Title="Выберите тему"
+                        TitleColor="White"
+                        BackgroundColor="#7E57C2"
+                        TextColor="White"
+                        SelectedIndexChanged="OnThemeChanged">
+
+                        <Picker.Items>
+                            <x:String>Системная</x:String>
+                            <x:String>Светлая</x:String>
+                            <x:String>Тёмная</x:String>
+                        </Picker.Items>
+
+                    </Picker>
+
+                </VerticalStackLayout>
+
+            </Frame>
+
+            <Button Text="Выйти из аккаунта"
+                    BackgroundColor="#E57373"
+                    TextColor="White"
+                    CornerRadius="12"
+                    Padding="12"
+                    Clicked="OnLogoutClicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

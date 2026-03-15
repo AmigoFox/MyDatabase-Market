@@ -22,24 +22,48 @@ namespace CrossApp
             builder.Services.AddHttpClient<CbrExchangeRateService>();
             builder.Services.AddTransient<ViewModels.DatabaseCalculatorViewModel>();
             builder.Services.AddTransient<DatabaseCalculator>();
-            builder.Services
-                .AddHttpClient<ApiClient>(client =>
-                {
-                    client.BaseAddress = new Uri("https://localhost:7166/api/v1/");
-                })
-                .AddHttpMessageHandler<AuthHandler>();
             builder.Services.AddTransient<LoginViewModel>();
             builder.Services.AddTransient<LoginPage>();
             builder.Services.AddTransient<OrdersPage>();
             builder.Services.AddTransient<PaymentsPage>();
-            builder.Services.AddTransient<Personal_account>();
+            builder.Services.AddTransient<SettingsPage>();
             builder.Services.AddTransient<ProfilePage>();
             builder.Services.AddTransient<OrdersViewModel>();
             builder.Services.AddSingleton<AuthTokenStore>();
             builder.Services.AddTransient<AuthHandler>();
             builder.Services.AddTransient<OrderDetailsViewModel>();
             builder.Services.AddTransient<OrderDetailsPage>();
-   
+            builder.Services.AddTransient<ProfileViewModel>();
+            builder.Services.AddSingleton<ThemeService>();
+
+
+
+            builder.Services
+            .AddHttpClient<ApiClient>(client =>
+            {
+                client.BaseAddress = new Uri("https://localhost:7166/api/v1/");
+            })
+            .AddHttpMessageHandler<AuthHandler>();
+
+
+
+
+            builder.Services.AddHttpClient<OrdersService>(client =>
+            {
+                client.BaseAddress = new Uri("https://localhost:7166/api/v1/");
+            })
+            .AddHttpMessageHandler<AuthHandler>();
+
+
+
+            builder.Services.AddHttpClient<UserService>(client =>
+            {
+                client.BaseAddress = new Uri("https://localhost:7166/api/v1/");
+            })
+            .AddHttpMessageHandler<AuthHandler>();
+
+
+            
 
 
 

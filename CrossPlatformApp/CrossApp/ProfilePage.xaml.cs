@@ -1,10 +1,23 @@
-﻿namespace CrossApp;
+﻿using CrossApp.ViewModels;
+
+namespace CrossApp;
 
 public partial class ProfilePage : ContentPage
 {
-    public ProfilePage()
+    private readonly ProfileViewModel _viewModel;
+    public ProfilePage(ProfileViewModel viewModel)
     {
         InitializeComponent();
+
+        BindingContext = viewModel;
+        _viewModel = viewModel;
+    }
+
+
+    protected override async void OnAppearing()
+    {
+        base.OnAppearing();
+        await _viewModel.LoadUser();
     }
 
     private async void OnProfileDetailsTapped(object sender, TappedEventArgs e)
@@ -21,5 +34,10 @@ public partial class ProfilePage : ContentPage
     private async void OnPaymentsTapped(object sender, TappedEventArgs e)
     {
         await Shell.Current.GoToAsync(nameof(PaymentsPage));
+    }
+
+    private async void OnLogoutClicked(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync("//LoginPage");
     }
 }

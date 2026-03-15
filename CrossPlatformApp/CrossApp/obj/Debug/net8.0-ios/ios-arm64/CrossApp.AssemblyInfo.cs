@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CrossApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+b6e0e92ae896c6e0d0bef4ba91c6ce384a858d92")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+b52fdd2ad7a3810f6bddb2b7ce9a85c55dfe1ec8")]
 [assembly: System.Reflection.AssemblyProductAttribute("CrossApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CrossApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

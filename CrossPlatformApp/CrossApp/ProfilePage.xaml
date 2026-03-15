@@ -8,49 +8,35 @@
     <ScrollView>
         <VerticalStackLayout Padding="20" Spacing="20">
 
-            <!-- Заголовок -->
-            <Label Text="Личный кабинет"
-                   FontSize="24"
-                   FontAttributes="Bold"
-                   HorizontalOptions="Center"
-                   TextColor="#4A148C" />
 
-            <!-- ✅ Блок информации о пользователе -->
-            <Frame BackgroundColor="White"
-                   BorderColor="#D1C4E9"
-                   CornerRadius="12"
-                   Padding="16"
-                   Margin="0,0,0,12">
+            <ScrollView>
+                <VerticalStackLayout Padding="20" Spacing="20">
 
-                <VerticalStackLayout Spacing="6">
+                    <Label Text="{Binding FullName}"
+                       FontSize="18"
+                       HorizontalOptions="Center"
+                                   TextColor="Black"/>
 
-                    <Label Text="Информация аккаунта"
-                           FontSize="18"
-                           FontAttributes="Bold"
-                           TextColor="#6A1B9A" />
+                    <Label Text="{Binding Email}"
+                       FontSize="16"
+                       HorizontalOptions="Center"
+                                   TextColor="Black"/>
 
-                    <Label Text="Имя: Андрей"
-                           FontSize="14"
-                           TextColor="#4A148C" />
+                    <Label Text="{Binding Login}"
+                       FontSize="16"
+                       HorizontalOptions="Center"
+                                   TextColor="Black"/>
 
-                    <Label Text="Почта: andr***@gmail.com"
-                           FontSize="14"
-                           TextColor="#4A148C" />
-
-                    <Label Text="Дата регистрации: 12.03.2024"
-                           FontSize="14"
-                           TextColor="#4A148C" />
-
-                    <Label Text="Активных подписок: 2"
-                           FontSize="14"
-                           TextColor="#4A148C" />
-
-                    <Label Text="ID аккаунта: #DBM-00421"
-                           FontSize="14"
-                           TextColor="#4A148C" />
+                    <!-- ✅ Кнопка выхода -->
+                    <Button Text="Выйти из аккаунта"
+                    BackgroundColor="#E57373"
+                    TextColor="White"
+                    CornerRadius="12"
+                    Padding="12"
+                    Clicked="OnLogoutClicked" />
 
                 </VerticalStackLayout>
-            </Frame>
+            </ScrollView>
 
 
         </VerticalStackLayout>

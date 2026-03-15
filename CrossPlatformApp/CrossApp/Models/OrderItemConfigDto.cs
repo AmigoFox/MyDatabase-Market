@@ -2,19 +2,20 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace CrossApp.Models
 {
     public class OrderItemConfigDto
     {
-        public decimal Price { get; set; }
-        public string Currency { get; set; } = "";
-        public int Quantity { get; set; }
-        public int ProductId { get; set; }
-        public string Warehouse { get; set; } = "";
+        [JsonPropertyName("backup")]
+        public bool Backup { get; set; }
 
-        // optional поле (оно не всегда есть)
-        public string? CreatedBy { get; set; }
+        [JsonPropertyName("sharding")]
+        public bool Sharding { get; set; }
+
+        [JsonPropertyName("replicaSet")]
+        public bool ReplicaSet { get; set; }
     }
 }

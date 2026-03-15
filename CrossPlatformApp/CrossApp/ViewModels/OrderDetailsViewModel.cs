@@ -34,20 +34,18 @@ public class OrderDetailsViewModel : INotifyPropertyChanged
 
     public async Task LoadOrder(int id)
     {
-        Debug.WriteLine($"OrderDetailsViewModel.LoadOrder called with id={id}");
+        Debug.WriteLine($"LoadOrder called with id={id}");
 
-        var item = await _api.GetAsync<OrderItemDto>($"OrderItems/{id}");
+        var order = await _api.GetAsync<OrderDto>($"orders/{id}");
 
-        Debug.WriteLine(item == null ? "Order item == null" : $"Order item received: {System.Text.Json.JsonSerializer.Serialize(item)}");
-
-        if (item == null)
+        if (order == null)
             return;
 
-        // Обновляем свойство в UI-потоке, чтобы биндинги отработали корректно
+        var item = order.Items?.FirstOrDefault();
+
         MainThread.BeginInvokeOnMainThread(() =>
         {
             Order = item;
-            Debug.WriteLine("OrderDetailsViewModel: Order property set on UI thread");
         });
     }
 

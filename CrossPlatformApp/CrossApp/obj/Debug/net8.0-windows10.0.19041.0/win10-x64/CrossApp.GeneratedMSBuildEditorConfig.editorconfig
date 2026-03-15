@@ -72,12 +72,6 @@ build_metadata.AdditionalFiles.ManifestResourceName = CrossApp.PaymentsPage.xaml
 build_metadata.AdditionalFiles.TargetPath = PaymentsPage.xaml
 build_metadata.AdditionalFiles.RelativePath = PaymentsPage.xaml
 
-[A:/Git/MyDatabase-Market/CrossPlatformApp/CrossApp/Personal_account.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = CrossApp.Personal_account.xaml
-build_metadata.AdditionalFiles.TargetPath = Personal_account.xaml
-build_metadata.AdditionalFiles.RelativePath = Personal_account.xaml
-
 [A:/Git/MyDatabase-Market/CrossPlatformApp/CrossApp/ProfilePage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = CrossApp.ProfilePage.xaml
@@ -95,3 +89,9 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = CrossApp.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[A:/Git/MyDatabase-Market/CrossPlatformApp/CrossApp/SettingsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = CrossApp.SettingsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = SettingsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = SettingsPage.xaml

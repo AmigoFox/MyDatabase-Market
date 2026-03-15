@@ -1,6 +1,8 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using CrossApp.Services;
+using CrossApp.Services.Api;
+using CrossApp.Models;
 
 namespace CrossApp.ViewModels;
 
@@ -8,11 +10,18 @@ public partial class DatabaseCalculatorViewModel : ObservableObject
 {
     private readonly ExchangeRateCache _cache;
     private readonly CbrExchangeRateService _cbr;
+    private readonly OrdersService _ordersService;
+    private bool _isUpdating;
 
-    public DatabaseCalculatorViewModel(ExchangeRateCache cache, CbrExchangeRateService cbr)
+
+    public DatabaseCalculatorViewModel(
+        ExchangeRateCache cache,
+        CbrExchangeRateService cbr,
+        OrdersService ordersService)
     {
         _cache = cache;
         _cbr = cbr;
+        _ordersService = ordersService;
 
         _ = LoadRatesAsync();
     }
@@ -75,6 +84,12 @@ public partial class DatabaseCalculatorViewModel : ObservableObject
     [ObservableProperty] private bool _chinaSelected;
     [ObservableProperty] private bool _uzbekistanSelected;
     [ObservableProperty] private bool _belarusSelected;
+    [ObservableProperty] private bool _usaSelected;
+    [ObservableProperty] private bool _indiaSelected;
+    [ObservableProperty] private bool _turkeySelected;
+    [ObservableProperty] private bool _koreaSelected;
+    [ObservableProperty] private bool _armeniaSelected;
+    [ObservableProperty] private bool _europeSelected;
 
     [ObservableProperty] private decimal _priceInRub;
     [ObservableProperty] private decimal _priceInUsd;
@@ -88,6 +103,9 @@ public partial class DatabaseCalculatorViewModel : ObservableObject
     [ObservableProperty] private decimal _priceInAmd;
     [ObservableProperty] private decimal _priceInUzs;
 
+    [ObservableProperty] private bool _backupEnabled;
+    [ObservableProperty] private bool _shardingEnabled;
+    [ObservableProperty] private bool _replicaSetEnabled;
 
     public string UsdRate => $"{_cache.Rates.GetValueOrDefault("USD"):N2}";
     public string CnyRate => $"{_cache.Rates.GetValueOrDefault("CNY"):N2}";
@@ -119,6 +137,12 @@ public partial class DatabaseCalculatorViewModel : ObservableObject
     partial void OnChinaSelectedChanged(bool value) => ValidateAndUpdate();
     partial void OnUzbekistanSelectedChanged(bool value) => ValidateAndUpdate();
     partial void OnBelarusSelectedChanged(bool value) => ValidateAndUpdate();
+    partial void OnUsaSelectedChanged(bool value) => ValidateAndUpdate();
+    partial void OnIndiaSelectedChanged(bool value) => ValidateAndUpdate();
+    partial void OnTurkeySelectedChanged(bool value) => ValidateAndUpdate();
+    partial void OnKoreaSelectedChanged(bool value) => ValidateAndUpdate();
+    partial void OnArmeniaSelectedChanged(bool value) => ValidateAndUpdate();
+    partial void OnEuropeSelectedChanged(bool value) => ValidateAndUpdate();
 
     public int SelectedCountriesCount => GetSelectedCountries().Count();
     public string SelectedCountriesText => string.Join(", ", GetSelectedCountries());
@@ -126,11 +150,20 @@ public partial class DatabaseCalculatorViewModel : ObservableObject
     public List<string> GetSelectedCountries()
     {
         var list = new List<string>();
-        if (RussiaSelected) list.Add("Россия");
-        if (KazakhstanSelected) list.Add("Казахстан");
-        if (ChinaSelected) list.Add("Китай");
-        if (UzbekistanSelected) list.Add("Узбекистан");
-        if (BelarusSelected) list.Add("Беларусь");
+
+        if (RussiaSelected) list.Add("RU");
+        if (BelarusSelected) list.Add("BY");
+        if (KazakhstanSelected) list.Add("KZ");
+        if (UzbekistanSelected) list.Add("UZ");
+        if (ChinaSelected) list.Add("CN");
+
+        if (UsaSelected) list.Add("US");
+        if (IndiaSelected) list.Add("IN");
+        if (TurkeySelected) list.Add("TR");
+        if (KoreaSelected) list.Add("KR");
+        if (ArmeniaSelected) list.Add("AM");
+        if (EuropeSelected) list.Add("EU");
+
         return list;
     }
 
@@ -140,6 +173,7 @@ public partial class DatabaseCalculatorViewModel : ObservableObject
         if (countries.Count == 0) return 1m;
 
         decimal total = 0m;
+
         foreach (var country in countries)
         {
             total += country switch
@@ -149,6 +183,12 @@ public partial class DatabaseCalculatorViewModel : ObservableObject
                 "Казахстан" => 1.5m,
                 "Узбекистан" => 1.2m,
                 "Китай" => 1.8m,
+                "США" => 2.0m,
+                "Индия" => 1.3m,
+                "Турция" => 1.4m,
+                "Южная Корея" => 1.9m,
+                "Армения" => 1.1m,
+                "Евросоюз" => 2.1m,
                 _ => 1.0m
             };
         }
@@ -165,6 +205,11 @@ public partial class DatabaseCalculatorViewModel : ObservableObject
     [RelayCommand]
     public void ValidateAndUpdate()
     {
+        if (_isUpdating)
+            return;
+
+        _isUpdating = true;
+
         var countries = GetSelectedCountries();
         if (countries.Count == 0)
         {
@@ -173,7 +218,7 @@ public partial class DatabaseCalculatorViewModel : ObservableObject
 
             ValidationState = ValidationState.Info;
             ValidationMessage = "Должна быть выбрана хоть одна страна. Стандартно выбрана Россия.";
-            _ = HideValidationAfterDelayAsync(8000);
+            _ = HideValidationAfterDelayAsync(800);
         }
 
         if (StorageType == "HDD" &&
@@ -183,7 +228,7 @@ public partial class DatabaseCalculatorViewModel : ObservableObject
 
             ValidationState = ValidationState.Info;
             ValidationMessage = "Для HDD недоступны высокие значения IOPS. Установлено среднее значение.";
-            _ = HideValidationAfterDelayAsync(8000);
+            _ = HideValidationAfterDelayAsync(800);
         }
 
 
@@ -192,14 +237,16 @@ public partial class DatabaseCalculatorViewModel : ObservableObject
             ValidationState = ValidationState.Error;
             ValidationMessage = "Объём хранилища должен быть больше 0 GB.";
 
-            _ = HideValidationAfterDelayAsync(8000);
+            _ = HideValidationAfterDelayAsync(800);
             return;
         }
 
         UpdatePrice((byte)countries.Count);
         OnPropertyChanged(nameof(SelectedCountriesCount));
         OnPropertyChanged(nameof(SelectedCountriesText));
-        _ = HideValidationAfterDelayAsync(8000);
+        _ = HideValidationAfterDelayAsync(800);
+
+        _isUpdating = false;
     }
 
     private bool TryGetRate(string code, out decimal rate)
@@ -309,4 +356,48 @@ public partial class DatabaseCalculatorViewModel : ObservableObject
         OnPropertyChanged(nameof(SelectedCountriesText));
         OnPropertyChanged(nameof(SelectedCountriesCount));
     }
+
+
+    [RelayCommand]
+    private async Task CreateOrder()
+    {
+        var request = new CreateOrderRequest
+        {
+            Items = new List<CreateOrderItemDto>
+        {
+            new CreateOrderItemDto
+            {
+                DatabaseType = SelectedType,
+                SizeGB = SizeGB,
+                Iops = SelectedIOPS,
+                StorageType = StorageType,
+                Scalability = Scalability,
+                Countries = GetSelectedCountries(),
+                Config = new OrderItemConfigDto
+                {
+                    Backup = BackupEnabled,
+                    Sharding = ShardingEnabled,
+                    ReplicaSet = ReplicaSetEnabled
+                }
+            }
+        }
+        };
+
+        var orderId = await _ordersService.CreateAsync(request);
+
+        if (orderId != null)
+        {
+            ValidationState = ValidationState.Info;
+            ValidationMessage = $"Заказ создан. ID: {orderId}";
+        }
+        else
+        {
+            ValidationState = ValidationState.Error;
+            ValidationMessage = "Ошибка создания заказа";
+        }
+
+        _ = HideValidationAfterDelayAsync(8000);
+    }
+
+
 }
