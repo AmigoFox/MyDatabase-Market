@@ -14,7 +14,7 @@ public partial class PaymentsPage : ContentPage
 
     private async void OnPaymentsTapped(object sender, TappedEventArgs e)
     {
-        await Shell.Current.GoToAsync(nameof(PaymentsPage));
+        await Shell.Current.GoToAsync($"//{nameof(PaymentsPage)}");
     }
 
     private async void OnProfileDetailsTapped(object sender, TappedEventArgs e)

@@ -41,37 +41,55 @@ namespace API_DatabaseMarket.Services
             return item;
         }
 
-        public async Task<bool> UpdateAsync(int id, OrderItem item)
+public async Task<bool> UpdateAsync(int id, OrderItem item)
+{
+    var existing = await _context.OrderItems
+        .Include(x => x.Countries)
+        .FirstOrDefaultAsync(x => x.Id == id);
+
+    if (existing == null)
+        return false;
+
+            // Если вы гарантируете, что контроллер передаёт все нужные поля — можно присваивать напрямую.
+            // ???? ?????????? ???????? ????????? ?????? — ??????????? ?????? ?? ????, ??????? ????????????? ????????
+            if (!string.IsNullOrEmpty(item.DatabaseType))
+                existing.DatabaseType = item.DatabaseType;
+
+            if (item.SizeGB != 0)
+                existing.SizeGB = item.SizeGB;
+
+            if (!string.IsNullOrEmpty(item.Iops))
+                existing.Iops = item.Iops;
+
+            if (!string.IsNullOrEmpty(item.StorageType))
+                existing.StorageType = item.StorageType;
+
+            if (!string.IsNullOrEmpty(item.Scalability))
+                existing.Scalability = item.Scalability;
+
+            if (item.FinalPriceRub != 0m)
+                existing.FinalPriceRub = item.FinalPriceRub;
+
+            // ????????? Config ?????? ???? ??? ??????? ???????? JSON-??????
+            if (item.Config.ValueKind != System.Text.Json.JsonValueKind.Undefined)
+                existing.Config = item.Config;
+
+            // Обновляем страны только если они переданы в item (иначе оставляем текущие)
+            if (item.Countries != null)
+    {
+        existing.Countries.Clear();
+        foreach (var country in item.Countries)
         {
-            var existing = await _context.OrderItems
-                .Include(x => x.Countries)
-                .FirstOrDefaultAsync(x => x.Id == id);
-
-            if (existing == null)
-                return false;
-
-            existing.DatabaseType = item.DatabaseType;
-            existing.SizeGB = item.SizeGB;
-            existing.Iops = item.Iops;
-            existing.StorageType = item.StorageType;
-            existing.Scalability = item.Scalability;
-            existing.FinalPriceRub = item.FinalPriceRub;
-            existing.Config = item.Config;
-
-            // Обновляем страны
-            existing.Countries.Clear();
-
-            foreach (var country in item.Countries)
+            existing.Countries.Add(new OrderItemCountry
             {
-                existing.Countries.Add(new OrderItemCountry
-                {
-                    CountryCode = country.CountryCode
-                });
-            }
-
-            await _context.SaveChangesAsync();
-            return true;
+                CountryCode = country.CountryCode
+            });
         }
+    }
+
+    await _context.SaveChangesAsync();
+    return true;
+}
 
         public async Task<bool> DeleteAsync(int id)
         {

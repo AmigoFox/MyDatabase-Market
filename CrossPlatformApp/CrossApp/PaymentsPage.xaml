@@ -5,14 +5,13 @@
              Title="Платежи"
              BackgroundColor="#F8F4FF">
 
-
     <VerticalStackLayout Padding="20" Spacing="16">
 
-
         <Label Text="История платежей"
-               FontSize="22"
+               FontSize="24"
                FontAttributes="Bold"
-               TextColor="#4A148C" />
+               TextColor="#4A148C"
+               Margin="0,0,0,10" />
 
         <CollectionView x:Name="PaymentsList"
                         SelectionMode="Single"
@@ -22,20 +21,25 @@
                 <DataTemplate>
                     <Frame BackgroundColor="White"
                            BorderColor="#D1C4E9"
-                           CornerRadius="12"
-                           Padding="12"
-                           Margin="0,0,0,12">
+                           CornerRadius="16"
+                           Padding="16"
+                           Margin="0,0,0,16"
+                           HasShadow="True"
+                           HeightRequest="120">
 
-                        <VerticalStackLayout>
+                        <VerticalStackLayout Spacing="8">
                             <Label Text="{Binding OrderName}"
                                    FontAttributes="Bold"
-                                   TextColor="#4A148C" />
+                                   TextColor="#4A148C"
+                                   FontSize="18" />
 
                             <Label Text="{Binding Amount}"
-                                   TextColor="#6A1B9A" />
+                                   TextColor="#6A1B9A"
+                                   FontSize="16" />
 
                             <Label Text="{Binding Status}"
-                                   TextColor="#7E57C2" />
+                                   TextColor="#7E57C2"
+                                   FontSize="14" />
                         </VerticalStackLayout>
 
                     </Frame>

@@ -3,24 +3,12 @@
   "WorkspaceRootPath": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|a:\\git\\mydatabase-market\\crossplatformapp\\crossapp\\settingspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|solutionrelative:settingspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|a:\\git\\mydatabase-market\\crossplatformapp\\crossapp\\services\\api\\paymentsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|solutionrelative:services\\api\\paymentsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|a:\\git\\mydatabase-market\\crossplatformapp\\crossapp\\settingspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|solutionrelative:settingspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|a:\\git\\mydatabase-market\\crossplatformapp\\crossapp\\services\\themeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|solutionrelative:services\\themeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|a:\\git\\mydatabase-market\\crossplatformapp\\crossapp\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|solutionrelative:appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|a:\\git\\mydatabase-market\\crossplatformapp\\crossapp\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|a:\\git\\mydatabase-market\\crossplatformapp\\crossapp\\models\\paymentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|solutionrelative:models\\paymentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,75 +18,40 @@
       "DocumentGroups": [
         {
           "DockedHeight": 349,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AppShell.xaml",
-              "DocumentMoniker": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\AppShell.xaml",
-              "RelativeDocumentMoniker": "AppShell.xaml",
-              "ToolTip": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\AppShell.xaml",
-              "RelativeToolTip": "AppShell.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-15T15:16:10.048Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "App.xaml.cs",
-              "DocumentMoniker": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\App.xaml.cs",
-              "RelativeDocumentMoniker": "App.xaml.cs",
-              "ToolTip": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\App.xaml.cs",
-              "RelativeToolTip": "App.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "PaymentDto.cs",
+              "DocumentMoniker": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\Models\\PaymentDto.cs",
+              "RelativeDocumentMoniker": "Models\\PaymentDto.cs",
+              "ToolTip": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\Models\\PaymentDto.cs",
+              "RelativeToolTip": "Models\\PaymentDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-15T15:12:37.057Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ThemeService.cs",
-              "DocumentMoniker": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\Services\\ThemeService.cs",
-              "RelativeDocumentMoniker": "Services\\ThemeService.cs",
-              "ToolTip": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\Services\\ThemeService.cs",
-              "RelativeToolTip": "Services\\ThemeService.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBgAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-15T15:11:34.736Z",
+              "WhenOpened": "2026-03-22T14:54:25.451Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "SettingsPage.xaml.cs",
-              "DocumentMoniker": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\SettingsPage.xaml.cs",
-              "RelativeDocumentMoniker": "SettingsPage.xaml.cs",
-              "ToolTip": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\SettingsPage.xaml.cs",
-              "RelativeToolTip": "SettingsPage.xaml.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAwBwAAAAmAAAAAAAAAA==",
+              "Title": "PaymentsService.cs",
+              "DocumentMoniker": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\Services\\Api\\PaymentsService.cs",
+              "RelativeDocumentMoniker": "Services\\Api\\PaymentsService.cs",
+              "ToolTip": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\Services\\Api\\PaymentsService.cs",
+              "RelativeToolTip": "Services\\Api\\PaymentsService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-15T15:00:28.249Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SettingsPage.xaml",
-              "DocumentMoniker": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\SettingsPage.xaml",
-              "RelativeDocumentMoniker": "SettingsPage.xaml",
-              "ToolTip": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\SettingsPage.xaml",
-              "RelativeToolTip": "SettingsPage.xaml",
-              "ViewState": "AgIAADkAAAAAAAAAAAAqwE8AAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-15T15:00:27.783Z",
+              "WhenOpened": "2026-03-22T15:09:42.707Z",
               "EditorCaption": ""
             }
           ]
@@ -114,14 +67,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             }
           ]
         }

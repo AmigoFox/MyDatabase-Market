@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("API_DatabaseMarket.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f86b3e9cf0d44883296ca0156fa4cf1831000cdd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f11b2ba93c7dd11c55701ae8512a99f4be95e40a")]
 [assembly: System.Reflection.AssemblyProductAttribute("API_DatabaseMarket.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("API_DatabaseMarket.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

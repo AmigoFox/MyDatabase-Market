@@ -1,0 +1,95 @@
+﻿using CrossApp.ViewModels;
+using System.Collections.Generic;
+using CrossApp.Services.Api;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Microsoft.Maui.Controls;
+using System.Diagnostics;
+using CrossApp.Models;
+using CrossApp.Services;
+
+namespace CrossApp;
+
+[QueryProperty(nameof(OrderId), "id")]
+public partial class OrderDetailsPage : ContentPage, IQueryAttributable
+{
+    private readonly OrderDetailsViewModel _vm;
+
+    public int OrderId
+    {
+        set
+        {
+            // оставляем совместимость — но основной механизм ниже (ApplyQueryAttributes)
+            _ = Load(value);
+        }
+    }
+
+    public OrderDetailsPage(OrderDetailsViewModel vm)
+    {
+        InitializeComponent();
+
+        Debug.WriteLine("OrderDetailsPage.ctor");
+        _vm = vm;
+        BindingContext = _vm;
+        Debug.WriteLine("OrderDetailsPage: BindingContext set to vm");
+    }
+
+    private async Task Load(int id)
+    {
+        await _vm.LoadOrder(id);
+    }
+
+    // Обратите внимание: IDictionary<string, object>
+    public void ApplyQueryAttributes(IDictionary<string, object> query)
+    {
+        Debug.WriteLine("ApplyQueryAttributes called: " + (query == null ? "null" : string.Join(", ", query.Keys)));
+
+        if (query == null)
+            return;
+
+        if (!query.TryGetValue("id", out var raw))
+            return;
+
+        int id;
+
+        switch (raw)
+        {
+            case int i:
+                id = i;
+                break;
+            case long l:
+                id = (int)l;
+                break;
+            case string s when int.TryParse(s, out var parsed):
+                id = parsed;
+                break;
+            default:
+                // Невозможный/неподдерживаемый тип
+                return;
+        }
+
+        Debug.WriteLine($"ApplyQueryAttributes parsed id={id}");
+        _ = Load(id);
+    }
+
+    private async void OnEditClicked(object sender, EventArgs e)
+    {
+        if (_vm.Order == null)
+            return;
+
+        var orderItemId = _vm.Order.Id;
+        await Shell.Current.GoToAsync($"{nameof(DatabaseCalculator)}?id={orderItemId}");
+    }
+
+
+
+
+    private async void OnDeleteClicked(object sender, EventArgs e)
+    {
+        var order = (sender as Button)?.BindingContext as OrderDto;
+        if (order == null) return;
+        if (!await DisplayAlert("Подтвердите", $"Удалить заказ #{order.Id}?", "Да", "Нет")) return;
+        await _vm.DeleteOrder(order.Id);
+
+    }
+}

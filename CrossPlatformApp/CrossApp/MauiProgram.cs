@@ -63,8 +63,11 @@ namespace CrossApp
             .AddHttpMessageHandler<AuthHandler>();
 
 
-            
-
+            builder.Services.AddHttpClient<PaymentsService>(client =>
+            {
+                client.BaseAddress = new Uri("https://localhost:7166/api/v1/");
+            })
+            .AddHttpMessageHandler<AuthHandler>();
 
 
 

@@ -405,7 +405,8 @@
             </Frame>
 
             <Button Text="Сохранить конфигурацию"
-                    Command="{Binding CreateOrderCommand}"
+                    Command="{Binding SaveOrderCommand}"
+                    IsEnabled="{Binding IsNotSaving}"
                     BackgroundColor="#6A1B9A"
                     TextColor="White"
                     CornerRadius="12"

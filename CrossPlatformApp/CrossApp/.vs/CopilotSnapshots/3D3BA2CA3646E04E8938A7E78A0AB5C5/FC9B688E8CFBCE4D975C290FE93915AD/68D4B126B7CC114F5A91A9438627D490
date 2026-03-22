@@ -1,0 +1,420 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:CrossApp.ViewModels"
+             xmlns:converters="clr-namespace:CrossApp.Converters"
+             x:Class="CrossApp.DatabaseCalculator"
+             Title="Калькулятор баз данных"
+             BackgroundColor="#F8F4FF">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:ValidationVisibleConverter x:Key="ValidationVisibleConverter" />
+            <converters:ValidationTextColorConverter x:Key="ValidationTextColorConverter" />
+            <converters:ValidationBorderColorConverter x:Key="ValidationBorderColorConverter" />
+            <converters:ValidationBackgroundColorConverter x:Key="ValidationBackgroundColorConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        
+        <VerticalStackLayout Padding="20" Spacing="25">
+
+
+            <!-- Блок валидации -->
+            <Frame IsVisible="{Binding ValidationState, Converter={StaticResource ValidationVisibleConverter}}"
+               CornerRadius="12"
+               Padding="12"
+               Margin="0,0,0,10"
+               BorderColor="{Binding ValidationState, Converter={StaticResource ValidationBorderColorConverter}}"
+               BackgroundColor="{Binding ValidationState, Converter={StaticResource ValidationBackgroundColorConverter}}">
+
+                        <Label Text="{Binding ValidationMessage}"
+                   FontAttributes="Bold"
+                   TextColor="{Binding ValidationState, Converter={StaticResource ValidationTextColorConverter}}"
+                   LineBreakMode="WordWrap" />
+            </Frame>
+
+
+
+
+            <Frame BackgroundColor="#FFFFFF"
+                   CornerRadius="16"
+                   Padding="16"
+                   BorderColor="#D1C4E9"
+                   HasShadow="True">
+
+                <Grid ColumnDefinitions="*,*"
+                      RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto"
+                      RowSpacing="16">
+
+                    <Label Text="Тип базы данных:"
+                           Grid.Row="0" Grid.Column="0"
+                           VerticalOptions="Center"
+                           FontAttributes="Bold"
+                           TextColor="#4A148C" />
+
+                    <Picker x:Name="DbTypePicker"
+                            Grid.Row="0" Grid.Column="1"
+                            SelectedItem="{Binding SelectedType}"
+                            SelectedIndexChanged="OnPickerChanged"
+                            BackgroundColor="#F8F4FF"
+                            TextColor="#6A1B9A"
+                            TitleColor="#9C27B0"
+                            Title="Выберите СУБД">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>MySQL</x:String>
+                                <x:String>PostgreSQL</x:String>
+                                <x:String>MongoDB</x:String>
+                                <x:String>Redis</x:String>
+                                <x:String>SQLite</x:String>
+                                <x:String>Microsoft SQL Server</x:String>
+                                <x:String>Cassandra</x:String>
+                                <x:String>Oracle Database</x:String>
+                                <x:String>MariaDB</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+
+                    <Label Text="Объём (GB):"
+                           Grid.Row="1" Grid.Column="0"
+                           VerticalOptions="Center"
+                           FontAttributes="Bold"
+                           TextColor="#4A148C" />
+
+                    <Grid Grid.Row="1" Grid.Column="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <Entry Text="{Binding SizeGB, Mode=TwoWay}"
+                               Keyboard="Numeric"
+                               Placeholder="10"
+                               BackgroundColor="#F8F4FF"
+                               TextColor="#4A148C"
+                               PlaceholderColor="#6A1B9A"
+                               TextChanged="OnEntryChanged" />
+
+                        <Label Text="GB"
+                               Grid.Column="1"
+                               VerticalOptions="Center"
+                               Margin="8,0,0,0"
+                               TextColor="#6A1B9A" />
+                    </Grid>
+
+                    <Label Text="Тип хранилища:"
+                           Grid.Row="2" Grid.Column="0"
+                           VerticalOptions="Center"
+                           FontAttributes="Bold"
+                           TextColor="#4A148C" />
+
+                    <Picker x:Name="StoragePicker"
+                            Grid.Row="2" Grid.Column="1"
+                            SelectedItem="{Binding StorageType}"
+                            SelectedIndexChanged="OnPickerChanged"
+                            BackgroundColor="#F8F4FF"
+                            TextColor="#6A1B9A"
+                            TitleColor="#9C27B0"
+                            Title="HDD/SSD/NVMe">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>HDD</x:String>
+                                <x:String>SSD</x:String>
+                                <x:String>NVMe</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+
+                    <Label Text="Скорость (IOPS):"
+                           Grid.Row="3" Grid.Column="0"
+                           VerticalOptions="Center"
+                           FontAttributes="Bold"
+                           TextColor="#4A148C" />
+
+                    <Picker x:Name="IOPSPicker"
+                            Grid.Row="3" Grid.Column="1"
+                            SelectedItem="{Binding SelectedIOPS}"
+                            SelectedIndexChanged="OnPickerChanged"
+                            BackgroundColor="#F8F4FF"
+                            TextColor="#6A1B9A"
+                            TitleColor="#9C27B0"
+                            Title="Выберите скорость">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Низкая (100)</x:String>
+                                <x:String>Средняя (1000)</x:String>
+                                <x:String>Высокая (5000)</x:String>
+                                <x:String>Очень высокая (10000)</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+
+                    <Label Text="Масштабируемость:"
+                           Grid.Row="4" Grid.Column="0"
+                           VerticalOptions="Center"
+                           FontAttributes="Bold"
+                           TextColor="#4A148C" />
+
+                    <Picker x:Name="ScalabilityPicker"
+                            Grid.Row="4" Grid.Column="1"
+                            SelectedItem="{Binding Scalability}"
+                            SelectedIndexChanged="OnPickerChanged"
+                            BackgroundColor="#F8F4FF"
+                            TextColor="#6A1B9A"
+                            TitleColor="#9C27B0"
+                            Title="Без масштабирования">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>None</x:String>
+                                <x:String>Replication</x:String>
+                                <x:String>Autoscaling</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+
+                    <Label Text="Выберите:"
+                           Grid.Row="5" Grid.Column="0"
+                           VerticalOptions="Start"
+                           FontAttributes="Bold"
+                           TextColor="#4A148C" />
+
+                    <VerticalStackLayout Grid.Row="5" Grid.Column="1" Spacing="12">
+                        <Grid ColumnDefinitions="*,*"
+      RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto"
+      ColumnSpacing="20"
+      RowSpacing="10">
+
+                            <!-- Россия -->
+                            <HorizontalStackLayout Grid.Row="0" Grid.Column="0" Spacing="12">
+                                <CheckBox IsChecked="{Binding RussiaSelected}" Scale="1.2" Color="#9C27B0"/>
+                                <Label Text="Россия" VerticalOptions="Center" TextColor="#4A148C"/>
+                            </HorizontalStackLayout>
+
+                            <!-- Беларусь -->
+                            <HorizontalStackLayout Grid.Row="0" Grid.Column="1" Spacing="12">
+                                <CheckBox IsChecked="{Binding BelarusSelected}" Scale="1.2" Color="#9C27B0"/>
+                                <Label Text="Беларусь" VerticalOptions="Center" TextColor="#4A148C"/>
+                            </HorizontalStackLayout>
+
+                            <!-- Казахстан -->
+                            <HorizontalStackLayout Grid.Row="1" Grid.Column="0" Spacing="12">
+                                <CheckBox IsChecked="{Binding KazakhstanSelected}" Scale="1.2" Color="#9C27B0"/>
+                                <Label Text="Казахстан" VerticalOptions="Center" TextColor="#4A148C"/>
+                            </HorizontalStackLayout>
+
+                            <!-- Узбекистан -->
+                            <HorizontalStackLayout Grid.Row="1" Grid.Column="1" Spacing="12">
+                                <CheckBox IsChecked="{Binding UzbekistanSelected}" Scale="1.2" Color="#9C27B0"/>
+                                <Label Text="Узбекистан" VerticalOptions="Center" TextColor="#4A148C"/>
+                            </HorizontalStackLayout>
+
+                            <!-- Китай -->
+                            <HorizontalStackLayout Grid.Row="2" Grid.Column="0" Spacing="12">
+                                <CheckBox IsChecked="{Binding ChinaSelected}" Scale="1.2" Color="#9C27B0"/>
+                                <Label Text="Китай" VerticalOptions="Center" TextColor="#4A148C"/>
+                            </HorizontalStackLayout>
+
+                            <!-- США -->
+                            <HorizontalStackLayout Grid.Row="2" Grid.Column="1" Spacing="12">
+                                <CheckBox IsChecked="{Binding UsaSelected}" Scale="1.2" Color="#9C27B0"/>
+                                <Label Text="США" VerticalOptions="Center" TextColor="#4A148C"/>
+                            </HorizontalStackLayout>
+
+                            <!-- Индия -->
+                            <HorizontalStackLayout Grid.Row="3" Grid.Column="0" Spacing="12">
+                                <CheckBox IsChecked="{Binding IndiaSelected}" Scale="1.2" Color="#9C27B0"/>
+                                <Label Text="Индия" VerticalOptions="Center" TextColor="#4A148C"/>
+                            </HorizontalStackLayout>
+
+                            <!-- Турция -->
+                            <HorizontalStackLayout Grid.Row="3" Grid.Column="1" Spacing="12">
+                                <CheckBox IsChecked="{Binding TurkeySelected}" Scale="1.2" Color="#9C27B0"/>
+                                <Label Text="Турция" VerticalOptions="Center" TextColor="#4A148C"/>
+                            </HorizontalStackLayout>
+
+                            <!-- Южная Корея -->
+                            <HorizontalStackLayout Grid.Row="4" Grid.Column="0" Spacing="12">
+                                <CheckBox IsChecked="{Binding KoreaSelected}" Scale="1.2" Color="#9C27B0"/>
+                                <Label Text="Южная Корея" VerticalOptions="Center" TextColor="#4A148C"/>
+                            </HorizontalStackLayout>
+
+                            <!-- Армения -->
+                            <HorizontalStackLayout Grid.Row="4" Grid.Column="1" Spacing="12">
+                                <CheckBox IsChecked="{Binding ArmeniaSelected}" Scale="1.2" Color="#9C27B0"/>
+                                <Label Text="Армения" VerticalOptions="Center" TextColor="#4A148C"/>
+                            </HorizontalStackLayout>
+
+                            <!-- ЕС -->
+                            <HorizontalStackLayout Grid.Row="5" Grid.Column="0" Spacing="12">
+                                <CheckBox IsChecked="{Binding EuropeSelected}" Scale="1.2" Color="#9C27B0"/>
+                                <Label Text="Евросоюз" VerticalOptions="Center" TextColor="#4A148C"/>
+                            </HorizontalStackLayout>
+
+                        </Grid>
+
+
+                        <Frame BackgroundColor="#F3E5F5"
+       CornerRadius="12"
+       Padding="12"
+       Margin="0,0,0,16"
+       BorderColor="#CE93D8">
+
+                            <VerticalStackLayout Spacing="8">
+
+                                <!-- Заголовок -->
+                                <Label Text="Курсы валют ЦБ РФ"
+               FontAttributes="Bold"
+               TextColor="#6A1B9A"
+               HorizontalOptions="Center"
+               FontSize="14" />
+
+                                <!-- FlexLayout без RowSpacing/ColumnSpacing (MAUI) -->
+                                <FlexLayout Direction="Row"
+                    Wrap="Wrap"
+                    JustifyContent="Start"
+                    AlignItems="Center"
+                    Padding="4">
+
+                                    <!-- Каждый блок валюты — компактный вертикальный стек с отступом -->
+                                    <VerticalStackLayout WidthRequest="120" Margin="4" Spacing="2" Padding="4">
+                                        <Label Text="USD" TextColor="#4A148C" FontAttributes="Bold" FontSize="12"/>
+                                        <Label Text="{Binding UsdRate}" TextColor="#6A1B9A" FontSize="12"/>
+                                    </VerticalStackLayout>
+
+                                    <VerticalStackLayout WidthRequest="120" Margin="4" Spacing="2" Padding="4">
+                                        <Label Text="EUR" TextColor="#4A148C" FontAttributes="Bold" FontSize="12"/>
+                                        <Label Text="{Binding EurRate}" TextColor="#6A1B9A" FontSize="12"/>
+                                    </VerticalStackLayout>
+
+                                    <VerticalStackLayout WidthRequest="120" Margin="4" Spacing="2" Padding="4">
+                                        <Label Text="CNY" TextColor="#4A148C" FontAttributes="Bold" FontSize="12"/>
+                                        <Label Text="{Binding CnyRate}" TextColor="#6A1B9A" FontSize="12"/>
+                                    </VerticalStackLayout>
+
+                                    <VerticalStackLayout WidthRequest="120" Margin="4" Spacing="2" Padding="4">
+                                        <Label Text="KZT" TextColor="#4A148C" FontAttributes="Bold" FontSize="12"/>
+                                        <Label Text="{Binding KztRate}" TextColor="#6A1B9A" FontSize="12"/>
+                                    </VerticalStackLayout>
+
+                                    <VerticalStackLayout WidthRequest="120" Margin="4" Spacing="2" Padding="4">
+                                        <Label Text="INR" TextColor="#4A148C" FontAttributes="Bold" FontSize="12"/>
+                                        <Label Text="{Binding InrRate}" TextColor="#6A1B9A" FontSize="12"/>
+                                    </VerticalStackLayout>
+
+                                    <VerticalStackLayout WidthRequest="120" Margin="4" Spacing="2" Padding="4">
+                                        <Label Text="TRY" TextColor="#4A148C" FontAttributes="Bold" FontSize="12"/>
+                                        <Label Text="{Binding TryRate}" TextColor="#6A1B9A" FontSize="12"/>
+                                    </VerticalStackLayout>
+
+                                    <VerticalStackLayout WidthRequest="120" Margin="4" Spacing="2" Padding="4">
+                                        <Label Text="BYN" TextColor="#4A148C" FontAttributes="Bold" FontSize="12"/>
+                                        <Label Text="{Binding BynRate}" TextColor="#6A1B9A" FontSize="12"/>
+                                    </VerticalStackLayout>
+
+                                    <VerticalStackLayout WidthRequest="120" Margin="4" Spacing="2" Padding="4">
+                                        <Label Text="UZS" TextColor="#4A148C" FontAttributes="Bold" FontSize="12"/>
+                                        <Label Text="{Binding UzsRate}" TextColor="#6A1B9A" FontSize="12"/>
+                                    </VerticalStackLayout>
+
+                                    <VerticalStackLayout WidthRequest="120" Margin="4" Spacing="2" Padding="4">
+                                        <Label Text="AMD" TextColor="#4A148C" FontAttributes="Bold" FontSize="12"/>
+                                        <Label Text="{Binding AmdRate}" TextColor="#6A1B9A" FontSize="12"/>
+                                    </VerticalStackLayout>
+
+                                    <VerticalStackLayout WidthRequest="120" Margin="4" Spacing="2" Padding="4">
+                                        <Label Text="KRW" TextColor="#4A148C" FontAttributes="Bold" FontSize="12"/>
+                                        <Label Text="{Binding KrwRate}" TextColor="#6A1B9A" FontSize="12"/>
+                                    </VerticalStackLayout>
+
+                                </FlexLayout>
+                            </VerticalStackLayout>
+                        </Frame>
+                    </VerticalStackLayout>
+                </Grid>
+            </Frame>
+
+
+            <Frame BackgroundColor="#FFFFFF"
+               CornerRadius="16"
+               Padding="20"
+               BorderColor="#D1C4E9"
+               HasShadow="True"
+               HorizontalOptions="Fill">
+
+                <Grid RowSpacing="12"
+      ColumnSpacing="20"
+      Padding="8"
+      HorizontalOptions="FillAndExpand"
+      ColumnDefinitions="Auto,*"
+      RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto">
+
+                    <!-- Заголовок -->
+                    <Label Grid.Row="0" Grid.ColumnSpan="2"
+           Text="Результат расчёта"
+           FontSize="22"
+           FontAttributes="Bold"
+           HorizontalOptions="Center"
+           TextColor="#4A148C"
+           Margin="0,0,0,6" />
+
+                    <BoxView Grid.Row="1" Grid.ColumnSpan="2"
+             Color="#D1C4E9"
+             HeightRequest="2"
+             HorizontalOptions="FillAndExpand" />
+
+                    <!-- Тип БД -->
+                    <Label Grid.Row="2" Grid.Column="0" Text="Тип базы данных:" TextColor="#4A148C" FontSize="16" />
+                    <Label Grid.Row="2" Grid.Column="1" Text="{Binding SelectedType}" TextColor="#6A1B9A" FontSize="16" HorizontalTextAlignment="End" />
+
+                    <!-- Объём -->
+                    <Label Grid.Row="3" Grid.Column="0" Text="Объём:" TextColor="#4A148C" FontSize="16" />
+                    <Label Grid.Row="3" Grid.Column="1" Text="{Binding SizeGB, StringFormat='{0} GB'}" TextColor="#6A1B9A" FontSize="16" HorizontalTextAlignment="End" />
+
+                    <!-- Хранилище -->
+                    <Label Grid.Row="4" Grid.Column="0" Text="Тип хранилища:" TextColor="#4A148C" FontSize="16" />
+                    <Label Grid.Row="4" Grid.Column="1" Text="{Binding StorageType}" TextColor="#6A1B9A" FontSize="16" HorizontalTextAlignment="End" />
+
+                    <!-- IOPS -->
+                    <Label Grid.Row="5" Grid.Column="0" Text="Скорость (IOPS):" TextColor="#4A148C" FontSize="16" />
+                    <Label Grid.Row="5" Grid.Column="1" Text="{Binding SelectedIOPS}" TextColor="#6A1B9A" FontSize="16" HorizontalTextAlignment="End" />
+
+                    <!-- Масштабируемость -->
+                    <Label Grid.Row="6" Grid.Column="0" Text="Масштабируемость:" TextColor="#4A148C" FontSize="16" />
+                    <Label Grid.Row="6" Grid.Column="1" Text="{Binding Scalability}" TextColor="#6A1B9A" FontSize="16" HorizontalTextAlignment="End" />
+
+                    <!-- Страны -->
+                    <Label Grid.Row="7" Grid.Column="0" Text="Страны размещения:" TextColor="#4A148C" FontSize="16" />
+                    <Label Grid.Row="7" Grid.Column="1" Text="{Binding SelectedCountriesText}" TextColor="#6A1B9A" FontSize="16" HorizontalTextAlignment="End" LineBreakMode="WordWrap" MaxLines="3" />
+
+                    <!-- Кол-во стран -->
+                    <Label Grid.Row="8" Grid.Column="0" Text="Выбрано стран:" TextColor="#4A148C" FontSize="16" />
+                    <Label Grid.Row="8" Grid.Column="1" Text="{Binding SelectedCountriesCount}" TextColor="#6A1B9A" FontSize="16" HorizontalTextAlignment="End" />
+
+                    <!-- RUB -->
+                    <Label Grid.Row="9" Grid.Column="0" Text="Стоимость (RUB):" TextColor="#E53935" FontAttributes="Bold" FontSize="17" />
+                    <Label Grid.Row="9" Grid.Column="1" Text="{Binding PriceInRubFormatted}" TextColor="#E53935" FontAttributes="Bold" FontSize="17" HorizontalTextAlignment="End" />
+
+                    <!-- USD -->
+                    <Label Grid.Row="10" Grid.Column="0" Text="Стоимость (USD):" TextColor="#6A1B9A" FontAttributes="Bold" FontSize="17" />
+                    <Label Grid.Row="10" Grid.Column="1" Text="{Binding PriceInUsdFormatted}" TextColor="#6A1B9A" FontAttributes="Bold" FontSize="17" HorizontalTextAlignment="End" />
+
+                </Grid>
+
+            </Frame>
+
+            <Button Text="Сохранить конфигурацию"
+                    Command="{Binding SaveOrderCommand}"
+                    IsEnabled="{Binding IsNotSaving}"
+                    BackgroundColor="#6A1B9A"
+                    TextColor="White"
+                    CornerRadius="12"
+                    FontSize="16"
+                    FontAttributes="Bold"
+                    HeightRequest="55"
+                    Margin="0,10" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

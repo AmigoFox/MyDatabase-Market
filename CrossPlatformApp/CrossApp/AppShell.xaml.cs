@@ -6,6 +6,7 @@
         {
             InitializeComponent();
             Routing.RegisterRoute(nameof(OrderDetailsPage), typeof(OrderDetailsPage));
+            Routing.RegisterRoute(nameof(DatabaseCalculator), typeof(DatabaseCalculator));
         }
 
     }

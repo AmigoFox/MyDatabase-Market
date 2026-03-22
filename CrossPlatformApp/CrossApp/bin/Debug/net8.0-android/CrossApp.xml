@@ -4,11 +4,26 @@
         <name>CrossApp</name>
     </assembly>
     <members>
+        <member name="T:CrossApp.ViewModels.BaseViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:CrossApp.ViewModels.BaseViewModel.IsBusy">
+            <inheritdoc cref="F:CrossApp.ViewModels.BaseViewModel.isBusy"/>
+        </member>
+        <member name="P:CrossApp.ViewModels.BaseViewModel.Title">
+            <inheritdoc cref="F:CrossApp.ViewModels.BaseViewModel.title"/>
+        </member>
         <member name="T:CrossApp.ViewModels.DatabaseCalculatorViewModel">
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
             <inheritdoc/>
+        </member>
+        <member name="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.OrderItemId">
+            <inheritdoc cref="F:CrossApp.ViewModels.DatabaseCalculatorViewModel.orderItemId"/>
+        </member>
+        <member name="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.IsSaving">
+            <inheritdoc cref="F:CrossApp.ViewModels.DatabaseCalculatorViewModel.isSaving"/>
         </member>
         <member name="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.ValidationState">
             <inheritdoc cref="F:CrossApp.ViewModels.DatabaseCalculatorViewModel._validationState"/>
@@ -106,6 +121,16 @@
         <member name="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.ReplicaSetEnabled">
             <inheritdoc cref="F:CrossApp.ViewModels.DatabaseCalculatorViewModel._replicaSetEnabled"/>
         </member>
+        <member name="M:CrossApp.ViewModels.DatabaseCalculatorViewModel.OnOrderItemIdChanged(System.Int32)">
+            <summary>Executes the logic for when <see cref="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.OrderItemId"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.OrderItemId"/> is changed.</remarks>
+        </member>
+        <member name="M:CrossApp.ViewModels.DatabaseCalculatorViewModel.OnIsSavingChanged(System.Boolean)">
+            <summary>Executes the logic for when <see cref="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.IsSaving"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.IsSaving"/> is changed.</remarks>
+        </member>
         <member name="M:CrossApp.ViewModels.DatabaseCalculatorViewModel.OnRussiaSelectedChanged(System.Boolean)">
             <summary>Executes the logic for when <see cref="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.RussiaSelected"/> just changed.</summary>
             <param name="value">The new property value that was set.</param>
@@ -173,17 +198,29 @@
         <member name="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.ValidateAndUpdateCommand">
             <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:CrossApp.ViewModels.DatabaseCalculatorViewModel.ValidateAndUpdate"/>.</summary>
         </member>
-        <member name="F:CrossApp.ViewModels.DatabaseCalculatorViewModel.createOrderCommand">
-            <summary>The backing field for <see cref="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.CreateOrderCommand"/>.</summary>
+        <member name="F:CrossApp.ViewModels.DatabaseCalculatorViewModel.saveOrderCommand">
+            <summary>The backing field for <see cref="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.SaveOrderCommand"/>.</summary>
         </member>
-        <member name="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.CreateOrderCommand">
-            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:CrossApp.ViewModels.DatabaseCalculatorViewModel.CreateOrder"/>.</summary>
+        <member name="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.SaveOrderCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:CrossApp.ViewModels.DatabaseCalculatorViewModel.SaveOrder"/>.</summary>
         </member>
         <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
             <summary>
             A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
             for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
             </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsBusy">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsBusy" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Title">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Title" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.OrderItemId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "OrderItemId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsSaving">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsSaving" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ValidationState">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ValidationState" generated properties.</summary>
@@ -286,6 +323,18 @@
             A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
             for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
             </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsBusy">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsBusy" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Title">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Title" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.OrderItemId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "OrderItemId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsSaving">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsSaving" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ValidationState">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ValidationState" generated properties.</summary>

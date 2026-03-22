@@ -232,7 +232,7 @@ namespace API_DatabaseMarket.Data
                       .HasDefaultValueSql("now()");
 
                 entity.HasOne(e => e.Order)
-                      .WithMany(o => o.Payments)
+                      .WithMany(o => o.Payments )
                       .HasForeignKey(e => e.OrderId)
                       .OnDelete(DeleteBehavior.Cascade);
             });

@@ -34,7 +34,7 @@ namespace API_DatabaseMarket.Services
                     _logger.LogError(ex, "Error updating exchange rates.");
                 }
 
-                await Task.Delay(TimeSpan.FromHours(6), stoppingToken);
+                await Task.Delay(TimeSpan.FromHours(5), stoppingToken);
             }
         }
     }

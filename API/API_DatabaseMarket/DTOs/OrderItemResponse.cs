@@ -17,5 +17,9 @@
         public decimal FinalPriceRub { get; set; }
 
         public List<string> Countries { get; set; } = new();
+
+        public System.Text.Json.JsonElement Config { get; set; }
+
+        public DateTime CreatedAt { get; set; }
     }
 }

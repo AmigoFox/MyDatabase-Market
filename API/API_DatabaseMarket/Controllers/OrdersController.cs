@@ -17,11 +17,13 @@ namespace API_DatabaseMarket.Controllers
         private readonly AppDbContext _db;
         private readonly IPricingService _pricingService;
         private readonly IExchangeRateService _exchangeService;
-        public OrdersController(AppDbContext db, IPricingService pricingService, IExchangeRateService exchangeService)
+        private readonly IOrderService _orderService;
+        public OrdersController(AppDbContext db, IPricingService pricingService, IExchangeRateService exchangeService, IOrderService orderService)
         {
             _db = db;
             _pricingService = pricingService;
             _exchangeService = exchangeService;
+            _orderService = orderService;
         }
 
         // ============================
@@ -218,6 +220,17 @@ namespace API_DatabaseMarket.Controllers
                 return NotFound();
 
             return Ok(order);
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteOrder(int id)
+        {
+            var deleted = await _orderService.DeleteOrderAsync(id);
+
+            if (!deleted)
+                return NotFound();
+
+            return NoContent();
         }
     }
 }

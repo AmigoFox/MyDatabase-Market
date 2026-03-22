@@ -1,23 +1,51 @@
-<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CrossApp.LoginPage"
-             Title="LoginPage">
+             Title="LoginPage"
+             BackgroundColor="#F0F0F0">
 
+    <ScrollView>
+        <VerticalStackLayout Padding="40" Spacing="20" HorizontalOptions="Center">
 
+            <Label Text="&#128100; Вход в систему" 
+                   FontSize="24" 
+                   FontAttributes="Bold" 
+                   TextColor="#4A148C" 
+                   HorizontalOptions="Center"/>
 
-    <VerticalStackLayout Padding="30" Spacing="15">
+            <Entry x:Name="LoginEntry"
+                   Placeholder="Логин"
+                   BackgroundColor="White"
+                   TextColor="Black"
+                   FontSize="16"
+                   PlaceholderColor="#9E9E9E"
 
-        <Entry x:Name="LoginEntry"
-               Placeholder="Login" />
+                   HeightRequest="50"
+                   HorizontalOptions="Fill"/>
 
-        <Entry x:Name="PasswordEntry"
-               Placeholder="Password"
-               IsPassword="True" />
+            <Entry x:Name="PasswordEntry"
+                   Placeholder="Пароль"
+                   IsPassword="True"
+                   BackgroundColor="White"
+                   TextColor="Black"
+                   FontSize="16"
+                   PlaceholderColor="#9E9E9E"
 
-        <Button Text="Login"
-                Clicked="OnLoginClicked" />
+                   HeightRequest="50"
+                   HorizontalOptions="Fill"/>
 
-    </VerticalStackLayout>
+            <Button Text="&#128274; Войти"
+                    BackgroundColor="#5C6BC0"
+                    TextColor="White"
+                    CornerRadius="15"
+                    HeightRequest="50"
+                    FontSize="18"
+                    FontAttributes="Bold"
+                    Clicked="OnLoginClicked"
+                    HorizontalOptions="Fill"
+                    Margin="0,10,0,0"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
 
 </ContentPage>

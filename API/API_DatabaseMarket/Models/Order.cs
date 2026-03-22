@@ -5,7 +5,7 @@ namespace API_DatabaseMarket.Models
 {
     public class Order
     {
-        [Key]
+        [Key]   
         public int Id { get; set; }
 
         [ForeignKey(nameof(User))]

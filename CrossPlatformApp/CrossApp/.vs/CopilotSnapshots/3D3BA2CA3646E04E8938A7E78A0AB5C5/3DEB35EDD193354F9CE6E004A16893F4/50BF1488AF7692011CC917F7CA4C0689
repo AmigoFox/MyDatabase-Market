@@ -1,0 +1,62 @@
+﻿using CrossApp.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net.Http;
+using System.Text;
+using System.Text.Json;
+using System.Threading.Tasks;
+
+namespace CrossApp.Services.Api
+{
+    public class PaymentsService
+    {
+        private readonly HttpClient _httpClient;
+        private readonly JsonSerializerOptions _jsonOptions;
+        private readonly AuthTokenStore _tokenStore;
+
+        public PaymentsService(HttpClient httpClient, AuthTokenStore tokenStore)
+        {
+            _httpClient = httpClient;
+            _tokenStore = tokenStore;
+
+            _jsonOptions = new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true
+            };
+        }
+
+        public async Task<List<PaymentDto>> GetPayments()
+        {
+            var response = await _httpClient.GetAsync("payments");
+
+            if (!response.IsSuccessStatusCode)
+                return new List<PaymentDto>();
+
+            var json = await response.Content.ReadAsStringAsync();
+
+            return JsonSerializer.Deserialize<List<PaymentDto>>(json, _jsonOptions);
+        }
+
+        public async Task CreatePayment(CreatePaymentRequest request)
+        {
+            var json = JsonSerializer.Serialize(request);
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+            Console.WriteLine("=== CREATE PAYMENT REQUEST ===");
+            Console.WriteLine(json);
+
+            var response = await _httpClient.PostAsync("payments", content);
+
+            var responseText = await response.Content.ReadAsStringAsync();
+
+            Console.WriteLine($"PAYMENT RESPONSE: {response.StatusCode}");
+            Console.WriteLine(responseText);
+
+            if (!response.IsSuccessStatusCode)
+            {
+                throw new Exception($"Payment error: {response.StatusCode} - {responseText}");
+            }
+        }
+    }
+}

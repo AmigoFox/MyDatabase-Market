@@ -1,7 +1,20 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|a:\\git\\mydatabase-market\\api\\api_databasemarket\\controllers\\paymentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|solutionrelative:controllers\\paymentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|a:\\git\\mydatabase-market\\api\\api_databasemarket\\dtos\\payments\\paymentresultdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|solutionrelative:dtos\\payments\\paymentresultdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|a:\\git\\mydatabase-market\\api\\api_databasemarket\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B4657BD-865C-4329-93EC-1389D28C3F39}|API_DatabaseMarket.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 1,
@@ -9,12 +22,8 @@
       "DocumentGroups": [
         {
           "DockedHeight": 349,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 4,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
@@ -22,6 +31,45 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
+              "ToolTip": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Data\\AppDbContext.cs",
+              "ViewState": "AgIAAPwAAAAAAAAAAAAYwA8BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T15:30:29.753Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PaymentResultDto.cs",
+              "DocumentMoniker": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket\\DTOs\\Payments\\PaymentResultDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\Payments\\PaymentResultDto.cs",
+              "ToolTip": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket\\DTOs\\Payments\\PaymentResultDto.cs",
+              "RelativeToolTip": "DTOs\\Payments\\PaymentResultDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T15:26:17.637Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PaymentsController.cs",
+              "DocumentMoniker": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket\\Controllers\\PaymentsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PaymentsController.cs",
+              "ToolTip": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket\\Controllers\\PaymentsController.cs",
+              "RelativeToolTip": "Controllers\\PaymentsController.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwIgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T08:38:53.751Z",
+              "EditorCaption": ""
             }
           ]
         },

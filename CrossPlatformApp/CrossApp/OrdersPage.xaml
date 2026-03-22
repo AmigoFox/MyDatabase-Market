@@ -46,11 +46,19 @@
                        FontAttributes="Bold"
                        TextColor="#FF7043"/>
 
-                            <!-- Кнопка подробнее -->
-                            <Button Text="Подробнее"
-                        BackgroundColor="#7E57C2"
-                        TextColor="White"
-                        Clicked="OnMoreDetailsClicked"/>
+                            <!-- Кнопки подробнее и удалить -->
+                            <HorizontalStackLayout Spacing="8">
+                                <Button Text="Подробнее"
+                                        BackgroundColor="#7E57C2"
+                                        TextColor="White"
+                                        Clicked="OnMoreDetailsClicked"/>
+
+                                <Button Text="Удалить"
+                                        BackgroundColor="#E53935"
+                                        TextColor="White"
+                                        Clicked="OnDeleteClicked"/>
+                            </HorizontalStackLayout>
+
                         </VerticalStackLayout>
 
                     </Frame>
