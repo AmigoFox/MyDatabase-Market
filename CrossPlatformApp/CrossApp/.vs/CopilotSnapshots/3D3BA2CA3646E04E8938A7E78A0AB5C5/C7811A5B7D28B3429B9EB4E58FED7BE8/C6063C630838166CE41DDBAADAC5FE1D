@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CrossApp.PaymentsPage"
+             Title="Платежи"
+             BackgroundColor="#F8F4FF">
+
+    <VerticalStackLayout Padding="20" Spacing="16">
+
+        <!-- Блок валидации -->
+        <Frame IsVisible="{Binding ValidationState, Converter={StaticResource ValidationVisibleConverter}}"
+               CornerRadius="12"
+               Padding="12"
+               Margin="0,0,0,10"
+               BorderColor="{Binding ValidationState, Converter={StaticResource ValidationBorderColorConverter}}"
+               BackgroundColor="{Binding ValidationState, Converter={StaticResource ValidationBackgroundColorConverter}}">
+
+            <Label Text="{Binding ValidationMessage}"
+                   FontAttributes="Bold"
+                   TextColor="{Binding ValidationState, Converter={StaticResource ValidationTextColorConverter}}"
+                   LineBreakMode="WordWrap" />
+        </Frame>
+
+        <Label Text="История платежей"
+               FontSize="24"
+               FontAttributes="Bold"
+               TextColor="#4A148C"
+               Margin="0,0,0,10" />
+
+        <CollectionView x:Name="PaymentsList"
+                        SelectionMode="Single"
+                        SelectionChanged="OnPaymentsTapped">
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame BackgroundColor="White"
+                           BorderColor="#D1C4E9"
+                           CornerRadius="16"
+                           Padding="16"
+                           Margin="0,0,0,16"
+                           HasShadow="True"
+                           HeightRequest="120">
+
+                        <VerticalStackLayout Spacing="6">
+
+                                            <!-- Заказ -->
+                            <Label Text="Заказ #{Binding OrderId}"
+                           FontAttributes="Bold"
+                           TextColor="#4A148C"
+                           FontSize="18" />
+
+                            <!-- Оплата -->
+                                            <Label Text="{Binding Amount, StringFormat='Сумма: {0} ₽'}"
+                           TextColor="#4CAF50"
+                           FontSize="16" />
+
+                                            <Label Text="{Binding PaymentMethod}"
+                           TextColor="#7E57C2"
+                           FontSize="14" />
+
+                                            <Label Text="{Binding Status}"
+                           TextColor="#7E57C2"
+                           FontSize="14" />
+
+                                            <!-- Дата -->
+                                            <Label Text="{Binding CreatedAt, StringFormat='Дата: {0:dd.MM.yyyy HH:mm}'}"
+                           FontSize="12"
+                           TextColor="Gray"/>
+
+                        </VerticalStackLayout>
+
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+
+    </VerticalStackLayout>
+</ContentPage>

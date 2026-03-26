@@ -1,0 +1,60 @@
+﻿using CrossApp.ViewModels;
+using Microsoft.Maui.Controls;
+
+namespace CrossApp;
+
+public partial class PaymentsPage : ContentPage
+{
+    private readonly PaymentsViewModel _vm;
+    public PaymentsPage(PaymentsViewModel vm)
+    {
+        InitializeComponent();
+        _vm = vm;
+        BindingContext = _vm;
+    }
+
+    protected override async void OnAppearing()
+    {
+        base.OnAppearing();
+        await _vm.LoadPayments();
+    }
+
+    private async void OnPaymentsSelectionChanged(object sender, SelectionChangedEventArgs e)
+    {
+        try
+        {
+            var current = e.CurrentSelection?.FirstOrDefault();
+            if (current is CrossApp.Models.PaymentDto payment)
+            {
+                // navigate to order details page for the payment's order
+                await Shell.Current.GoToAsync($"{nameof(OrderDetailsPage)}?id={payment.OrderId}");
+            }
+        }
+        catch (Exception ex)
+        {
+            System.Diagnostics.Debug.WriteLine(ex);
+        }
+        finally
+        {
+            // clear selection to avoid stuck selection
+            if (sender is CollectionView cv)
+                cv.SelectedItem = null;
+        }
+    }
+
+    private async void OnOrdersTapped(object sender, TappedEventArgs e)
+    {
+        await Shell.Current.GoToAsync(nameof(OrdersPage));
+    }
+
+    private async void OnPaymentsTapped(object sender, TappedEventArgs e)
+    {
+        await Shell.Current.GoToAsync($"//{nameof(PaymentsPage)}");
+    }
+
+    private async void OnProfileDetailsTapped(object sender, TappedEventArgs e)
+    {
+        await Shell.Current.GoToAsync(nameof(ProfilePage));
+    }
+
+}

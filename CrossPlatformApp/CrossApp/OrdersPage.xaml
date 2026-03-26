@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:CrossApp.ViewModels"
+             xmlns:converters="clr-namespace:CrossApp.Converters"
+             x:Class="CrossApp.OrdersPage"
+             Title="Заказы"
+             BackgroundColor="#F8F4FF">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:ValidationVisibleConverter x:Key="ValidationVisibleConverter" />
+            <converters:ValidationTextColorConverter x:Key="ValidationTextColorConverter" />
+            <converters:ValidationBorderColorConverter x:Key="ValidationBorderColorConverter" />
+            <converters:ValidationBackgroundColorConverter x:Key="ValidationBackgroundColorConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid RowDefinitions="Auto,Auto,*"
+          Padding="20"
+          RowSpacing="16">
+
+        <Label Grid.Row="1"
+               Text="Ваши заказы"
+               FontSize="22"
+               FontAttributes="Bold"
+               TextColor="#4A148C"/>
+
+
+        <CollectionView Grid.Row="2"
+                        ItemsSource="{Binding Orders}"
+                        SelectionMode="None">
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame BackgroundColor="White"
+               BorderColor="#D1C4E9"
+               CornerRadius="16"
+               Padding="16"
+               Margin="0,0,0,14">
+
+                        <VerticalStackLayout Spacing="8">
+
+                            <!-- Название заказа -->
+                            <Label Text="{Binding OrderName}"
+           FontSize="18"
+           FontAttributes="Bold"
+           TextColor="#4A148C"/>
+
+                            <!-- Сумма -->
+                            <Label Text="{Binding TotalAmount, StringFormat='Сумма: {0} ₽'}"
+           FontSize="16"
+           FontAttributes="Bold"
+           TextColor="#FF7043"/>
+
+                            <!-- Дедлайн -->
+                            <Label Text="{Binding PaymentDueText}"
+           FontSize="12"
+           TextColor="Gray"/>
+
+                            <!-- Статус -->
+                            <Label Text="{Binding StatusText}"
+           TextColor="{Binding StatusColor}"
+           FontAttributes="Bold"/>
+
+                            <!-- Кнопки -->
+                            <HorizontalStackLayout Spacing="8">
+
+                                <Button Text="Подробнее"
+                BackgroundColor="#7E57C2"
+                TextColor="White"
+                Clicked="OnMoreDetailsClicked"/>
+
+                                <Button Text="Удалить"
+                BackgroundColor="#E53935"
+                TextColor="White"
+                Clicked="OnDeleteClicked"
+                IsVisible="{Binding Status, Converter={StaticResource NotPaidConverter}}" />
+
+                            </HorizontalStackLayout>
+
+                        </VerticalStackLayout>
+
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+    </Grid>
+</ContentPage>

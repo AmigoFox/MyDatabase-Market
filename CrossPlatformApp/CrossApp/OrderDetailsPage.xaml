@@ -1,0 +1,139 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CrossApp.OrderDetailsPage"
+             Title="Детали заказа"
+             BackgroundColor="#F8F4FF">
+
+    <ScrollView>
+
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <!-- Заголовок -->
+            <Label Text="Информация о заказе"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   TextColor="#4A148C"
+                   HorizontalOptions="Center"
+                   Margin="0,0,0,10"/>
+
+            <Frame BackgroundColor="White"
+                   BorderColor="#D1C4E9"
+                   CornerRadius="20"
+                   Padding="20"
+                   HasShadow="True"
+                   Margin="0,0,0,10">
+
+                <VerticalStackLayout Spacing="12">
+
+                    <Label Text="{Binding Order.DatabaseType, StringFormat='Тип базы данных: {0}'}"
+                           FontSize="20"
+                           TextColor="#2E1A5E"
+                           FontAttributes="Bold"/>
+
+                    <Label Text="{Binding CountriesText, StringFormat='Страны, в которых находятся сервера: {0}'}"
+                           FontSize="18"
+                           TextColor="#2E1A5E"/>
+
+                    <Label Text="{Binding Order.SizeGB, StringFormat='Объем: {0} GB'}"
+                           FontSize="16"
+                           TextColor="#2E1A5E"/>
+
+                    <Label Text="{Binding Order.Iops, StringFormat='IOPS: {0}'}"
+                           FontSize="16"
+                           TextColor="#2E1A5E"/>
+
+                    <Label Text="{Binding Order.StorageType, StringFormat='Тип хранилища: {0}'}"
+                           FontSize="16"
+                           TextColor="#2E1A5E"/>
+
+                    <Label Text="{Binding Order.Scalability, StringFormat='Вид масштабируемости: {0}'}"
+                           FontSize="16"
+                           TextColor="#2E1A5E"/>
+
+                    <Label Text="{Binding Order.Config.Backup, StringFormat='Backup: {0}'}"
+                           FontSize="16"
+                           TextColor="#2E1A5E"/>
+
+                    <Label Text="{Binding Order.Config.Sharding, StringFormat='Sharding: {0}'}"
+                           FontSize="16"
+                           TextColor="#2E1A5E"/>
+
+                    <Label Text="{Binding Order.Config.ReplicaSet, StringFormat='Replica Set: {0}'}"
+                           FontSize="16"
+                           TextColor="#2E1A5E"/>
+
+                    <Label Text="{Binding Order.CreatedAt, StringFormat='Дата создания: {0:dd.MM.yyyy HH:mm}'}"
+                           FontSize="16"
+                           TextColor="#2E1A5E"/>
+
+                    <Label Text="{Binding Order.FinalPriceRub, StringFormat='Стоимость в рублях: {0} ₽'}"
+                           FontSize="18"
+                           TextColor="#2E1A5E"
+                           FontAttributes="Bold"/>
+
+                </VerticalStackLayout>
+
+            </Frame>
+
+
+            <HorizontalStackLayout Spacing="15"
+                       HorizontalOptions="Center">
+
+                <Button Text="Редактировать заказ"
+            BackgroundColor="#5C6BC0"
+            TextColor="White"
+            CornerRadius="15"
+            HeightRequest="50"
+            WidthRequest="200"
+            Clicked="OnEditClicked"/>
+
+                <Button Text="Удалить заказ"
+            BackgroundColor="#E57373"
+            TextColor="White"
+            CornerRadius="15"
+            HeightRequest="50"
+            WidthRequest="150"
+            Clicked="OnDeleteClicked"/>
+
+            </HorizontalStackLayout>
+
+
+            <Frame BackgroundColor="White"
+               BorderColor="#D1C4E9"
+               CornerRadius="20"
+               Padding="20"
+               HasShadow="True">
+
+                <VerticalStackLayout Spacing="12">
+
+                    <Label Text="Оплата"
+               FontSize="20"
+               FontAttributes="Bold"
+               TextColor="#4A148C"/>
+
+                    <Label Text="Выберите способ оплаты"
+               FontSize="16"
+               TextColor="#4A148C"/>
+
+                    <Picker Title="Способ оплаты"
+                ItemsSource="{Binding PaymentMethods}"
+                SelectedItem="{Binding SelectedPaymentMethod}"
+                TextColor="#2E1A5E"/>
+
+                    <Button Text="Оплатить заказ"
+                BackgroundColor="#66BB6A"
+                TextColor="White"
+                CornerRadius="15"
+                HeightRequest="55"
+                FontSize="18"
+                Clicked="OnPayClicked"/>
+
+                </VerticalStackLayout>
+
+            </Frame>
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+</ContentPage>

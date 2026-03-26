@@ -9,11 +9,50 @@
     <ScrollView>
         <VerticalStackLayout Padding="20" Spacing="25">
 
+<<<<<<< Updated upstream:cross-platform application/app/DatabaseCalculator.xaml
+=======
+
+            <!-- Блок валидации -->
+            <Frame IsVisible="{Binding ValidationState, Converter={StaticResource ValidationVisibleConverter}}"
+               CornerRadius="12"
+               Padding="12"
+               Margin="0,0,0,10"
+               BorderColor="{Binding ValidationState, Converter={StaticResource ValidationBorderColorConverter}}"
+               BackgroundColor="{Binding ValidationState, Converter={StaticResource ValidationBackgroundColorConverter}}">
+
+                        <Label Text="{Binding ValidationMessage}"
+                   FontAttributes="Bold"
+                   TextColor="{Binding ValidationState, Converter={StaticResource ValidationTextColorConverter}}"
+                   LineBreakMode="WordWrap" />
+            </Frame>
+
+
+
+
+            <VerticalStackLayout Spacing="6">
+
+                <Label Text="Название заказа"
+                   FontSize="16"
+                   TextColor="#4A148C"
+                   FontAttributes="Bold"/>
+
+                <Entry Text="{Binding OrderName}"
+                   Placeholder="Введите название заказа"
+                   BackgroundColor="White"
+                   TextColor="#2E1A5E"
+                   PlaceholderColor="Gray"
+                   HeightRequest="50"
+                   Margin="0,0,0,10"/>
+
+            </VerticalStackLayout>
+            
+>>>>>>> Stashed changes:CrossPlatformApp/CrossApp/DatabaseCalculator.xaml
             <Frame BackgroundColor="#FFFFFF"
                    CornerRadius="16"
                    Padding="16"
                    BorderColor="#D1C4E9"
                    HasShadow="True">
+
 
                 <Grid ColumnDefinitions="*,*"
                       RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto"

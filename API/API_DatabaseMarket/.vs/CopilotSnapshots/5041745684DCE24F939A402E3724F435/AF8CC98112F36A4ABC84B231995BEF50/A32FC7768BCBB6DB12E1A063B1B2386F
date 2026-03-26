@@ -1,0 +1,36 @@
+﻿using System.Text.Json;
+
+
+namespace API_DatabaseMarket.DTOs.Orders
+{
+    public class OrderResponse
+    {
+        public int Id { get; set; }
+        public decimal TotalAmount { get; set; }
+        public string Status { get; set; } = default!;
+        public DateTime CreatedAt { get; set; }
+
+        public string OrderName { get; set; } = default!;
+        public DateTime? PaymentDueDate { get; set; }
+
+        public List<OrderItemResponse> Items { get; set; } = new();
+        public Dictionary<string, decimal> Prices { get; set; } = new();
+    }
+
+    public class OrderItemResponse
+    {
+        public int Id { get; set; }
+        public string DatabaseType { get; set; } = default!;
+        public int SizeGB { get; set; }
+        public string Iops { get; set; } = default!;
+        public string StorageType { get; set; } = default!;
+        public string Scalability { get; set; } = default!;
+        public decimal FinalPriceRub { get; set; }
+        public List<string> Countries { get; set; } = new();
+        public JsonElement Config { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public Dictionary<string, decimal> Prices { get; set; } = new();
+        public string OrderName { get; set; } = default!;
+ 
+    }
+}

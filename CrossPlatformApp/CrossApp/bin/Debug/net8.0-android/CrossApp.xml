@@ -1,0 +1,454 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CrossApp</name>
+    </assembly>
+    <members>
+        <member name="T:CrossApp.ViewModels.BaseViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:CrossApp.ViewModels.BaseViewModel.IsBusy">
+            <inheritdoc cref="F:CrossApp.ViewModels.BaseViewModel.isBusy"/>
+        </member>
+        <member name="P:CrossApp.ViewModels.BaseViewModel.Title">
+            <inheritdoc cref="F:CrossApp.ViewModels.BaseViewModel.title"/>
+        </member>
+        <member name="T:CrossApp.ViewModels.DatabaseCalculatorViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.OrderItemId">
+            <inheritdoc cref="F:CrossApp.ViewModels.DatabaseCalculatorViewModel.orderItemId"/>
+        </member>
+        <member name="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.IsSaving">
+            <inheritdoc cref="F:CrossApp.ViewModels.DatabaseCalculatorViewModel.isSaving"/>
+        </member>
+        <member name="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.ValidationState">
+            <inheritdoc cref="F:CrossApp.ViewModels.DatabaseCalculatorViewModel._validationState"/>
+        </member>
+        <member name="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.ValidationMessage">
+            <inheritdoc cref="F:CrossApp.ViewModels.DatabaseCalculatorViewModel._validationMessage"/>
+        </member>
+        <member name="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.SelectedType">
+            <inheritdoc cref="F:CrossApp.ViewModels.DatabaseCalculatorViewModel._selectedType"/>
+        </member>
+        <member name="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.SizeGB">
+            <inheritdoc cref="F:CrossApp.ViewModels.DatabaseCalculatorViewModel._sizeGB"/>
+        </member>
+        <member name="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.SelectedIOPS">
+            <inheritdoc cref="F:CrossApp.ViewModels.DatabaseCalculatorViewModel._selectedIOPS"/>
+        </member>
+        <member name="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.StorageType">
+            <inheritdoc cref="F:CrossApp.ViewModels.DatabaseCalculatorViewModel._storageType"/>
+        </member>
+        <member name="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.Scalability">
+            <inheritdoc cref="F:CrossApp.ViewModels.DatabaseCalculatorViewModel._scalability"/>
+        </member>
+        <member name="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.RussiaSelected">
+            <inheritdoc cref="F:CrossApp.ViewModels.DatabaseCalculatorViewModel._russiaSelected"/>
+        </member>
+        <member name="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.KazakhstanSelected">
+            <inheritdoc cref="F:CrossApp.ViewModels.DatabaseCalculatorViewModel._kazakhstanSelected"/>
+        </member>
+        <member name="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.ChinaSelected">
+            <inheritdoc cref="F:CrossApp.ViewModels.DatabaseCalculatorViewModel._chinaSelected"/>
+        </member>
+        <member name="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.UzbekistanSelected">
+            <inheritdoc cref="F:CrossApp.ViewModels.DatabaseCalculatorViewModel._uzbekistanSelected"/>
+        </member>
+        <member name="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.BelarusSelected">
+            <inheritdoc cref="F:CrossApp.ViewModels.DatabaseCalculatorViewModel._belarusSelected"/>
+        </member>
+        <member name="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.UsaSelected">
+            <inheritdoc cref="F:CrossApp.ViewModels.DatabaseCalculatorViewModel._usaSelected"/>
+        </member>
+        <member name="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.IndiaSelected">
+            <inheritdoc cref="F:CrossApp.ViewModels.DatabaseCalculatorViewModel._indiaSelected"/>
+        </member>
+        <member name="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.TurkeySelected">
+            <inheritdoc cref="F:CrossApp.ViewModels.DatabaseCalculatorViewModel._turkeySelected"/>
+        </member>
+        <member name="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.KoreaSelected">
+            <inheritdoc cref="F:CrossApp.ViewModels.DatabaseCalculatorViewModel._koreaSelected"/>
+        </member>
+        <member name="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.ArmeniaSelected">
+            <inheritdoc cref="F:CrossApp.ViewModels.DatabaseCalculatorViewModel._armeniaSelected"/>
+        </member>
+        <member name="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.EuropeSelected">
+            <inheritdoc cref="F:CrossApp.ViewModels.DatabaseCalculatorViewModel._europeSelected"/>
+        </member>
+        <member name="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.PriceInRub">
+            <inheritdoc cref="F:CrossApp.ViewModels.DatabaseCalculatorViewModel._priceInRub"/>
+        </member>
+        <member name="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.PriceInUsd">
+            <inheritdoc cref="F:CrossApp.ViewModels.DatabaseCalculatorViewModel._priceInUsd"/>
+        </member>
+        <member name="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.PriceInCny">
+            <inheritdoc cref="F:CrossApp.ViewModels.DatabaseCalculatorViewModel._priceInCny"/>
+        </member>
+        <member name="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.PriceInInr">
+            <inheritdoc cref="F:CrossApp.ViewModels.DatabaseCalculatorViewModel._priceInInr"/>
+        </member>
+        <member name="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.PriceInTry">
+            <inheritdoc cref="F:CrossApp.ViewModels.DatabaseCalculatorViewModel._priceInTry"/>
+        </member>
+        <member name="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.PriceInByn">
+            <inheritdoc cref="F:CrossApp.ViewModels.DatabaseCalculatorViewModel._priceInByn"/>
+        </member>
+        <member name="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.PriceInKzt">
+            <inheritdoc cref="F:CrossApp.ViewModels.DatabaseCalculatorViewModel._priceInKzt"/>
+        </member>
+        <member name="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.PriceInKrw">
+            <inheritdoc cref="F:CrossApp.ViewModels.DatabaseCalculatorViewModel._priceInKrw"/>
+        </member>
+        <member name="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.PriceInEur">
+            <inheritdoc cref="F:CrossApp.ViewModels.DatabaseCalculatorViewModel._priceInEur"/>
+        </member>
+        <member name="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.PriceInAmd">
+            <inheritdoc cref="F:CrossApp.ViewModels.DatabaseCalculatorViewModel._priceInAmd"/>
+        </member>
+        <member name="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.PriceInUzs">
+            <inheritdoc cref="F:CrossApp.ViewModels.DatabaseCalculatorViewModel._priceInUzs"/>
+        </member>
+        <member name="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.BackupEnabled">
+            <inheritdoc cref="F:CrossApp.ViewModels.DatabaseCalculatorViewModel._backupEnabled"/>
+        </member>
+        <member name="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.ShardingEnabled">
+            <inheritdoc cref="F:CrossApp.ViewModels.DatabaseCalculatorViewModel._shardingEnabled"/>
+        </member>
+        <member name="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.ReplicaSetEnabled">
+            <inheritdoc cref="F:CrossApp.ViewModels.DatabaseCalculatorViewModel._replicaSetEnabled"/>
+        </member>
+        <member name="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.OrderName">
+            <inheritdoc cref="F:CrossApp.ViewModels.DatabaseCalculatorViewModel._orderName"/>
+        </member>
+        <member name="M:CrossApp.ViewModels.DatabaseCalculatorViewModel.OnOrderItemIdChanged(System.Int32)">
+            <summary>Executes the logic for when <see cref="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.OrderItemId"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.OrderItemId"/> is changed.</remarks>
+        </member>
+        <member name="M:CrossApp.ViewModels.DatabaseCalculatorViewModel.OnIsSavingChanged(System.Boolean)">
+            <summary>Executes the logic for when <see cref="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.IsSaving"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.IsSaving"/> is changed.</remarks>
+        </member>
+        <member name="M:CrossApp.ViewModels.DatabaseCalculatorViewModel.OnRussiaSelectedChanged(System.Boolean)">
+            <summary>Executes the logic for when <see cref="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.RussiaSelected"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.RussiaSelected"/> is changed.</remarks>
+        </member>
+        <member name="M:CrossApp.ViewModels.DatabaseCalculatorViewModel.OnKazakhstanSelectedChanged(System.Boolean)">
+            <summary>Executes the logic for when <see cref="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.KazakhstanSelected"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.KazakhstanSelected"/> is changed.</remarks>
+        </member>
+        <member name="M:CrossApp.ViewModels.DatabaseCalculatorViewModel.OnChinaSelectedChanged(System.Boolean)">
+            <summary>Executes the logic for when <see cref="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.ChinaSelected"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.ChinaSelected"/> is changed.</remarks>
+        </member>
+        <member name="M:CrossApp.ViewModels.DatabaseCalculatorViewModel.OnUzbekistanSelectedChanged(System.Boolean)">
+            <summary>Executes the logic for when <see cref="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.UzbekistanSelected"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.UzbekistanSelected"/> is changed.</remarks>
+        </member>
+        <member name="M:CrossApp.ViewModels.DatabaseCalculatorViewModel.OnBelarusSelectedChanged(System.Boolean)">
+            <summary>Executes the logic for when <see cref="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.BelarusSelected"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.BelarusSelected"/> is changed.</remarks>
+        </member>
+        <member name="M:CrossApp.ViewModels.DatabaseCalculatorViewModel.OnUsaSelectedChanged(System.Boolean)">
+            <summary>Executes the logic for when <see cref="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.UsaSelected"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.UsaSelected"/> is changed.</remarks>
+        </member>
+        <member name="M:CrossApp.ViewModels.DatabaseCalculatorViewModel.OnIndiaSelectedChanged(System.Boolean)">
+            <summary>Executes the logic for when <see cref="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.IndiaSelected"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.IndiaSelected"/> is changed.</remarks>
+        </member>
+        <member name="M:CrossApp.ViewModels.DatabaseCalculatorViewModel.OnTurkeySelectedChanged(System.Boolean)">
+            <summary>Executes the logic for when <see cref="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.TurkeySelected"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.TurkeySelected"/> is changed.</remarks>
+        </member>
+        <member name="M:CrossApp.ViewModels.DatabaseCalculatorViewModel.OnKoreaSelectedChanged(System.Boolean)">
+            <summary>Executes the logic for when <see cref="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.KoreaSelected"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.KoreaSelected"/> is changed.</remarks>
+        </member>
+        <member name="M:CrossApp.ViewModels.DatabaseCalculatorViewModel.OnArmeniaSelectedChanged(System.Boolean)">
+            <summary>Executes the logic for when <see cref="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.ArmeniaSelected"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.ArmeniaSelected"/> is changed.</remarks>
+        </member>
+        <member name="M:CrossApp.ViewModels.DatabaseCalculatorViewModel.OnEuropeSelectedChanged(System.Boolean)">
+            <summary>Executes the logic for when <see cref="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.EuropeSelected"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.EuropeSelected"/> is changed.</remarks>
+        </member>
+        <member name="F:CrossApp.ViewModels.DatabaseCalculatorViewModel.selectionChangedCommand">
+            <summary>The backing field for <see cref="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.SelectionChangedCommand"/>.</summary>
+        </member>
+        <member name="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.SelectionChangedCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:CrossApp.ViewModels.DatabaseCalculatorViewModel.OnSelectionChanged"/>.</summary>
+        </member>
+        <member name="F:CrossApp.ViewModels.DatabaseCalculatorViewModel.validateAndUpdateCommand">
+            <summary>The backing field for <see cref="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.ValidateAndUpdateCommand"/>.</summary>
+        </member>
+        <member name="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.ValidateAndUpdateCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:CrossApp.ViewModels.DatabaseCalculatorViewModel.ValidateAndUpdate"/>.</summary>
+        </member>
+        <member name="F:CrossApp.ViewModels.DatabaseCalculatorViewModel.saveOrderCommand">
+            <summary>The backing field for <see cref="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.SaveOrderCommand"/>.</summary>
+        </member>
+        <member name="P:CrossApp.ViewModels.DatabaseCalculatorViewModel.SaveOrderCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:CrossApp.ViewModels.DatabaseCalculatorViewModel.SaveOrder"/>.</summary>
+        </member>
+        <member name="T:CrossApp.ViewModels.PaymentsViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:CrossApp.ViewModels.PaymentsViewModel.ValidationState">
+            <inheritdoc cref="F:CrossApp.ViewModels.PaymentsViewModel._validationState"/>
+        </member>
+        <member name="P:CrossApp.ViewModels.PaymentsViewModel.ValidationMessage">
+            <inheritdoc cref="F:CrossApp.ViewModels.PaymentsViewModel._validationMessage"/>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsBusy">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsBusy" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Title">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Title" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.OrderItemId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "OrderItemId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsSaving">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsSaving" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ValidationState">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ValidationState" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ValidationMessage">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ValidationMessage" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedType">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedType" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SizeGB">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SizeGB" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedIOPS">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedIOPS" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.StorageType">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "StorageType" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Scalability">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Scalability" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.RussiaSelected">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "RussiaSelected" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.KazakhstanSelected">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "KazakhstanSelected" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ChinaSelected">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ChinaSelected" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.UzbekistanSelected">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "UzbekistanSelected" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.BelarusSelected">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "BelarusSelected" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.UsaSelected">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "UsaSelected" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IndiaSelected">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IndiaSelected" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.TurkeySelected">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "TurkeySelected" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.KoreaSelected">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "KoreaSelected" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ArmeniaSelected">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ArmeniaSelected" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.EuropeSelected">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "EuropeSelected" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.PriceInRub">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "PriceInRub" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.PriceInUsd">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "PriceInUsd" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.PriceInCny">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "PriceInCny" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.PriceInInr">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "PriceInInr" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.PriceInTry">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "PriceInTry" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.PriceInByn">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "PriceInByn" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.PriceInKzt">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "PriceInKzt" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.PriceInKrw">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "PriceInKrw" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.PriceInEur">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "PriceInEur" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.PriceInAmd">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "PriceInAmd" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.PriceInUzs">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "PriceInUzs" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.BackupEnabled">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "BackupEnabled" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ShardingEnabled">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ShardingEnabled" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ReplicaSetEnabled">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ReplicaSetEnabled" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.OrderName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "OrderName" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsBusy">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsBusy" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Title">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Title" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.OrderItemId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "OrderItemId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsSaving">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsSaving" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ValidationState">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ValidationState" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ValidationMessage">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ValidationMessage" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedType">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedType" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SizeGB">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SizeGB" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedIOPS">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedIOPS" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.StorageType">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "StorageType" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Scalability">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Scalability" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.RussiaSelected">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "RussiaSelected" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.KazakhstanSelected">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "KazakhstanSelected" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ChinaSelected">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ChinaSelected" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.UzbekistanSelected">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "UzbekistanSelected" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.BelarusSelected">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "BelarusSelected" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.UsaSelected">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "UsaSelected" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IndiaSelected">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IndiaSelected" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.TurkeySelected">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "TurkeySelected" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.KoreaSelected">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "KoreaSelected" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ArmeniaSelected">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ArmeniaSelected" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.EuropeSelected">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "EuropeSelected" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.PriceInRub">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "PriceInRub" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.PriceInUsd">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "PriceInUsd" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.PriceInCny">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "PriceInCny" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.PriceInInr">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "PriceInInr" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.PriceInTry">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "PriceInTry" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.PriceInByn">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "PriceInByn" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.PriceInKzt">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "PriceInKzt" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.PriceInKrw">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "PriceInKrw" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.PriceInEur">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "PriceInEur" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.PriceInAmd">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "PriceInAmd" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.PriceInUzs">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "PriceInUzs" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.BackupEnabled">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "BackupEnabled" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ShardingEnabled">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ShardingEnabled" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ReplicaSetEnabled">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ReplicaSetEnabled" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.OrderName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "OrderName" generated properties.</summary>
+        </member>
+    </members>
+</doc>
