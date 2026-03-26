@@ -38,8 +38,7 @@
               "RelativeToolTip": "Models\\PaymentDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-22T14:54:25.451Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-22T14:54:25.451Z"
             },
             {
               "$type": "Document",
@@ -49,7 +48,7 @@
               "RelativeDocumentMoniker": "Services\\Api\\PaymentsService.cs",
               "ToolTip": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\Services\\Api\\PaymentsService.cs",
               "RelativeToolTip": "Services\\Api\\PaymentsService.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwCYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-22T15:09:42.707Z",
               "EditorCaption": ""

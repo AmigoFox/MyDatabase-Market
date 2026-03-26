@@ -15,7 +15,6 @@ namespace CrossApp.Services.Api
         private readonly HttpClient _httpClient;
         private readonly JsonSerializerOptions _jsonOptions;
         private readonly AuthTokenStore _tokenStore;
-
         public PaymentsService(HttpClient httpClient, AuthTokenStore tokenStore)
         {
             _httpClient = httpClient;
@@ -38,7 +37,6 @@ namespace CrossApp.Services.Api
 
             return JsonSerializer.Deserialize<List<PaymentDto>>(json, _jsonOptions);
         }
-
         public async Task CreatePayment(CreatePaymentRequest request)
         {
             var json = JsonSerializer.Serialize(request);
