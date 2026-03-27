@@ -2,6 +2,8 @@
 using API_DatabaseMarket.DTOs.Orders;
 using API_DatabaseMarket.Models;
 using API_DatabaseMarket.Services;
+using API_DatabaseMarket.DTOs;
+
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -46,7 +48,13 @@ namespace API_DatabaseMarket.Controllers
                 UserId = userId,
                 Status = "created",
                 CreatedAt = DateTime.UtcNow,
-                OrderItems = new List<OrderItem>()
+                OrderItems = new List<OrderItem>(),
+
+                OrderName = string.IsNullOrWhiteSpace(request.OrderName)
+                    ? $"{request.Items.First().DatabaseType} ({request.Items.First().SizeGB}GB)"
+                    : request.OrderName,
+
+                PaymentDueDate = DateTime.UtcNow.AddDays(30)
             };
 
             decimal totalAmount = 0m;
@@ -131,7 +139,9 @@ namespace API_DatabaseMarket.Controllers
                     Id = o.Id,
                     TotalAmount = o.TotalAmount,
                     Status = o.Status,
-                    CreatedAt = o.CreatedAt
+                    CreatedAt = o.CreatedAt,
+                    OrderName = o.OrderName,
+                    PaymentDueDate = o.PaymentDueDate
                 };
 
                 foreach (var currency in requestedCurrencies)
@@ -145,7 +155,7 @@ namespace API_DatabaseMarket.Controllers
 
                 foreach (var i in o.OrderItems)
                 {
-                    var itemResponse = new OrderItemResponse
+                    var itemResponse = new DTOs.Orders.OrderItemResponse
                     {
                         Id = i.Id,
                         DatabaseType = i.DatabaseType,
@@ -198,7 +208,9 @@ namespace API_DatabaseMarket.Controllers
                     TotalAmount = o.TotalAmount,
                     Status = o.Status,
                     CreatedAt = o.CreatedAt,
-                    Items = o.OrderItems.Select(i => new OrderItemResponse
+                    OrderName = o.OrderName,
+                    PaymentDueDate = o.PaymentDueDate,
+                    Items = o.OrderItems.Select(i => new DTOs.Orders.OrderItemResponse
                     {
                         Id = i.Id,
                         DatabaseType = i.DatabaseType,
@@ -221,6 +233,34 @@ namespace API_DatabaseMarket.Controllers
 
             return Ok(order);
         }
+
+
+        [HttpPut("{id}/name")]
+        public async Task<IActionResult> UpdateOrderName(int id, [FromBody] UpdateOrderNameRequest request)
+        {
+            var userIdClaim = User.FindFirst("UserId")?.Value;
+            if (userIdClaim == null)
+                return Unauthorized();
+
+            int userId = int.Parse(userIdClaim);
+
+            var order = await _db.Orders
+                .FirstOrDefaultAsync(o => o.Id == id && o.UserId == userId);
+
+            if (order == null)
+                return NotFound();
+
+            if (string.IsNullOrWhiteSpace(request.OrderName))
+                return BadRequest("Order name cannot be empty");
+
+            order.OrderName = request.OrderName;
+
+            await _db.SaveChangesAsync();
+
+            return Ok();
+        }
+
+
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteOrder(int id)

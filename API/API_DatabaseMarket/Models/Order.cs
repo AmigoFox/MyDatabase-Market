@@ -20,6 +20,12 @@ namespace API_DatabaseMarket.Models
 
         public DateTime? UpdatedAt { get; set; }
 
+        [Column("order_name")]
+        public string? OrderName { get; set; }
+
+        [Column("payment_due_date")]
+        public DateTime? PaymentDueDate { get; set; }
+
         // Navigation
         public User User { get; set; }
         public ICollection<OrderItem> OrderItems { get; set; }

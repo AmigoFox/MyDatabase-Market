@@ -235,6 +235,27 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "API_DatabaseMarket.Controllers.OrdersController",
+    "Method": "UpdateOrderName",
+    "RelativePath": "api/v1/orders/{id}/name",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "API_DatabaseMarket.DTOs.Orders.UpdateOrderNameRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "API_DatabaseMarket.Controllers.PaymentsController",
     "Method": "Create",
     "RelativePath": "api/v1/payments",

@@ -128,6 +128,14 @@ namespace API_DatabaseMarket.Data
                 entity.Property(e => e.UpdatedAt)
                       .HasColumnName("updated_at");
 
+                entity.Property(e => e.OrderName)
+                       .HasColumnName("order_name");
+
+                entity.Property(e => e.PaymentDueDate)
+                      .HasColumnName("payment_due_date");
+
+
+
                 entity.HasOne(e => e.User)
                       .WithMany(u => u.Orders)
                       .HasForeignKey(e => e.UserId)

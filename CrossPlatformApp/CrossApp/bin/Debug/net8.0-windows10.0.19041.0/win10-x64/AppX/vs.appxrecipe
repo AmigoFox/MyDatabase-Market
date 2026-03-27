@@ -29,301 +29,301 @@
     <AppXManifest Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2026-03-22T15:17:24.912</Modified>
+      <Modified>2026-03-26T18:24:05.443</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2026-03-22T14:49:12.565</Modified>
+      <Modified>2026-03-26T18:24:05.266</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\CrossApp.runtimeconfig.json">
       <PackagePath>CrossApp.runtimeconfig.json</PackagePath>
-      <Modified>2026-03-22T15:17:24.519</Modified>
+      <Modified>2026-03-26T18:24:05.089</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\CrossApp.dll">
       <PackagePath>CrossApp.dll</PackagePath>
-      <Modified>2026-03-22T15:17:23.306</Modified>
+      <Modified>2026-03-26T18:24:04.077</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>CrossApp.exe</PackagePath>
-      <Modified>2026-03-22T15:17:23.369</Modified>
+      <Modified>2026-03-26T18:24:04.090</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
-      <Modified>2026-02-25T09:28:50.235</Modified>
+      <Modified>2026-03-26T18:21:12.651</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
       <PackagePath>splashSplashScreen.scale-100.png</PackagePath>
-      <Modified>2026-03-22T14:49:09.625</Modified>
+      <Modified>2026-03-26T18:21:17.589</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-125.png">
       <PackagePath>splashSplashScreen.scale-125.png</PackagePath>
-      <Modified>2026-03-22T14:49:09.640</Modified>
+      <Modified>2026-03-26T18:21:17.589</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-150.png">
       <PackagePath>splashSplashScreen.scale-150.png</PackagePath>
-      <Modified>2026-03-22T14:49:09.660</Modified>
+      <Modified>2026-03-26T18:21:17.589</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-200.png">
       <PackagePath>splashSplashScreen.scale-200.png</PackagePath>
-      <Modified>2026-03-22T14:49:09.690</Modified>
+      <Modified>2026-03-26T18:21:17.589</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-400.png">
       <PackagePath>splashSplashScreen.scale-400.png</PackagePath>
-      <Modified>2026-03-22T14:49:09.789</Modified>
+      <Modified>2026-03-26T18:21:17.590</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf">
       <PackagePath>OpenSans-Regular.ttf</PackagePath>
-      <Modified>2026-02-25T09:28:50.230</Modified>
+      <Modified>2026-03-26T18:21:17.572</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Semibold.ttf">
       <PackagePath>OpenSans-Semibold.ttf</PackagePath>
-      <Modified>2026-02-25T09:28:50.230</Modified>
+      <Modified>2026-03-26T18:21:17.573</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
-      <Modified>2026-03-22T14:49:10.480</Modified>
+      <Modified>2026-03-26T18:21:17.573</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
       <PackagePath>appiconLargeTile.scale-100.png</PackagePath>
-      <Modified>2026-03-22T14:49:10.471</Modified>
+      <Modified>2026-03-26T18:21:17.573</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
       <PackagePath>appiconLargeTile.scale-125.png</PackagePath>
-      <Modified>2026-03-22T14:49:10.471</Modified>
+      <Modified>2026-03-26T18:21:17.573</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
       <PackagePath>appiconLargeTile.scale-150.png</PackagePath>
-      <Modified>2026-03-22T14:49:10.471</Modified>
+      <Modified>2026-03-26T18:21:17.573</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
       <PackagePath>appiconLargeTile.scale-200.png</PackagePath>
-      <Modified>2026-03-22T14:49:10.471</Modified>
+      <Modified>2026-03-26T18:21:17.573</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
       <PackagePath>appiconLargeTile.scale-400.png</PackagePath>
-      <Modified>2026-03-22T14:49:10.471</Modified>
+      <Modified>2026-03-26T18:21:17.573</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-16.png</PackagePath>
-      <Modified>2026-03-22T14:49:10.471</Modified>
+      <Modified>2026-03-26T18:21:17.573</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-24.png</PackagePath>
-      <Modified>2026-03-22T14:49:10.471</Modified>
+      <Modified>2026-03-26T18:21:17.573</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-256.png</PackagePath>
-      <Modified>2026-03-22T14:49:10.471</Modified>
+      <Modified>2026-03-26T18:21:17.573</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-32.png</PackagePath>
-      <Modified>2026-03-22T14:49:10.471</Modified>
+      <Modified>2026-03-26T18:21:17.573</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-48.png</PackagePath>
-      <Modified>2026-03-22T14:49:10.471</Modified>
+      <Modified>2026-03-26T18:21:17.573</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-16.png</PackagePath>
-      <Modified>2026-03-22T14:49:10.480</Modified>
+      <Modified>2026-03-26T18:21:17.573</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-24.png</PackagePath>
-      <Modified>2026-03-22T14:49:10.480</Modified>
+      <Modified>2026-03-26T18:21:17.573</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-256.png</PackagePath>
-      <Modified>2026-03-22T14:49:10.471</Modified>
+      <Modified>2026-03-26T18:21:17.577</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-32.png</PackagePath>
-      <Modified>2026-03-22T14:49:10.471</Modified>
+      <Modified>2026-03-26T18:21:17.577</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-48.png</PackagePath>
-      <Modified>2026-03-22T14:49:10.471</Modified>
+      <Modified>2026-03-26T18:21:17.577</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
       <PackagePath>appiconLogo.scale-100.png</PackagePath>
-      <Modified>2026-03-22T14:49:10.480</Modified>
+      <Modified>2026-03-26T18:21:17.577</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
       <PackagePath>appiconLogo.scale-125.png</PackagePath>
-      <Modified>2026-03-22T14:49:10.480</Modified>
+      <Modified>2026-03-26T18:21:17.577</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
       <PackagePath>appiconLogo.scale-150.png</PackagePath>
-      <Modified>2026-03-22T14:49:10.480</Modified>
+      <Modified>2026-03-26T18:21:17.577</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
       <PackagePath>appiconLogo.scale-200.png</PackagePath>
-      <Modified>2026-03-22T14:49:10.480</Modified>
+      <Modified>2026-03-26T18:21:17.577</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
       <PackagePath>appiconLogo.scale-400.png</PackagePath>
-      <Modified>2026-03-22T14:49:10.480</Modified>
+      <Modified>2026-03-26T18:21:17.577</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png">
       <PackagePath>appiconLogo.targetsize-16.png</PackagePath>
-      <Modified>2026-03-22T14:49:10.480</Modified>
+      <Modified>2026-03-26T18:21:17.577</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png">
       <PackagePath>appiconLogo.targetsize-24.png</PackagePath>
-      <Modified>2026-03-22T14:49:10.480</Modified>
+      <Modified>2026-03-26T18:21:17.577</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png">
       <PackagePath>appiconLogo.targetsize-256.png</PackagePath>
-      <Modified>2026-03-22T14:49:10.480</Modified>
+      <Modified>2026-03-26T18:21:17.577</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png">
       <PackagePath>appiconLogo.targetsize-32.png</PackagePath>
-      <Modified>2026-03-22T14:49:10.480</Modified>
+      <Modified>2026-03-26T18:21:17.577</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png">
       <PackagePath>appiconLogo.targetsize-48.png</PackagePath>
-      <Modified>2026-03-22T14:49:10.480</Modified>
+      <Modified>2026-03-26T18:21:17.577</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
       <PackagePath>appiconMediumTile.scale-100.png</PackagePath>
-      <Modified>2026-03-22T14:49:10.471</Modified>
+      <Modified>2026-03-26T18:21:17.577</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
       <PackagePath>appiconMediumTile.scale-125.png</PackagePath>
-      <Modified>2026-03-22T14:49:10.471</Modified>
+      <Modified>2026-03-26T18:21:17.577</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
       <PackagePath>appiconMediumTile.scale-150.png</PackagePath>
-      <Modified>2026-03-22T14:49:10.471</Modified>
+      <Modified>2026-03-26T18:21:17.577</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
       <PackagePath>appiconMediumTile.scale-200.png</PackagePath>
-      <Modified>2026-03-22T14:49:10.471</Modified>
+      <Modified>2026-03-26T18:21:17.577</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
       <PackagePath>appiconMediumTile.scale-400.png</PackagePath>
-      <Modified>2026-03-22T14:49:10.471</Modified>
+      <Modified>2026-03-26T18:21:17.577</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
       <PackagePath>appiconSmallTile.scale-100.png</PackagePath>
-      <Modified>2026-03-22T14:49:10.471</Modified>
+      <Modified>2026-03-26T18:21:17.577</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
       <PackagePath>appiconSmallTile.scale-125.png</PackagePath>
-      <Modified>2026-03-22T14:49:10.471</Modified>
+      <Modified>2026-03-26T18:21:17.577</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
       <PackagePath>appiconSmallTile.scale-150.png</PackagePath>
-      <Modified>2026-03-22T14:49:10.471</Modified>
+      <Modified>2026-03-26T18:21:17.577</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
       <PackagePath>appiconSmallTile.scale-200.png</PackagePath>
-      <Modified>2026-03-22T14:49:10.471</Modified>
+      <Modified>2026-03-26T18:21:17.577</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
       <PackagePath>appiconSmallTile.scale-400.png</PackagePath>
-      <Modified>2026-03-22T14:49:10.471</Modified>
+      <Modified>2026-03-26T18:21:17.577</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
       <PackagePath>appiconStoreLogo.scale-100.png</PackagePath>
-      <Modified>2026-03-22T14:49:10.471</Modified>
+      <Modified>2026-03-26T18:21:17.577</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
       <PackagePath>appiconStoreLogo.scale-125.png</PackagePath>
-      <Modified>2026-03-22T14:49:10.471</Modified>
+      <Modified>2026-03-26T18:21:17.577</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
       <PackagePath>appiconStoreLogo.scale-150.png</PackagePath>
-      <Modified>2026-03-22T14:49:10.471</Modified>
+      <Modified>2026-03-26T18:21:17.577</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
       <PackagePath>appiconStoreLogo.scale-200.png</PackagePath>
-      <Modified>2026-03-22T14:49:10.471</Modified>
+      <Modified>2026-03-26T18:21:17.577</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
       <PackagePath>appiconStoreLogo.scale-400.png</PackagePath>
-      <Modified>2026-03-22T14:49:10.471</Modified>
+      <Modified>2026-03-26T18:21:17.577</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
       <PackagePath>appiconWideTile.scale-100.png</PackagePath>
-      <Modified>2026-03-22T14:49:10.471</Modified>
+      <Modified>2026-03-26T18:21:17.577</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
       <PackagePath>appiconWideTile.scale-125.png</PackagePath>
-      <Modified>2026-03-22T14:49:10.471</Modified>
+      <Modified>2026-03-26T18:21:17.582</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
       <PackagePath>appiconWideTile.scale-150.png</PackagePath>
-      <Modified>2026-03-22T14:49:10.471</Modified>
+      <Modified>2026-03-26T18:21:17.582</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
       <PackagePath>appiconWideTile.scale-200.png</PackagePath>
-      <Modified>2026-03-22T14:49:10.471</Modified>
+      <Modified>2026-03-26T18:21:17.582</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
-      <Modified>2026-03-22T14:49:10.471</Modified>
+      <Modified>2026-03-26T18:21:17.582</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\cassandra.scale-100.png">
       <PackagePath>cassandra.scale-100.png</PackagePath>
-      <Modified>2026-03-22T14:49:10.471</Modified>
+      <Modified>2026-03-26T18:21:17.583</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
-      <Modified>2026-03-22T14:49:10.480</Modified>
+      <Modified>2026-03-26T18:21:17.583</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
       <PackagePath>dotnet_bot.scale-125.png</PackagePath>
-      <Modified>2026-03-22T14:49:10.480</Modified>
+      <Modified>2026-03-26T18:21:17.584</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
       <PackagePath>dotnet_bot.scale-150.png</PackagePath>
-      <Modified>2026-03-22T14:49:10.480</Modified>
+      <Modified>2026-03-26T18:21:17.584</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
       <PackagePath>dotnet_bot.scale-200.png</PackagePath>
-      <Modified>2026-03-22T14:49:10.480</Modified>
+      <Modified>2026-03-26T18:21:17.584</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
-      <Modified>2026-03-22T14:49:10.480</Modified>
+      <Modified>2026-03-26T18:21:17.584</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\mariadb.scale-100.png">
       <PackagePath>mariadb.scale-100.png</PackagePath>
-      <Modified>2026-03-22T14:49:10.471</Modified>
+      <Modified>2026-03-26T18:21:17.584</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\microsoftsqlserver.scale-100.png">
       <PackagePath>microsoftsqlserver.scale-100.png</PackagePath>
-      <Modified>2026-03-22T14:49:10.471</Modified>
+      <Modified>2026-03-26T18:21:17.584</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\mongodb.scale-100.png">
       <PackagePath>mongodb.scale-100.png</PackagePath>
-      <Modified>2026-03-22T14:49:10.471</Modified>
+      <Modified>2026-03-26T18:21:17.584</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\mysql.scale-100.png">
       <PackagePath>mysql.scale-100.png</PackagePath>
-      <Modified>2026-03-22T14:49:10.471</Modified>
+      <Modified>2026-03-26T18:21:17.588</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\oracledb.scale-100.jpeg">
       <PackagePath>oracledb.scale-100.jpeg</PackagePath>
-      <Modified>2026-03-22T14:49:10.471</Modified>
+      <Modified>2026-03-26T18:21:17.588</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\postgresql.scale-100.png">
       <PackagePath>postgresql.scale-100.png</PackagePath>
-      <Modified>2026-03-22T14:49:10.471</Modified>
+      <Modified>2026-03-26T18:21:17.588</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\redis.scale-100.png">
       <PackagePath>redis.scale-100.png</PackagePath>
-      <Modified>2026-03-22T14:49:10.471</Modified>
+      <Modified>2026-03-26T18:21:17.588</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\sqlite.scale-100.jpg">
       <PackagePath>sqlite.scale-100.jpg</PackagePath>
-      <Modified>2026-03-22T14:49:10.471</Modified>
+      <Modified>2026-03-26T18:21:17.589</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\CrossApp.deps.json">
       <PackagePath>CrossApp.deps.json</PackagePath>
-      <Modified>2026-03-22T15:17:24.511</Modified>
+      <Modified>2026-03-26T18:24:05.076</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Andrey\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.56\lib\net8.0\Microsoft.Windows.SDK.NET.dll">
       <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>

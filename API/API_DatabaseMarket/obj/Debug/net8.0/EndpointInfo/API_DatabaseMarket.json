@@ -395,6 +395,48 @@
         }
       }
     },
+    "/api/v1/orders/{id}/name": {
+      "put": {
+        "tags": [
+          "Orders"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateOrderNameRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateOrderNameRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateOrderNameRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/v1/payments": {
       "post": {
         "tags": [
@@ -557,6 +599,10 @@
             "items": {
               "$ref": "#/components/schemas/CreateOrderItemDto"
             },
+            "nullable": true
+          },
+          "orderName": {
+            "type": "string",
             "nullable": true
           }
         },
@@ -765,6 +811,15 @@
               "format": "double"
             },
             "nullable": true
+          },
+          "orderName": {
+            "type": "string",
+            "nullable": true
+          },
+          "paymentDueDate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -789,6 +844,16 @@
             "nullable": true
           },
           "phone": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateOrderNameRequest": {
+        "type": "object",
+        "properties": {
+          "orderName": {
             "type": "string",
             "nullable": true
           }

@@ -1,5 +1,6 @@
 ﻿using API_DatabaseMarket.Data;
 using API_DatabaseMarket.Services;
+using API_DatabaseMarket.Services.Background;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -54,6 +55,7 @@ builder.Services.AddScoped<IExchangeRateService, ExchangeRateService>();
 builder.Services.AddScoped<ExchangeRateUpdater>();
 builder.Services.AddHostedService<ExchangeRateBackgroundService>();
 builder.Services.AddScoped<IOrderService, OrderService>();
+builder.Services.AddHostedService<OrderExpirationService>();
 
 builder.Services.AddEndpointsApiExplorer();
 

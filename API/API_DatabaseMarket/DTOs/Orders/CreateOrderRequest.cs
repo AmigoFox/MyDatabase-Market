@@ -1,6 +1,8 @@
 ﻿namespace API_DatabaseMarket.DTOs.Orders
 {
-    public record CreateOrderRequest(
-        List<CreateOrderItemDto> Items
-    );
+    public class CreateOrderRequest
+    {
+        public List<CreateOrderItemDto> Items { get; set; } = new();
+        public string? OrderName { get; set; }
+    }
 }

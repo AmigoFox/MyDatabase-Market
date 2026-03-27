@@ -10,6 +10,9 @@ namespace API_DatabaseMarket.DTOs.Orders
         public DateTime CreatedAt { get; set; }
         public List<OrderItemResponse> Items { get; set; } = new();
         public Dictionary<string, decimal> Prices { get; set; } = new();
+        public string OrderName { get; set; } = "";
+        public DateTime? PaymentDueDate { get; set; }
+
     }
 
     public class OrderItemResponse
