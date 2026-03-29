@@ -23,7 +23,6 @@ namespace CrossApp
             builder.Services.AddTransient<ViewModels.DatabaseCalculatorViewModel>();
             builder.Services.AddTransient<DatabaseCalculator>();
             builder.Services.AddTransient<LoginViewModel>();
-            builder.Services.AddTransient<LoginPage>();
             builder.Services.AddTransient<OrdersPage>();
             builder.Services.AddTransient<PaymentsPage>();
             builder.Services.AddTransient<SettingsPage>();
@@ -35,7 +34,8 @@ namespace CrossApp
             builder.Services.AddTransient<OrderDetailsPage>();
             builder.Services.AddTransient<ProfileViewModel>();
             builder.Services.AddSingleton<ThemeService>();
-
+            builder.Services.AddTransient<LoginPage>();
+            builder.Services.AddSingleton<AppShell>();
 
 
             builder.Services

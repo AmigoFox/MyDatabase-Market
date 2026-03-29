@@ -3,23 +3,77 @@
   "WorkspaceRootPath": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|a:\\git\\mydatabase-market\\crossplatformapp\\crossapp\\services\\api\\paymentsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|solutionrelative:services\\api\\paymentsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|a:\\git\\mydatabase-market\\crossplatformapp\\crossapp\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|solutionrelative:loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|a:\\git\\mydatabase-market\\crossplatformapp\\crossapp\\models\\paymentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|solutionrelative:models\\paymentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|a:\\git\\mydatabase-market\\crossplatformapp\\crossapp\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|solutionrelative:loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|a:\\git\\mydatabase-market\\crossplatformapp\\crossapp\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|solutionrelative:appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|a:\\git\\mydatabase-market\\crossplatformapp\\crossapp\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|a:\\git\\mydatabase-market\\crossplatformapp\\crossapp\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|solutionrelative:mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|a:\\git\\mydatabase-market\\crossplatformapp\\crossapp\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|solutionrelative:viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|a:\\git\\mydatabase-market\\crossplatformapp\\crossapp\\orderspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|solutionrelative:orderspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|a:\\git\\mydatabase-market\\crossplatformapp\\crossapp\\models\\orderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|solutionrelative:models\\orderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|a:\\git\\mydatabase-market\\crossplatformapp\\crossapp\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|solutionrelative:mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|a:\\git\\mydatabase-market\\crossplatformapp\\crossapp\\orderspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|solutionrelative:orderspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|a:\\git\\mydatabase-market\\crossplatformapp\\crossapp\\services\\api\\ordersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|solutionrelative:services\\api\\ordersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|a:\\git\\mydatabase-market\\crossplatformapp\\crossapp\\models\\createorderrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99ACB668-C593-4761-AA92-16F3B64E67FF}|CrossApp.csproj|solutionrelative:models\\createorderrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
     {
-      "Orientation": 1,
+      "Orientation": 0,
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedHeight": 349,
+          "DockedWidth": 200,
           "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\ViewModels\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\LoginViewModel.cs",
+              "ToolTip": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\ViewModels\\LoginViewModel.cs",
+              "RelativeToolTip": "ViewModels\\LoginViewModel.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAwwC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T16:50:35.218Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
@@ -30,34 +84,149 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PaymentDto.cs",
-              "DocumentMoniker": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\Models\\PaymentDto.cs",
-              "RelativeDocumentMoniker": "Models\\PaymentDto.cs",
-              "ToolTip": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\Models\\PaymentDto.cs",
-              "RelativeToolTip": "Models\\PaymentDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-22T14:54:25.451Z",
+              "DocumentIndex": 0,
+              "Title": "LoginPage.xaml",
+              "DocumentMoniker": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\LoginPage.xaml",
+              "RelativeDocumentMoniker": "LoginPage.xaml",
+              "ToolTip": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\LoginPage.xaml",
+              "RelativeToolTip": "LoginPage.xaml",
+              "ViewState": "AgIAADYAAAAAAAAAAAAUwFsAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-29T17:14:22.117Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PaymentsService.cs",
-              "DocumentMoniker": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\Services\\Api\\PaymentsService.cs",
-              "RelativeDocumentMoniker": "Services\\Api\\PaymentsService.cs",
-              "ToolTip": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\Services\\Api\\PaymentsService.cs",
-              "RelativeToolTip": "Services\\Api\\PaymentsService.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAQwCYAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "LoginPage.xaml.cs",
+              "DocumentMoniker": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\LoginPage.xaml.cs",
+              "RelativeDocumentMoniker": "LoginPage.xaml.cs",
+              "ToolTip": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\LoginPage.xaml.cs",
+              "RelativeToolTip": "LoginPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-22T15:09:42.707Z",
+              "WhenOpened": "2026-03-29T17:12:48.847Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MauiProgram.cs",
+              "DocumentMoniker": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\MauiProgram.cs",
+              "RelativeDocumentMoniker": "MauiProgram.cs",
+              "ToolTip": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\MauiProgram.cs",
+              "RelativeToolTip": "MauiProgram.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAIwEEAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T17:04:52.047Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\App.xaml.cs",
+              "RelativeDocumentMoniker": "App.xaml.cs",
+              "ToolTip": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\App.xaml.cs",
+              "RelativeToolTip": "App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T16:46:48.121Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AppShell.xaml",
+              "DocumentMoniker": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\AppShell.xaml",
+              "RelativeDocumentMoniker": "AppShell.xaml",
+              "ToolTip": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\AppShell.xaml",
+              "RelativeToolTip": "AppShell.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-29T16:34:27.711Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "OrdersPage.xaml.cs",
+              "DocumentMoniker": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\OrdersPage.xaml.cs",
+              "RelativeDocumentMoniker": "OrdersPage.xaml.cs",
+              "ToolTip": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\OrdersPage.xaml.cs",
+              "RelativeToolTip": "OrdersPage.xaml.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwCAAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T07:42:21.894Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "OrdersPage.xaml",
+              "DocumentMoniker": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\OrdersPage.xaml",
+              "RelativeDocumentMoniker": "OrdersPage.xaml",
+              "ToolTip": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\OrdersPage.xaml",
+              "RelativeToolTip": "OrdersPage.xaml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAAYAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-29T07:42:21.153Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "OrdersService.cs",
+              "DocumentMoniker": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\Services\\Api\\OrdersService.cs",
+              "RelativeDocumentMoniker": "Services\\Api\\OrdersService.cs",
+              "ToolTip": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\Services\\Api\\OrdersService.cs",
+              "RelativeToolTip": "Services\\Api\\OrdersService.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAkwD4AAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-28T11:18:36.525Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CreateOrderRequest.cs",
+              "DocumentMoniker": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\Models\\CreateOrderRequest.cs",
+              "RelativeDocumentMoniker": "Models\\CreateOrderRequest.cs",
+              "ToolTip": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\Models\\CreateOrderRequest.cs",
+              "RelativeToolTip": "Models\\CreateOrderRequest.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-28T11:23:07.964Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "OrderDto.cs",
+              "DocumentMoniker": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\Models\\OrderDto.cs",
+              "RelativeDocumentMoniker": "Models\\OrderDto.cs",
+              "ToolTip": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\Models\\OrderDto.cs",
+              "RelativeToolTip": "Models\\OrderDto.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAywCEAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T11:24:22.668Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\MainPage.xaml",
+              "RelativeDocumentMoniker": "MainPage.xaml",
+              "ToolTip": "A:\\Git\\MyDatabase-Market\\CrossPlatformApp\\CrossApp\\MainPage.xaml",
+              "RelativeToolTip": "MainPage.xaml",
+              "ViewState": "AgIAACkAAAAAAAAAAAAUwIMAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-29T11:27:22.663Z",
               "EditorCaption": ""
             }
           ]
         },
         {
-          "DockedHeight": 229,
+          "DockedWidth": 200,
           "SelectedChildIndex": -1,
           "Children": [
             {

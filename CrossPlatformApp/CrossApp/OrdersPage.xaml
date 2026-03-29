@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converters="clr-namespace:CrossApp.Converters"
              x:Class="CrossApp.OrdersPage"
              Title="Заказы"
              BackgroundColor="#F8F4FF">
 
     <Grid RowDefinitions="Auto,Auto,*"
           Padding="20"
-          RowSpacing="16">
+          RowSpacing="20">
 
+        <!-- Заголовок -->
         <Label Grid.Row="1"
                Text="Ваши заказы"
-               FontSize="22"
+               FontSize="26"
                FontAttributes="Bold"
-               TextColor="#4A148C"/>
+               TextColor="#4A148C"
+               Margin="0,0,0,10"/>
 
-
+        <!-- Список заказов -->
         <CollectionView Grid.Row="2"
                         ItemsSource="{Binding Orders}"
                         SelectionMode="None">
@@ -23,39 +26,63 @@
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <Frame BackgroundColor="White"
-               BorderColor="#D1C4E9"
-               CornerRadius="16"
-               Padding="16"
-               Margin="0,0,0,14">
+                           BorderColor="#D1C4E9"
+                           CornerRadius="18"
+                           Padding="18"
+                           Margin="0,0,0,18"
+                           HasShadow="True">
 
-                        <VerticalStackLayout Spacing="8">
+                        <VerticalStackLayout Spacing="10">
 
-                            <!-- Номер заказа -->
-                            <Label Text="{Binding Id, StringFormat='Заказ №{0}'}"
-                       FontSize="18"
-                       FontAttributes="Bold"
-                       TextColor="#4A148C"/>
+                            <!-- Имя -->
+                            <Label Text="{Binding OrderName}"
+                                   FontSize="18"
+                                   TextColor="#4A148C"/>
 
                             <!-- Тип БД -->
                             <Label Text="{Binding DatabaseType}"
-                       FontSize="16"
-                       TextColor="#6A1B9A"/>
+                                   FontSize="15"
+                                   TextColor="#7E57C2"/>
+
                             <!-- Цена -->
                             <Label Text="{Binding FinalPriceRub, StringFormat='Цена: {0} ₽'}"
-                       FontSize="16"
-                       FontAttributes="Bold"
-                       TextColor="#FF7043"/>
+                                   FontSize="17"
+                                   FontAttributes="Bold"
+                                   TextColor="#E64A19"
+                                   Margin="0,4,0,0"/>
 
-                            <!-- Кнопки подробнее и удалить -->
-                            <HorizontalStackLayout Spacing="8">
+                            <!-- Статус -->
+                            <Label Text="{Binding StatusText}"
+                                   FontSize="16"
+                                   FontAttributes="Bold"
+                                   TextColor="{Binding StatusColor}"/>
+
+                            <Label Text="Срок оплаты"
+                                   FontSize="14"
+                                   TextColor="#6A1B9A"
+                                   IsVisible="{Binding ShowPaymentDate}"/>
+
+                            <Label Text="{Binding PaymentDueDate, StringFormat='До: {0:dd.MM.yyyy HH:mm}'}"
+                                   FontSize="16"
+                                   TextColor="#D32F2F"
+                                   IsVisible="{Binding ShowPaymentDate}"/>
+
+                            <!-- Кнопки -->
+                            <HorizontalStackLayout Spacing="12"
+                                                   Margin="0,10,0,0">
+
                                 <Button Text="Подробнее"
                                         BackgroundColor="#7E57C2"
                                         TextColor="White"
+                                        CornerRadius="12"
+                                        Padding="14,8"
                                         Clicked="OnMoreDetailsClicked"/>
 
                                 <Button Text="Удалить"
-                                        BackgroundColor="#E53935"
+                                        BackgroundColor="#D32F2F"
                                         TextColor="White"
+                                        CornerRadius="12"
+                                        Padding="14,8"
                                         Clicked="OnDeleteClicked"/>
                             </HorizontalStackLayout>
 
@@ -64,6 +91,7 @@
                     </Frame>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
+
         </CollectionView>
 
     </Grid>

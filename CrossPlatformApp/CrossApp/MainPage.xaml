@@ -129,7 +129,7 @@
 
             </FlexLayout>
 
-            <Button Text="Перейти к калькулятору"
+            <Button Text="Начать настройку"
                     BackgroundColor="#6A1B9A"
                     TextColor="White"
                     CornerRadius="8"

@@ -7,6 +7,7 @@ using CrossApp.ViewModels;
 using System.Diagnostics;
 
 
+
 namespace CrossApp.ViewModels;
 
 [QueryProperty(nameof(OrderItemId), "id")]
@@ -16,12 +17,6 @@ public partial class DatabaseCalculatorViewModel : BaseViewModel
     private readonly CbrExchangeRateService _cbr;
     private readonly OrdersService _ordersService;
     private bool _isUpdating;
-
-    [ObservableProperty]
-    private int orderItemId;
-
-    [ObservableProperty]
-    private bool isSaving;
 
     public bool IsNotSaving => !IsSaving;
 
@@ -70,6 +65,11 @@ public partial class DatabaseCalculatorViewModel : BaseViewModel
         }
     }
 
+    [RelayCommand]
+    private async Task SaveOrderName()
+    {
+        await SaveOrderNameAsync();
+    }
 
 
     [ObservableProperty]
@@ -124,6 +124,18 @@ public partial class DatabaseCalculatorViewModel : BaseViewModel
     [ObservableProperty] private bool _shardingEnabled;
     [ObservableProperty] private bool _replicaSetEnabled;
 
+    [ObservableProperty]
+    private int orderItemId;
+    [ObservableProperty]
+    private bool isSaving;
+
+
+    [ObservableProperty]
+    private string orderName;
+
+    [ObservableProperty]
+    private int orderId;
+
     public string UsdRate => $"{_cache.Rates.GetValueOrDefault("USD"):N2}";
     public string CnyRate => $"{_cache.Rates.GetValueOrDefault("CNY"):N2}";
     public string EurRate => $"{_cache.Rates.GetValueOrDefault("EUR"):N2}";
@@ -160,6 +172,43 @@ public partial class DatabaseCalculatorViewModel : BaseViewModel
     partial void OnKoreaSelectedChanged(bool value) => ValidateAndUpdate();
     partial void OnArmeniaSelectedChanged(bool value) => ValidateAndUpdate();
     partial void OnEuropeSelectedChanged(bool value) => ValidateAndUpdate();
+
+    public async Task SaveOrderNameAsync()
+    {
+        Debug.WriteLine($"SaveOrderNameAsync: OrderId={OrderId}, Name={OrderName}");
+        if (OrderId <= 0)
+            return;
+
+        Debug.WriteLine($"SaveOrderNameAsync: OrderId={OrderId}, Name={OrderName}");
+
+        try
+        {
+            IsSaving = true;
+
+            var success = await _ordersService.UpdateOrderNameAsync(OrderId, OrderName);
+
+            if (success)
+            {
+                ValidationState = ValidationState.Info;
+                ValidationMessage = "Имя заказа обновлено";
+            }
+            else
+            {
+                ValidationState = ValidationState.Error;
+                ValidationMessage = "Ошибка обновления";
+            }
+        }
+        catch (Exception ex)
+        {
+            ValidationState = ValidationState.Error;
+            Debug.WriteLine($"SaveOrderNameAsync: OrderId={OrderId}, Name={OrderName}");
+            ValidationMessage = ex.Message;
+        }
+        finally
+        {
+            IsSaving = false;
+        }
+    }
 
     public int SelectedCountriesCount => GetSelectedCountries().Count();
     public string SelectedCountriesText => string.Join(", ", GetSelectedCountries());
@@ -429,6 +478,7 @@ public partial class DatabaseCalculatorViewModel : BaseViewModel
                 // CREATE
                 var createRequest = new CreateOrderRequest
                 {
+                    OrderName = OrderName,
                     Items = new List<CreateOrderItemDto>
                 {
                     new CreateOrderItemDto

@@ -37,12 +37,33 @@
 
 
 
+            <VerticalStackLayout Spacing="6">
+
+                <Label Text="Название заказа"
+                   FontSize="14"
+                   TextColor="#6A1B9A" />
+
+                <Entry Text="{Binding OrderName}"
+                   Placeholder="Например: Продакшн база"
+                   BackgroundColor="#F8F4FF"
+                   TextColor="#4A148C"
+                   PlaceholderColor="#9E9E9E"
+                   HeightRequest="44"/>
+
+                <Button Text="Сохранить имя"
+                    BackgroundColor="#4CAF50"
+                    TextColor="White"
+                    Clicked="OnSaveOrderNameClicked"/>
+
+            </VerticalStackLayout>
+
 
             <Frame BackgroundColor="#FFFFFF"
                    CornerRadius="16"
                    Padding="16"
                    BorderColor="#D1C4E9"
                    HasShadow="True">
+
 
                 <Grid ColumnDefinitions="*,*"
                       RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto"

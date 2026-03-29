@@ -1,14 +1,33 @@
-﻿using Microsoft.Maui.Controls;
+﻿using CrossApp.ViewModels;
+using CrossApp.Models;
+using CrossApp.Services.Api;
+using System.Diagnostics;
+
+using Microsoft.Maui.Controls;
 
 namespace CrossApp;
 
-public partial class DatabaseCalculator : ContentPage
+public partial class DatabaseCalculator : ContentPage, IQueryAttributable
 {
-
-    public DatabaseCalculator(CrossApp.ViewModels.DatabaseCalculatorViewModel vm)
-    {
+    private readonly DatabaseCalculatorViewModel _vm;
+    private readonly OrdersService _ordersService;
+    public DatabaseCalculator(DatabaseCalculatorViewModel vm, OrdersService ordersService)
+    {   
         InitializeComponent();
-        BindingContext = vm;
+        _vm = vm;
+        _ordersService = ordersService;
+        BindingContext = _vm;
+    }
+
+    public void ApplyQueryAttributes(IDictionary<string, object> query)
+    {
+        if (query.TryGetValue("orderId", out var idObj))
+        {
+            if (int.TryParse(idObj.ToString(), out var id))
+            {
+                _vm.OrderId = id;
+            }
+        }
     }
 
     private void OnPickerChanged(object sender, EventArgs e)
@@ -32,4 +51,11 @@ public partial class DatabaseCalculator : ContentPage
             await DisplayAlert("Успех", "Конфигурация сохранена!", "OK");
         }
     }
+
+    private async void OnSaveOrderNameClicked(object sender, EventArgs e)
+    {
+        if (_vm != null)
+            await _vm.SaveOrderNameAsync();
+    }
+
 }

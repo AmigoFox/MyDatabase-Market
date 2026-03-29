@@ -7,6 +7,7 @@ using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 
@@ -54,8 +55,11 @@ namespace CrossApp.ViewModels
                 var result = await _api.GetAsync<List<OrderDto>>("orders");
 
                 Debug.WriteLine("RESULT COUNT: " + (result?.Count ?? 0));
-                Debug.WriteLine("RESULT COUNT: " + (result));
-                
+                Debug.WriteLine(JsonSerializer.Serialize(result, new JsonSerializerOptions
+                {
+                    WriteIndented = true
+                }));
+
 
 
                 if (result == null)

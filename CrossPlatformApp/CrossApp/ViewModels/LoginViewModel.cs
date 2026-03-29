@@ -13,29 +13,42 @@ namespace CrossApp.ViewModels
     {
         private readonly ApiClient _api;
         private readonly AuthTokenStore _tokenStore;
+        private readonly IServiceProvider _services;
+        public event Action? LoginSucceeded;
+        public string LoginApp { get; set; }
+        public string Password { get; set; }
 
-        public LoginViewModel(ApiClient api, AuthTokenStore tokenStore)
+        public LoginViewModel(ApiClient api, AuthTokenStore tokenStore, IServiceProvider services)
         {
             _api = api;
             _tokenStore = tokenStore;
+            _services = services;
         }
+
+        public Command LoginCommand => new Command(async () =>
+        {
+            await Login(LoginApp, Password);
+        });
 
         public async Task Login(string login, string password)
         {
-            Console.WriteLine("LOIN BUTTON CLICKED");
             var request = new LoginRequest
             {
                 Login = login,
                 Password = password
             };
+
             var result = await _api.PostAsync<LoginRequest, LoginResponse>("auth/login", request);
 
             if (result != null)
             {
                 _tokenStore.SetToken(result.Token);
+                Preferences.Set("auth_token", result.Token);
 
-                await Shell.Current.GoToAsync("//MainPage");
+                // 🔥 просто сигнал
+                LoginSucceeded?.Invoke();
             }
         }
+
     }
 }

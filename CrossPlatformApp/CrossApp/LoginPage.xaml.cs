@@ -14,10 +14,16 @@ public partial class LoginPage : ContentPage
     {
         InitializeComponent();
         _vm = vm;
+        BindingContext = _vm;
+
+        _vm.LoginSucceeded += OnLoginSucceeded;
     }
 
-    private async void OnLoginClicked(object sender, EventArgs e)
+    private void OnLoginSucceeded()
     {
-        await _vm.Login(LoginEntry.Text, PasswordEntry.Text);
+        MainThread.BeginInvokeOnMainThread(async () =>
+        {
+            await Shell.Current.GoToAsync("//MainPage");
+        });
     }
 }

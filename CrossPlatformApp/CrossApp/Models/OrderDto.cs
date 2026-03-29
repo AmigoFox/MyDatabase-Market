@@ -23,6 +23,27 @@ public class OrderDto
 
     public decimal FinalPriceRub => Items?.FirstOrDefault()?.FinalPriceRub ?? 0;
 
+    public string? OrderName { get; set; }
+
+
+    public DateTime? PaymentDueDate { get; set; }
+
+
+    public bool ShowPaymentDate => Status == "paid";
+
+    public string StatusText =>
+        Status == "paid"
+            ? "Оплачен"
+            : "Оплатить";
+
+    public string StatusColor =>
+        Status == "paid"
+            ? "#4CAF50"
+            : "#FB8C00";
+
+
+
+
     public string Countries =>
         Items?.FirstOrDefault()?.Countries != null
             ? string.Join(", ", Items.First().Countries)

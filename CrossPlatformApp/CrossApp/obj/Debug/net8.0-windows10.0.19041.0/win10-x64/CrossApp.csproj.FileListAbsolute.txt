@@ -307,13 +307,13 @@ A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.
 A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\mauifont.stamp
 A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Regular.ttf
 A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\f\OpenSans-Semibold.ttf
-A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\mongodb.scale-100.png
 A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\postgresql.scale-100.png
+A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\sqlite.scale-100.jpg
 A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\redis.scale-100.png
 A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\cassandra.scale-100.png
-A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\mariadb.scale-100.png
-A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\sqlite.scale-100.jpg
 A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\microsoftsqlserver.scale-100.png
+A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\mariadb.scale-100.png
+A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\mongodb.scale-100.png
 A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\oracledb.scale-100.jpeg
 A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\mysql.scale-100.png
 A:\Git\MyDatabase-Market\CrossPlatformApp\CrossApp\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png

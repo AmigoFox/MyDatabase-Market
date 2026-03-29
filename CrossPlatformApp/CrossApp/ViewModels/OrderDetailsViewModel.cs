@@ -24,6 +24,31 @@ public class OrderDetailsViewModel : INotifyPropertyChanged
             "Bank"
         };
 
+    private OrderDto? _orderFull;
+    public OrderDto? OrderFull
+    {
+        get => _orderFull;
+        set
+        {
+            _orderFull = value;
+            OnPropertyChanged(nameof(OrderName));
+        }
+    }
+
+    public string OrderName
+    {
+        get => OrderFull?.OrderName ?? "";
+        set
+        {
+            if (OrderFull != null)
+            {
+                OrderFull.OrderName = value;
+                OnPropertyChanged(nameof(OrderName));
+            }
+        }
+    }
+
+
     private string _selectedPaymentMethod = "Card";
 
     public string SelectedPaymentMethod
@@ -32,7 +57,7 @@ public class OrderDetailsViewModel : INotifyPropertyChanged
         set
         {
             _selectedPaymentMethod = value;
-            OnPropertyChanged();
+            OnPropertyChanged(nameof(OrderName));
         }
     }
 
@@ -46,6 +71,8 @@ public class OrderDetailsViewModel : INotifyPropertyChanged
             OnPropertyChanged(nameof(CountriesText));
         }
     }
+
+ 
 
     public OrderDetailsViewModel(ApiClient api, OrdersService ordersService, PaymentsService paymentsService)
     {
@@ -69,31 +96,56 @@ public class OrderDetailsViewModel : INotifyPropertyChanged
             return;
 
         var item = order.Items?.FirstOrDefault();
+        OnPropertyChanged(nameof(OrderName));
 
         MainThread.BeginInvokeOnMainThread(() =>
         {
-            Order = item;
+            OrderFull = order;
+            Order = order.Items?.FirstOrDefault();
+            OnPropertyChanged(nameof(OrderName));
         });
     }
 
     public async Task DeleteOrder(int id)
     {
         var success = await _ordersService.DeleteOrderAsync(id);
+        
 
         if (success)
         {
             await Shell.Current.GoToAsync("//OrdersPage");
         }
+        OnPropertyChanged(nameof(OrderName));
     }
 
     public async Task PutOrder(int id, UpdateOrderItemRequest request)
     {
         var success = await _ordersService.UpdateAsync(id, request);
-
+        
         if (success)
         {
             await Shell.Current.GoToAsync("//OrdersPage");
         }
+        OnPropertyChanged(nameof(OrderName));
+    }
+
+    public async Task SaveOrderNameAsync()
+    {
+        if (OrderId <= 0)
+            return;
+
+        var success = await _ordersService.UpdateOrderNameAsync(OrderId, OrderName);
+
+        if (success)
+        {
+            await Application.Current.MainPage.DisplayAlert("Успех", "Имя обновлено", "OK");
+        }
+        else
+        {
+            await Application.Current.MainPage.DisplayAlert("Ошибка", "Не удалось обновить имя", "OK");
+        }
+
+        OnPropertyChanged(nameof(OrderName));
     }
 
 
@@ -105,5 +157,8 @@ public class OrderDetailsViewModel : INotifyPropertyChanged
     public async Task CreatePayment(CreatePaymentRequest request)
     {
         await _paymentsService.CreatePayment(request);
+        OnPropertyChanged(nameof(OrderName));
     }
+
+
 }

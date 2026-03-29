@@ -1,49 +1,90 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CrossApp.LoginPage"
-             Title="LoginPage"
-             BackgroundColor="#F0F0F0">
+             Title="Вход"
+             BackgroundColor="#F8F4FF">
 
     <ScrollView>
-        <VerticalStackLayout Padding="40" Spacing="20" HorizontalOptions="Center">
+        <VerticalStackLayout Padding="25" Spacing="25">
 
-            <Label Text="&#128100; Вход в систему" 
-                   FontSize="24" 
-                   FontAttributes="Bold" 
-                   TextColor="#4A148C" 
+            <!-- 🔥 Заголовок -->
+            <VerticalStackLayout Spacing="5" HorizontalOptions="Center">
+
+                <Label Text="👤"
+                       FontSize="50"
+                       HorizontalOptions="Center"/>
+
+                <Label Text="Вход в систему"
+                       FontSize="26"
+                       FontAttributes="Bold"
+                       TextColor="#4A148C"
+                       HorizontalOptions="Center"/>
+
+                <Label Text="Введите логин и пароль"
+                       FontSize="14"
+                       TextColor="#6A1B9A"
+                       HorizontalOptions="Center"/>
+
+            </VerticalStackLayout>
+
+            <!-- 🔲 Карточка -->
+            <Frame BackgroundColor="White"
+                   CornerRadius="20"
+                   Padding="20"
+                   HasShadow="True"
+                   BorderColor="#D1C4E9">
+
+                <VerticalStackLayout Spacing="18">
+
+                    <!-- Логин -->
+                    <VerticalStackLayout Spacing="5">
+                        <Label Text="Логин"
+                               FontSize="14"
+                               TextColor="#6A1B9A"/>
+
+                        <Entry Text="{Binding LoginApp}"
+                               Placeholder="Введите логин"
+                               BackgroundColor="#F3EFFF"
+                               TextColor="#2E1A5E"
+                               HeightRequest="45"
+                               Margin="0"
+                               />
+                    </VerticalStackLayout>
+
+                    <!-- Пароль -->
+                    <VerticalStackLayout Spacing="5">
+                        <Label Text="Пароль"
+                               FontSize="14"
+                               TextColor="#6A1B9A"/>
+
+                        <Entry Text="{Binding Password}"
+                               Placeholder="Введите пароль"
+                               IsPassword="True"
+                               BackgroundColor="#F3EFFF"
+                               TextColor="#2E1A5E"
+                               HeightRequest="45"/>
+                    </VerticalStackLayout>
+
+                    <!-- Кнопка -->
+                    <Button Text="🔒 Войти"
+                            BackgroundColor="#7E57C2"
+                            TextColor="White"
+                            CornerRadius="14"
+                            HeightRequest="50"
+                            FontSize="18"
+                            FontAttributes="Bold"
+                            Command="{Binding LoginCommand}"
+                            Margin="0,10,0,0"/>
+
+                </VerticalStackLayout>
+
+            </Frame>
+
+            <!-- 👇 Доп инфо -->
+            <Label Text="Нет аккаунта? Просто введите данные и войдите 🙂"
+                   FontSize="13"
+                   TextColor="#6A1B9A"
                    HorizontalOptions="Center"/>
-
-            <Entry x:Name="LoginEntry"
-                   Placeholder="Логин"
-                   BackgroundColor="White"
-                   TextColor="Black"
-                   FontSize="16"
-                   PlaceholderColor="#9E9E9E"
-
-                   HeightRequest="50"
-                   HorizontalOptions="Fill"/>
-
-            <Entry x:Name="PasswordEntry"
-                   Placeholder="Пароль"
-                   IsPassword="True"
-                   BackgroundColor="White"
-                   TextColor="Black"
-                   FontSize="16"
-                   PlaceholderColor="#9E9E9E"
-
-                   HeightRequest="50"
-                   HorizontalOptions="Fill"/>
-
-            <Button Text="&#128274; Войти"
-                    BackgroundColor="#5C6BC0"
-                    TextColor="White"
-                    CornerRadius="15"
-                    HeightRequest="50"
-                    FontSize="18"
-                    FontAttributes="Bold"
-                    Clicked="OnLoginClicked"
-                    HorizontalOptions="Fill"
-                    Margin="0,10,0,0"/>
 
         </VerticalStackLayout>
     </ScrollView>

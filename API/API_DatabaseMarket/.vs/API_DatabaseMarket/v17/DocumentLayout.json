@@ -68,7 +68,7 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "A:\\Git\\MyDatabase-Market\\API\\API_DatabaseMarket\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAAADgAAAA6AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-27T08:23:05.765Z",
               "EditorCaption": ""
@@ -83,8 +83,7 @@
               "RelativeToolTip": "Services\\Background\\OrderExpirationService.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAQwCYAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T08:22:32.358Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-27T08:22:32.358Z"
             },
             {
               "$type": "Document",
@@ -96,8 +95,7 @@
               "RelativeToolTip": "DTOs\\Orders\\UpdateOrderNameRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T07:44:57.166Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-27T07:44:57.166Z"
             },
             {
               "$type": "Document",
@@ -109,8 +107,7 @@
               "RelativeToolTip": "Controllers\\OrdersController.cs",
               "ViewState": "AgIAAGEAAAAAAAAAAAAswGIAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T06:53:03.522Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-27T06:53:03.522Z"
             },
             {
               "$type": "Document",
@@ -122,8 +119,7 @@
               "RelativeToolTip": "Models\\Order.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAQwBUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T07:02:48.136Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-27T07:02:48.136Z"
             },
             {
               "$type": "Document",
@@ -135,8 +131,7 @@
               "RelativeToolTip": "DTOs\\Orders\\CreateOrderRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T07:25:14.314Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-27T07:25:14.314Z"
             },
             {
               "$type": "Document",
@@ -148,8 +143,7 @@
               "RelativeToolTip": "DTOs\\Orders\\CreateOrderItemDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T07:25:46.009Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-27T07:25:46.009Z"
             },
             {
               "$type": "Document",
@@ -161,8 +155,7 @@
               "RelativeToolTip": "DTOs\\Orders\\OrderResponse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T07:00:08.628Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-27T07:00:08.628Z"
             },
             {
               "$type": "Document",
@@ -174,8 +167,7 @@
               "RelativeToolTip": "DTOs\\Payments\\PaymentResultDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-22T15:26:17.637Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-22T15:26:17.637Z"
             },
             {
               "$type": "Document",
@@ -187,8 +179,7 @@
               "RelativeToolTip": "Controllers\\PaymentsController.cs",
               "ViewState": "AgIAAGIAAAAAAAAAAAAgwHUAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-22T08:38:53.751Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-22T08:38:53.751Z"
             }
           ]
         },

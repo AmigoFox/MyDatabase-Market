@@ -93,6 +93,11 @@ public partial class OrderDetailsPage : ContentPage, IQueryAttributable
 
     }
 
+    private async void OnSaveOrderNameClicked(object sender, EventArgs e)
+    {
+        await _vm.SaveOrderNameAsync();
+    }
+
 
     private async void OnPayClicked(object sender, EventArgs e)
     {

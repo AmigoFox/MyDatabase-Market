@@ -28,6 +28,7 @@ namespace CrossApp.Services.Api
         }
 
 
+
         public async Task<int?> CreateAsync(CreateOrderRequest request)
         {
             var json = JsonSerializer.Serialize(request);
@@ -74,6 +75,21 @@ namespace CrossApp.Services.Api
             var json = await response.Content.ReadAsStringAsync();
 
             return JsonSerializer.Deserialize<OrderItemDto>(json, _jsonOptions);
+        }
+
+        public async Task<bool> UpdateOrderNameAsync(int orderId, string? orderName)
+        {
+            var request = new
+            {
+                orderName = orderName
+            };
+
+            var json = JsonSerializer.Serialize(request);
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+            var response = await _httpClient.PutAsync($"orders/{orderId}/name", content);
+
+            return response.IsSuccessStatusCode;
         }
 
 
